@@ -8,7 +8,7 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import logo from '../assets/navarIconNoBg.png';
+import logo from '../assets/kostianisIconNoBg.png';
 import flag from '../assets/bandera-usa.png'
 import { Link } from 'react-router-dom';
 
@@ -23,11 +23,11 @@ const products = [
 
 const navBarElements = [
 
-  { name: 'Home', href: 'navar-web/', current: 'home' },
+  { name: 'Home', href: 'kostianis-web/', current: 'home' },
   { name: 'Services' },
-  { name: 'About Us', href: 'navar-web/about', current: 'about' },
-  { name: 'Our Work', href: 'navar-web/work', current: 'work' },
-  { name: 'Contact', href: 'navar-web/contact', current: 'contact' },
+  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
+  { name: 'Our Work', href: 'kostianis-web/work', current: 'work' },
+  { name: 'Contact', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
@@ -52,7 +52,7 @@ export default function NavBar({current, setCurrent}) {
           //logo
         }
         <div className="flex 2xl:justify-center 2xl:pr-48 lg:flex-1">
-          <Link to="/navar-web" onClick={() => setCurrent("home")} className="">
+          <Link to="/kostianis-web" onClick={() => setCurrent("home")} className="">
             <img className="h-16 w-42" src={logo} alt="" />
           </Link>
         </div>
@@ -164,7 +164,7 @@ export default function NavBar({current, setCurrent}) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Link to="/navar-web" onClick={() => setMobileMenuOpen(false)} className="">
+            <Link to="/kostianis-web" onClick={() => setMobileMenuOpen(false)} className="">
               <img className="h-12 w-auto" src={logo} alt="" />
             </Link>
             <button

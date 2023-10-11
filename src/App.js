@@ -19,13 +19,13 @@ function App() {
     <Router className="bg-black">
       <Navbar current={current} setCurrent={(current) => setCurrent(current)}/>
       <Routes>
-        <Route path='/navar-web' element={<Home />} />
-        <Route path='navar-web/devops' element={<Devops />} />
-        <Route path='navar-web/nose' element={<Cloud />} />
-        <Route path='navar-web/others' element={<Others />} />
-        <Route path='navar-web/web-development' element={<Webdev />} />
-        <Route path='navar-web/about' element={<About />} />
-        <Route path='navar-web/contact' element={<Contact />} />
+        <Route path='/kostianis-web' element={<Home />} />
+        <Route path='kostianis-web/devops' element={<Devops />} />
+        <Route path='kostianis-web/nose' element={<Cloud />} />
+        <Route path='kostianis-web/others' element={<Others />} />
+        <Route path='kostianis-web/web-development' element={<Webdev />} />
+        <Route path='kostianis-web/about' element={<About />} />
+        <Route path='kostianis-web/contact' element={<Contact />} />
       </Routes>
       <Footer current={current} setCurrent={(current) => setCurrent(current)}/>
     </Router>

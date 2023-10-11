@@ -8,7 +8,7 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import logo from '../assets/navarIconNoBg.png';
+import logo from '../assets/kostianisIconNoBg.png';
 import flag from '../assets/bandera-usa.png'
 import { Link } from 'react-router-dom';
 
@@ -21,19 +21,19 @@ const classNameTitles = "font-bold text-xl"
 
 const company = [
 
-  { name: 'Home', href: 'navar-web/', current: 'home' },
-  { name: 'About Us', href: 'navar-web/about', current: 'about' },
-  { name: 'Our Work', href: 'navar-web/work', current: 'work' },
-  { name: 'Contact', href: 'navar-web/contact', current: 'contact' },
+  { name: 'Home', href: 'kostianis-web/', current: 'home' },
+  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
+  { name: 'Our Work', href: 'kostianis-web/work', current: 'work' },
+  { name: 'Contact', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 
 const services = [
 
-  { name: 'Web Design', href: 'navar-web/web', current: 'home' },
-  { name: 'Software Solutions', href: 'navar-web/software', current: 'about' },
-  { name: 'Devops', href: 'navar-web/devops', current: 'work' },
-  { name: 'Learn More', href: 'navar-web/contact', current: 'contact' },
+  { name: 'Web Design', href: 'kostianis-web/web', current: 'home' },
+  { name: 'Software Solutions', href: 'kostianis-web/software', current: 'about' },
+  { name: 'Devops', href: 'kostianis-web/devops', current: 'work' },
+  { name: 'Learn More', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 
@@ -74,7 +74,7 @@ function Footer({ current, setCurrent }) {
               </Link>
             </div>
             <p class="mt-8 text-xs text-logo self-center">
-              © 2023 Navar Solutions
+              © 2023 kostianis Solutions
             </p>
           </div>
           <div class="grid grid-cols-2 gap-8 lg:col-span-2 lg:grid-cols-3">
