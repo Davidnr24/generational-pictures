@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/kostianis-web/static/css/main.1fdfe7b7.css",
+    "main.js": "/kostianis-web/static/js/main.b1326da8.js",
+    "static/js/787.ba86c4cf.chunk.js": "/kostianis-web/static/js/787.ba86c4cf.chunk.js",
+    "static/media/hero_video.mp4": "/kostianis-web/static/media/hero_video.02e07a83794c39049d90.mp4",
+    "static/media/kostianis_logo.png": "/kostianis-web/static/media/kostianis_logo.209922bcd52ac0a25fd9.png",
+    "index.html": "/kostianis-web/index.html",
+    "static/media/logo.svg": "/kostianis-web/static/media/logo.0b9ae72ec0c8cd855ac0b077849d4c2c.svg",
+    "main.1fdfe7b7.css.map": "/kostianis-web/static/css/main.1fdfe7b7.css.map",
+    "main.b1326da8.js.map": "/kostianis-web/static/js/main.b1326da8.js.map",
+    "787.ba86c4cf.chunk.js.map": "/kostianis-web/static/js/787.ba86c4cf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1fdfe7b7.css",
+    "static/js/main.b1326da8.js"
+  ]
+}
