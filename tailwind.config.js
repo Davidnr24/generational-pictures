@@ -14,7 +14,8 @@ module.exports = {
         'min': '500px',
       },
       fontFamily: {
-        oxygen: ['"Oxygen"', ...defaultTheme.fontFamily.sans]
+        oxygen: ["Oxygen", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"]
       },
       colors: {
         'logo': {

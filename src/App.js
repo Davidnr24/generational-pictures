@@ -1,16 +1,23 @@
 import logo from './icons/logo.svg';
 import Home from './pages/Home'
-import Devops from './pages/Devops'
-import Cloud from './pages/Cloud'
-import Webdev from './pages/Webdev'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Others from './pages/Others'
+import ChrisWork from './pages/ChrisWork'
+import Skills from './pages/Skills'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from './Navigation/NavBar';
-import Footer from './Navigation/Footer';
+import Navbar from './navigation/NavBar';
+import Footer from './navigation/Footer';
 import { Fragment, useState } from 'react'
+
+const paths = [
+  {name: 'Home', element: <Home/>, path: '/kostianis-web'},
+  {name: 'Chris Work', element: <ChrisWork/>, path: 'kostianis-web/chris-work'},
+  {name: 'Skills', element: <Skills/>, path: 'kostianis-web/skills'},
+  {name: 'About Us', element: <About/>, path: 'kostianis-web/about'},
+  {name: 'Lets talk', element: <Contact/>, path: 'kostianis-web/contact'},
+]
+
 
 function App() {
   const [current, setCurrent] = useState("home");
@@ -19,13 +26,9 @@ function App() {
     <Router className="bg-black">
       <Navbar current={current} setCurrent={(current) => setCurrent(current)}/>
       <Routes>
-        <Route path='/kostianis-web' element={<Home />} />
-        <Route path='kostianis-web/devops' element={<Devops />} />
-        <Route path='kostianis-web/nose' element={<Cloud />} />
-        <Route path='kostianis-web/others' element={<Others />} />
-        <Route path='kostianis-web/web-development' element={<Webdev />} />
-        <Route path='kostianis-web/about' element={<About />} />
-        <Route path='kostianis-web/contact' element={<Contact />} />
+        {paths.map((path) => {
+          return <Route path={path.path} element={path.element} />
+        })}
       </Routes>
       <Footer current={current} setCurrent={(current) => setCurrent(current)}/>
     </Router>

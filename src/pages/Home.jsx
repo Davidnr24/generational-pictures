@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import ImageHero from '../components/ImageHero';
+import HeroVideo from '../components/HeroVideo';
 import Services from '../components/Services';
 import Intro from '../components/Intro';
-import NavbarTail from '../Navigation/NavBar';
+import NavbarTail from '../navigation/NavBar';
 import Team from '../components/Team';
 
 function Home() {
 
 	return (
 		<div className='bg-white h-fit w-screen'>
-			<ImageHero />
+			<HeroVideo />
 			<Intro/>
-			<div className='h-[1px] bg-logo w-1/2 mx-auto my-32'/>
-			<Services />
-			<div className='h-[1px] bg-logo w-1/2 mx-auto my-32'/>
-			<Team/>
+			<div className='h-20'/>
 		</div>
 
 	)

@@ -8,5 +8,5 @@ ReactJs + Tailwind for style
 
 ## Designed and Coded by 
 
-David kostianisro
+David Navarro
 Luis Bustamante

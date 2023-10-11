@@ -1,7 +1,7 @@
 {
   "name": "business-app-frontend",
   "version": "0.1.0",
-  "homepage": "https://Dhakernator24.github.io/kostianis-web",
+  "homepage": "https://dhakernator24.github.io/kostianis-web",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.7.4",
     "react-bootstrap-icons": "^1.10.3",
     "react-dom": "^18.2.0",
+    "react-player": "^2.13.0",
     "react-responsive": "^9.0.2",
     "react-router": "^6.10.0",
     "react-router-dom": "^6.11.0",
