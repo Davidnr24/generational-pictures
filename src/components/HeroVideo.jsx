@@ -7,15 +7,16 @@ export default function HeroVideo() {
 
 	return (
 		<div>
-			<div className='relative w-80vh h-auto'>
+			<div className='relative h-[100vh] w-auto'
+			>
 				<ReactPlayer
-					className="object-cover"
+					className=""
 					url={hero_video}
 					playing
 					loop
 					muted
 					width="100%"
-					height="auto"
+					height="100%"
 
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full top-0 left-0 bg-black/50 text-logo-white">
