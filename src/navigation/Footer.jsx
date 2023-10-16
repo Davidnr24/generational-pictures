@@ -23,25 +23,23 @@ const textColor = "text-logo-white"
 const company = [
 
   { name: 'Home', href: 'kostianis-web/', current: 'home' },
+  { name: 'Chris\'s Work', href: 'kostianis-web/work', current: 'work' },
   { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
-  { name: 'Our Work', href: 'kostianis-web/work', current: 'work' },
   { name: 'Contact', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 
-const services = [
-
-  { name: 'Web Design', href: 'kostianis-web/web', current: 'home' },
-  { name: 'Software Solutions', href: 'kostianis-web/software', current: 'about' },
-  { name: 'Devops', href: 'kostianis-web/devops', current: 'work' },
-  { name: 'Learn More', href: 'kostianis-web/contact', current: 'contact' },
-  //{ name: 'Reviews', href: 'reviews'},
-]
+const contact = {
+  name: 'Chris Kostianis',
+  phone: '+1 (555)-555-5555',
+  email: 'email@kostianis.com',
+  address: '555 Street Name, ST, 55555, United States'
+}
 
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer class="bg-black bottom-0 font-oxygen">
+    <footer class="bg-black bottom-0 font-poppins">
       <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div className='flex flex-col justify-center items-center'>
@@ -94,19 +92,6 @@ function Footer({ current, setCurrent }) {
             </div>
             <div>
               <p className={classNameTitles}>
-                Services
-              </p>
-              <nav class="flex flex-col mt-4 space-y-2 text-sm">
-                {services.map(item => {
-                  return <Link
-                    to={item.href}
-                    onClick={() => setCurrent(item.current)}
-                    className={classNameLinks}> {item.name}</Link>
-                })}
-              </nav>
-            </div>
-            <div>
-              <p className={classNameTitles}>
                 Legal
               </p>
               <nav class="flex flex-col mt-4 space-y-2 text-sm">
@@ -114,6 +99,17 @@ function Footer({ current, setCurrent }) {
                 <Link className={classNameLinks} to> Terms &amp; Conditions </Link>
                 <Link className={classNameLinks} to> Accessibility </Link>
               </nav>
+            </div>
+            <div>
+              <p className={classNameTitles}>
+                Contact
+              </p>
+              <div class="flex flex-col mt-4 space-y-2 text-sm">
+                <span className={classNameLinks}> {contact.name}</span>
+                <span className={classNameLinks}> {contact.phone}</span>
+                <span className={classNameLinks}> {contact.email}</span>
+                <span className={classNameLinks}> {contact.address}</span>
+              </div>
             </div>
           </div>
         </div>

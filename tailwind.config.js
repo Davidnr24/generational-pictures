@@ -25,7 +25,8 @@ module.exports = {
           'secondDark': '#00845e',
           'light': '#9faeb7',
           'secLight': '#bff4e5',
-          'white': '#ffffff'
+          'white': '#ffffff',
+          'black': '#000000'
         }
       },
       borderColors:{
@@ -61,6 +62,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     }
   },
-  plugins: [],
+  plugins: [
+    require('@headlessui/tailwindcss')
+  ],
 }
 
