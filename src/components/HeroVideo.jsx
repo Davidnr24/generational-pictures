@@ -20,7 +20,7 @@ export default function HeroVideo() {
 
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-black/50 text-logo-white">
-					<h1 className="text-logo-white text-[10vw] pl-20 xl:pl-32 xl:text-[4vw] xl:max-w-[50vw] md:pl-32 md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
+					<h1 className="text-logo-white font-bold text-[10vw] pl-20 xl:pl-32 xl:text-[4vw] xl:max-w-[50vw] md:pl-32 md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
 						AN EMERGING VIDEO PRODUCTION HOUSE
 					</h1>
 				</div>
