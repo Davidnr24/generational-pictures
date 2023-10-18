@@ -1,5 +1,6 @@
 import hero_video from '../assets/hero_video.mp4';
 import ReactPlayer from 'react-player';
+import { Link } from 'react-router-dom';
 
 
 export default function HeroVideo() {
@@ -19,10 +20,13 @@ export default function HeroVideo() {
 					height="100%"
 
 				/>
-				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-black/50 text-logo-white">
-					<h1 className="text-logo-white font-bold text-[10vw] pl-20 xl:pl-32 xl:text-[4vw] xl:max-w-[50vw] md:pl-32 md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
+				<div className="absolute flex flex-col justify-center items-start w-full gap-10 lg:gap-20 h-full grow top-0 left-0 bg-black/50 text-logo-white">
+					<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-poppins pl-20 xl:pl-48">
 						AN EMERGING VIDEO PRODUCTION HOUSE
 					</h1>
+					<Link to='/kostianis-web'className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 font-poppins border-[1px] border-white font-bold ml-20 xl:ml-48'>
+						Learn More
+					</Link>
 				</div>
 
 
