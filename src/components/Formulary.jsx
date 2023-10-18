@@ -70,8 +70,8 @@ export default function Formulary() {
     // console.log(formData);
 
     // Submit form data to a specific URL
-    //const url = 'https://nocodeform.io/f/652f1e5c4081185a963d2639';
-    const url = 'localhost:3006/kostianis-web'
+    const url = 'https://nocodeform.io/f/652f1e5c4081185a963d2639';
+    //const url = 'localhost:3006/kostianis-web'
     const formData = {
       firstName: firstName,
       lastName: lastName,
