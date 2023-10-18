@@ -85,6 +85,7 @@ export default function Formulary() {
       headers: {
         'Accept': 'application/javascript',
         'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
       },
     })
       .then((response) => response.json())
@@ -92,6 +93,7 @@ export default function Formulary() {
         console.log('Form submission response:', data);
         // Handle response as needed
         send()
+        handleFormChange(true)
       })
       .catch((error) => {
         console.error('Form submission error:', error);
