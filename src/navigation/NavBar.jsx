@@ -57,7 +57,7 @@ export default function NavBar({current, setCurrent}) {
   const [navBarColor, setNavBarColor] = useState('bg-transparent')
 
   const changeNavBarColor = () => {
-    if (window.scrollY >= window.innerHeight/2-5){
+    if (window.scrollY >= 1){
       setNavBarColor('bg-black/90')
     }else{
       setNavBarColor('bg-transparent')
