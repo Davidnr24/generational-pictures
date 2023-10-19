@@ -15,7 +15,6 @@ function Home() {
 			<Intro/>
 			<div className='h-20'/>
 			<VideoWork />
-			<div className='h-20'/>
 		</div>
 
 	)

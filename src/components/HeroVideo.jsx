@@ -20,13 +20,16 @@ export default function HeroVideo() {
 					height="100%"
 
 				/>
-				<div className="absolute flex flex-col justify-center items-start w-full gap-10 lg:gap-20 h-full grow top-0 left-0 bg-black/50 text-logo-white">
-					<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-poppins pl-20 xl:pl-48">
-						AN EMERGING VIDEO PRODUCTION HOUSE
-					</h1>
-					<Link to='/kostianis-web'className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 font-poppins border-[1px] border-white font-bold ml-20 xl:ml-48'>
-						Learn More
-					</Link>
+				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-gradient-to-r from-black to-black/40">
+					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-20 xl:ml-48'>
+						<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
+							AN EMERGING VIDEO PRODUCTION HOUSE
+						</h1>
+						<h2 className='font-poppins text-white text-3xl'>May be some text here?</h2>
+						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 mt-10 font-poppins border-[1px] border-white font-bold'>
+							Learn More
+						</Link>
+					</div>
 				</div>
 
 
@@ -34,7 +37,7 @@ export default function HeroVideo() {
 
 
 
-		</div>
+		</div >
 		// <div
 		// 	style={{
 		// 		backgroundImage: `linear-gradient(rgba(191, 244, 229, 0.25), rgba(0, 0, 0, 0.6)), url(${hero_video})`

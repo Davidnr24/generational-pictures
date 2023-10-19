@@ -19,7 +19,7 @@ import { usePopper } from 'react-popper';
 
 const work = [
 
-  { name: 'Marketing', description: '', href: '#', icon: PresentationChartLineIcon },
+  { name: 'Marketing', description: '', href: '/kostianis-web/marketing', icon: PresentationChartLineIcon },
   { name: 'Hype Videos', description: '', href: '#', icon:  SparklesIcon },
   { name: 'Story Telling', description: '', href: '#', icon: BookOpenIcon },
 ]
@@ -35,7 +35,7 @@ const navBarElements = [
 
   { name: 'Home', href: 'kostianis-web/', current: 'home' },
   { name: 'Chris\'s Work' },
-  { name: 'About Us', href: 'kostianis-web/work', current: 'work' },
+  { name: 'About Us', href: 'kostianis-web/about', current: 'work' },
   { name: 'Lets Talk', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
@@ -130,7 +130,7 @@ export default function NavBar({current, setCurrent}) {
                             <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-black" aria-hidden="true" />
                           </div>
                           <div className="flex-auto">
-                            <Link href={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
+                            <Link to={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
                               {item.name}
                               <span className="absolute inset-0" />
                             </Link>
@@ -212,7 +212,7 @@ export default function NavBar({current, setCurrent}) {
                                 as="Link"
                                 to={item.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className={`block rounded-lg py-2 pl-6 pr-3 no-underline text-sm ${font} leading-7 text-logo hover:bg-gray-50 hover:text-logo`}
+                                className={`block rounded-lg ${navBarElementsStyleMobile} ${navBarElementsStyleMobileHover} py-2 pl-6 pr-3 no-underline text-sm`}
                               >
                                 {item.name}
                               </Disclosure.Button>

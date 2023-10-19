@@ -45,11 +45,11 @@ export default function VideoWork() {
 
 
 	return (
-		<div className="w-full max-w-[2000px] mx-auto h-fit pb-10 bg-white font-poppins overflow-hidden px-10">
+		<div className="w-screen h-fit bg-black font-poppins overflow-hidden px-10 py-20">
 			<div className="mx-auto">
 				<div>
 					<div className="text-center mb-10">
-						<div className='font-poppins text-4xl text-black'>
+						<div className='font-poppins text-4xl text-white'>
 							Chris's work
 						</div>
 					</div>
