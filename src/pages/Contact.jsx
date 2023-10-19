@@ -5,7 +5,7 @@ function Contact() {
 
     return (
         <div className='bg-black pt-32 2xl:h-[calc(100vh-304px)] h-fit w-screen flex flex-col items-center justify-center'>
-            <div className='text-4xl font-poppins text-white'>CONTACT US</div>
+            <div className='text-4xl font-poppins text-white font-semibold'>CONTACT US</div>
 			<Formulary />
 			
 		</div>

@@ -220,9 +220,12 @@ export default function Formulary() {
                 Something went wrong, please try again later
               </div>
               }
-              <div className="mt-4">
+              <div className="mt-4 flex flex-row justify-between items-center">
+                <div className='text-base font-poppins font-semibold text-white'>
+                  We will get back to you
+                </div>
                 <button
-                  className="hover:shadow-form font-poppins rounded-md bg-purple-900 py-3 px-8 text-center text-base font-semibold text-white outline-none"
+                  className="font-poppins font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none"
                   type='submit'
                 >
                   Submit
