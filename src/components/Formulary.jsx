@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 
 
 export default function Formulary() {
@@ -224,18 +225,24 @@ export default function Formulary() {
                 <div className='text-base font-poppins font-semibold text-white'>
                   We will get back to you
                 </div>
-                <button
-                  className="font-poppins font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none"
-                  type='submit'
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+                <div className='inline-block relative w-[125px] h-[54px]'>
+                  <button
+                    className="absolute top-0 left-0 font-poppins font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none
+                   hover:border-2 transition duration-1000"
+                    type='submit'
+                  >
+                    Submit
+                    </button>
+                </div>
+
+                
+              
           </div>
-        </div> ||
-        <div className='text-4xl text-white font-poppins font-extrabold my-32'>Thank you we will contact you soon</div>
-      }
+        </form>
+          </div >
+        </div > ||
+    <div className='text-4xl text-white font-poppins font-extrabold my-32'>Thank you we will contact you soon</div>
+}
 
     </>
 
