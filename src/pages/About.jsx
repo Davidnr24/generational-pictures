@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 function About() {
 
     return (
-        <div className='pt-32 w-screen 2xl:h-[calc(100vh-301px)] h-fit bg-black flex justify-start items-start'>
+        <div className='pt-32 w-screen 2xl:h-[calc(100vh-301px)] h-fit bg-black flex justify-start items-start min-h-[calc(100vh-304px)]'>
             <div className='flex flex-col mt-[50px] justify-start items-start w-full ml-20 xl:ml-48 '>
                 <h1 className='font-poppins text-white text-4xl font-semibold'>OUR STORY</h1>
                 <div className='my-24 h-full w-full'>

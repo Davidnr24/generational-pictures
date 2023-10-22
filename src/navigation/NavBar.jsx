@@ -19,24 +19,28 @@ import { usePopper } from 'react-popper';
 
 const work = [
 
-  { name: 'Marketing', description: '', href: '/kostianis-web/marketing', icon: PresentationChartLineIcon },
-  { name: 'Hype Videos', description: '', href: '#', icon:  SparklesIcon },
-  { name: 'Story Telling', description: '', href: '#', icon: BookOpenIcon },
+  { name: 'Marketing', description: '', href: '/kostianis-web/chris-work/marketing', icon: PresentationChartLineIcon },
+  { name: 'Hype Videos', description: '', href: '/kostianis-web/chris-work/hype-videos', icon: SparklesIcon },
+  { name: 'Story Telling', description: '', href: 'kostianis-web/chris-work/story-telling', icon: BookOpenIcon },
 ]
 
+const underlineStyleC = {
+  background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
+}
+
 const font = "font-poppins"
-const colorUnderline = "bg-logo-white"
+const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
-const underlineStyle = colorUnderline + " max-w-0 bg-logo-second mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50"
+const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50"
 
 const navBarElements = [
 
   { name: 'Home', href: 'kostianis-web/', current: 'home' },
-  { name: 'Chris\'s Work' },
+  { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'chris-work' },
   { name: 'About Us', href: 'kostianis-web/about', current: 'work' },
-  { name: 'Lets Talk', href: 'kostianis-web/contact', current: 'contact' },
+  { name: 'Let\'s Talk', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
@@ -52,20 +56,21 @@ function classNames(...classes) {
 
 
 
-export default function NavBar({current, setCurrent}) {
+export default function NavBar({ current, setCurrent }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [navBarColor, setNavBarColor] = useState('bg-transparent')
+  const [isOpen, setisOpen] = useState(false)
 
   const changeNavBarColor = () => {
-    if (window.scrollY >= 1){
+    if (window.scrollY >= 1) {
       setNavBarColor('bg-black/90')
-    }else{
+    } else {
       setNavBarColor('bg-transparent')
     }
   }
 
   window.addEventListener('scroll', changeNavBarColor)
-  
+
 
   return (
     <div className={`${navBarColor} z-10 fixed top-0 w-full`}>
@@ -94,23 +99,35 @@ export default function NavBar({current, setCurrent}) {
         {
           //navBar elements desktop
         }
-        <Popover.Group className="hidden lg:flex lg:gap-x-12 ">
+        <Popover.Group className="hidden lg:flex lg:gap-x-12 justify-center items-center">
           {
             //navBar elements
           }
           {navBarElements.map(item => {
             if (item.name == 'Chris\'s Work') {
-              return <Popover className="relative group">
-                <Popover.Button className=" py-4 focus:outline-none">
-                  <div className={`transition ease-in-out duration-500 ${font} flex items-center gap-x-1 leading-6`}>
-                    <span className={navBarElementsStyle}> {item.name} </span>
-                    <ChevronDownIcon className="h-5 w-5 flex-none text-white ui-open:rotate-180 transition duration-300" aria-hidden="true" />
-                  </div>
-                  <div className={underlineStyle} />
+              return <Popover className="relative group" open={isOpen}>
+
+                <Popover.Button
+                  className="mt-3 focus:outline-none"
+                  onMouseEnter={() => setisOpen(true)}
+                  onMouseLeave={() => setisOpen(false)}
+                >
+                  <Link to={item.href} className='no-underline'>
+                    <div className={`transition ease-in-out duration-500 ${font} flex items-center gap-x-1 leading-6`}>
+                      <span className={navBarElementsStyle}> {item.name} </span>
+                      <ChevronDownIcon 
+                      className={`h-5 w-5 flex-none text-white ${isOpen ? 'rotate-180':''} transition duration-300" aria-hidden="true" `}
+                      />
+                      
+                    </div>
+                    <div className={underlineStyle}
+                      style={underlineStyleC} />
+                  </Link>
                 </Popover.Button>
 
                 <Transition
                   as={Fragment}
+                  show={isOpen}
                   enter="transition ease-out duration-200"
                   enterFrom="opacity-0 translate-y-1"
                   enterTo="opacity-100 translate-y-0"
@@ -118,44 +135,64 @@ export default function NavBar({current, setCurrent}) {
                   leaveFrom="opacity-100 translate-y-0"
                   leaveTo="opacity-0 translate-y-1"
                 >
-                  <Popover.Panel className="absolute -left-full top-full z-10 mt-0 w-screen max-w-md  
-                  overflow-hidden bg-black border-2 rounded-lg border-logo-white shadow-lg">
-                    <div className="p-4">
-                      {work.map((item) => (
-                        <div
-                          key={item.name}
-                          className="group/pop relative flex items-center gap-x-6 rounded-md p-4 text-sm leading-6 hover:bg-logo-white"
-                        >
-                          <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover/pop:bg-logo-white">
-                            <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-black" aria-hidden="true" />
+                  <Popover.Panel
+                    static
+                    className="absolute -left-0 top-full z-10 font-poppins  
+                  "
+                    onMouseEnter={() => setisOpen(true)}
+                    onMouseLeave={() => setisOpen(false)}
+                  >
+                    <div className=' bg-black border-2 mt-3 w-[300px] rounded-sm border-logo-white shadow-lg'>
+                      <div className="p-2 flex flex-col w-full">
+                        {work.map((item) => (
+                          <div
+                            key={item.name}
+                            className="group/pop relative flex items-center gap-x-6 rounded-none p-4 text-md leading-6 hover:bg-logo-white"
+                          >
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover/pop:bg-logo-white">
+                              <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-black" aria-hidden="true" />
+                            </div>
+                            <div className="flex-auto">
+                              <Link to={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </Link>
+                            </div>
                           </div>
-                          <div className="flex-auto">
-                            <Link to={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
-                              {item.name}
-                              <span className="absolute inset-0" />
-                            </Link>
-                            <p className="mt-1 text-gray-300 group-hover/pop:text-gray-600">{item.description}</p>
-                          </div>
-                        </div>
-                      ))}
+                        ))}
+                        <div className='relative w-[250px] my-2 mx-auto h-[40px] rounded-sm' style={underlineStyleC} />
+                      </div>
                     </div>
                   </Popover.Panel>
                 </Transition>
               </Popover>
-              }
-            else if (item.name == 'Lets Talk') {
-              return <Link to={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
+
+            }
+            else if (item.name == 'Let\'s Talk') {
+              return <Link to={item.href}
+                onClick={() => setCurrent(item.current)}
+                className='group/talk transition duration-300 my-4 no-underline'
+                style={underlineStyleC}
+              >
                 {current == item.current &&
-                <span className={`${navBarElementsStyle} p-3 border-2 border-black bg-logo-white text-black`}> {item.name} </span> || 
-                <span className={`${navBarElementsStyle} p-3 border-2 border-logo-white group-hover:bg-logo-white group-hover:text-black transition duration-300`}> {item.name} </span>
+                  <div className={`${navBarElementsStyle} border-black bg-white text-black m-1 p-3`}> {item.name} </div> ||
+
+                  <div
+                    className={`${navBarElementsStyle} bg-logo-black  group-hover/talk:text-black group-hover/talk:bg-white transition duration-300
+                    m-1 p-3 `}
+
+                  > {item.name} </div>
+
                 }
-                </Link>
+              </Link>
             } else {
               return <Link to={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
-                <span className={navBarElementsStyle}> {item.name} </span>
+                <div className={`pt-3 ${navBarElementsStyle}`}> {item.name} </div>
                 {current == item.current &&
-                  <div className={`${colorUnderline} mt-2 h-1 max-w-full`}/> ||
-                  <div className={underlineStyle} />}
+                  <div className={`mt-2 h-1 max-w-full`}
+                    style={underlineStyleC} /> ||
+                  <div className={underlineStyle}
+                    style={underlineStyleC} />}
               </Link>
             }
           }

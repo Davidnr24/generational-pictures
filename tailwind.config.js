@@ -19,14 +19,23 @@ module.exports = {
       },
       colors: {
         'logo': {
-          DEFAULT: '#00283f',
-          'main': '#00283e',
+          DEFAULT: '#9d5dc2 ',
+          'main': '#9d5dc2 ',
           'second': '#00d397',
           'secondDark': '#00845e',
           'light': '#9faeb7',
           'secLight': '#bff4e5',
           'white': '#ffffff',
           'black': '#000000'
+        },
+        'colorBar':{
+          'white': '#c0c0c0',
+          'yellow': '#c0c000',
+          'blueLight': '#00c0c0',
+          'green': '#00c000',
+          'purple': '#c000c0',
+          'red': '#c00000',
+          'blueDark': '#0000c0'
         }
       },
       borderColors:{
