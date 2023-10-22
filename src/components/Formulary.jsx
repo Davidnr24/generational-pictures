@@ -105,7 +105,7 @@ export default function Formulary() {
 
   //COMMON STYLES
 
-  const titleStyles = 'mb-3 block text-base font-poppins text-white'
+  const titleStyles = 'mb-3 block text-base font-poppins text-black'
   const boxStyles = 'w-full rounded-sm border-[2px] border-[#e0e0e0] bg-white py-3 px-6 text-base font-poppins text-[#6B7280] outline-none focus:border-purple-900 focus:shadow-md'
 
 
@@ -222,7 +222,7 @@ export default function Formulary() {
               </div>
               }
               <div className="mt-4 flex flex-row justify-between items-center">
-                <div className='text-base font-poppins font-semibold text-white'>
+                <div className='text-base font-poppins font-semibold text-black'>
                   We will get back to you
                 </div>
                 <div className='inline-block relative w-[125px] h-[54px]'>
@@ -241,7 +241,7 @@ export default function Formulary() {
         </form>
           </div >
         </div > ||
-    <div className='text-4xl text-white font-poppins font-extrabold my-32'>Thank you we will contact you soon</div>
+    <div className='text-4xl text-black font-poppins font-extrabold my-32'>Thank you we will contact you soon</div>
 }
 
     </>

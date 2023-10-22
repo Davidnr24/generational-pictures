@@ -26,11 +26,15 @@ export default function Logos() {
   ]
 
   return (
-    <div className="">
+    <div className="mt-[100px]">
       <div className="flex flex-col justify-center items-center">
+        <div className='flex flex-col justify-center items-center'>
         <div className="font-poppins text-[50px] text-black">
           Some of Chris’s recent clients
         </div>
+        <div className='bg-logo w-full h-[5px]'/>
+        </div>
+        
         <div className="bg-white pt-10">
           <div className="grid grid-cols-6 gap-2 justify-center items-center">
             {logos.map((logo) => {

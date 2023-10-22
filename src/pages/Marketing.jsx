@@ -43,19 +43,19 @@ const videos = [
 
 export default function Marketing() {
 
-
+    
 
     return (
         <div className='font-poppins min-h-[calc(100vh-304px)]'>
             <div className='w-full h-[112px] bg-black' />
-            <div className='flex flex-col justify-center items-center my-20'>
-                <h1 className='font-extrabold text-black'>Marketing</h1>
+            <div className='flex flex-col justify-center items-center gap-4 my-20'>
+                <h1 className='font-extrabold text-black'><span className='text-logo'>M</span>arketing</h1>
                 <h2 className=''>Chris Kostianis, Director of Photography</h2>
                 <div className='grid lg:grid-cols-3 grid-cols-1'>
                     {videos.map(video => {
                         return <VideoComp
                             title={video.title}
-                            url={video.url} />
+                            url={video.url}/>
                     }
                     )}
 

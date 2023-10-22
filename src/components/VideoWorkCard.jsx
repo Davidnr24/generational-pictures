@@ -11,7 +11,7 @@ import storytelling_image from '../assets/storytelling.png';
 export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color }) {
 
 	return (
-		<Link to={href} className='group/work relative h-[40vh] w-auto hover:shadow-xl transition duration-500 overflow-hidden '>
+		<Link to={href} className='group/work relative h-[40vh] w-auto shadow-xl transition duration-500 overflow-hidden '>
 			<img
 				src={imageC} className="h-full w-full object-cover group-hover/work:scale-110 transition duration-300"
 			/>

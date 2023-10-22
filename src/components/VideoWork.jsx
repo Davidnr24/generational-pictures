@@ -54,7 +54,7 @@ export default function VideoWork() {
 							<div className='font-poppins text-4xl text-black font-bold no-underline'> 
 							Chris's work
 							</div>
-							<div className='bg-logo w-full h-[10px]'/>
+							<div className='bg-logo w-full h-[5px]'/>
 							
 						</Link>
 					</div>
