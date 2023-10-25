@@ -1,15 +1,15 @@
 import IntroCard from "./IntroCard.jsx";
 
-const descriptionStyle = 'text-xl font-notoSans text-black font-extralight pt-10'
+const descriptionStyle = 'text-xl font-zenKaku text-white font-extralight pt-10'
 
 const columns = [
   {
     title: 'Who we are',
     description: <div
       className={descriptionStyle}>A
-      <span className="font-bold"> dynamic</span>,
-      <span className="font-bold"> detail-oriented</span>, and
-      <span className="font-bold"> cross-cultural</span>
+      <span className="font-bold text-logo"> dynamic</span>,
+      <span className="font-bold text-logo"> detail-oriented</span>, and
+      <span className="font-bold text-logo"> cross-cultural</span>
       <span> video production company dedicated to filming and producing powerful visual experiences.</span>
     </div>,
   },
@@ -33,7 +33,7 @@ const columns = [
 function Intro() {
 
   return (
-    <div className=" mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 lg:grid-cols-3 items-start justify-evenly gap-5 pt-20">
+    <div className=" mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 bg-black lg:grid-cols-3 items-start justify-evenly gap-5 py-32">
       {columns.map((col) => (
         <IntroCard title={col.title} description={col.description} />
       ))}

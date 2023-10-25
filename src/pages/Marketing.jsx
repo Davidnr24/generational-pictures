@@ -46,7 +46,7 @@ export default function Marketing() {
     
 
     return (
-        <div className='font-notoSans min-h-[calc(100vh-304px)]'>
+        <div className='font-zenKaku min-h-[calc(100vh-304px)]'>
             <div className='w-full h-[112px] bg-black' />
             <div className='flex flex-col justify-center items-center gap-4 my-20'>
                 <h1 className='font-extrabold text-black'><span className='text-logo'>M</span>arketing</h1>

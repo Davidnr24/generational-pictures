@@ -8,7 +8,7 @@ function Contact() {
     <div className='min-h-[calc(100vh-304px)]'>
       <div className='w-full h-[112px] bg-black' />
       <div className='bg-white h-fit w-screen flex flex-col items-center justify-center'>
-        <div className='text-4xl font-notoSans my-10 text-black font-semibold'>
+        <div className='text-4xl font-zenKaku my-10 text-black font-semibold'>
           <span className='text-logo'>C</span>ONTACT US
         </div>
         <div className='flex flex-row h-full justify-center items-stretch border-[1px] mb-10 bg-gray-100 rounded-xl'>

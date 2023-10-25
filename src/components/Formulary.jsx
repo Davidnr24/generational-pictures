@@ -105,8 +105,8 @@ export default function Formulary() {
 
   //COMMON STYLES
 
-  const titleStyles = 'mb-3 block text-base font-notoSans text-black'
-  const boxStyles = 'w-full rounded-sm border-[2px] border-[#e0e0e0] bg-white py-3 px-6 text-base font-notoSans text-[#6B7280] outline-none focus:border-purple-900 focus:shadow-md'
+  const titleStyles = 'mb-3 block text-base font-zenKaku text-black'
+  const boxStyles = 'w-full rounded-sm border-[2px] border-[#e0e0e0] bg-white py-3 px-6 text-base font-zenKaku text-[#6B7280] outline-none focus:border-purple-900 focus:shadow-md'
 
 
 
@@ -116,7 +116,7 @@ export default function Formulary() {
       {!isSent &&
         <div className="flex items-center justify-center px-12 pt-4 pb-12">
           <div className="mx-auto w-full max-w-[550px]">
-          <div className='text-lg mb-10 font-notoSans font-semibold text-black'>
+          <div className='text-lg mb-10 font-zenKaku font-semibold text-black'>
                   If you prefer we will contact you:
           </div>
             <form onSubmit={handleSubmit}>
@@ -179,7 +179,7 @@ export default function Formulary() {
                   required
                 />
                 {!emailValid && (
-                  <p className="text-red-500 font-notoSans text-xs mt-1">Please enter a valid email</p>
+                  <p className="text-red-500 font-zenKaku text-xs mt-1">Please enter a valid email</p>
                 )}
               </div>
               <div className="mb-4">
@@ -199,7 +199,7 @@ export default function Formulary() {
                   required
                 />
                 {!phoneValid && (
-                  <p className="text-red-500 font-notoSans text-xs mt-1">
+                  <p className="text-red-500 font-zenKaku text-xs mt-1">
                     Please enter a valid 10-digit phone number
                   </p>
                 )}
@@ -220,14 +220,14 @@ export default function Formulary() {
                   rows="5"
                 />
               </div>
-              {!formOk && <div className='text-red-700 font-notoSans text-xl'>
+              {!formOk && <div className='text-red-700 font-zenKaku text-xl'>
                 Something went wrong, please try again later
               </div>
               }
               <div className="mt-4 flex flex-row justify-center items-center">
                 <div className='inline-block relative w-[125px] h-[54px]'>
                   <button
-                    className="absolute top-0 left-0 font-notoSans font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none
+                    className="absolute top-0 left-0 font-zenKaku font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none
                    hover:border-2 transition duration-1000"
                     type='submit'
                   >
@@ -241,7 +241,7 @@ export default function Formulary() {
         </form>
           </div >
         </div > ||
-    <div className='text-4xl text-black font-notoSans font-extrabold my-32'>Thank you we will contact you soon</div>
+    <div className='text-4xl text-black font-zenKaku font-extrabold my-32'>Thank you we will contact you soon</div>
 }
 
     </>

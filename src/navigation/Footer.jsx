@@ -48,7 +48,7 @@ const contact = {
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer className="bg-black bottom-0 font-notoSans h-[320px]">
+    <footer className="bg-black bottom-0 font-zenKaku h-[320px]">
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <div className='flex flex-col justify-start items-start'>

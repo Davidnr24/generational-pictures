@@ -28,7 +28,7 @@ const underlineStyleC = {
   background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
 }
 
-const font = "font-notoSans"
+const font = "font-zenKaku"
 const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
@@ -140,7 +140,7 @@ export default function NavBar({ current, setCurrent }) {
                 >
                   <Popover.Panel
                     static
-                    className="absolute -left-0 top-full z-10 font-notoSans  
+                    className="absolute -left-0 top-full z-10 font-zenKaku  
                   "
                     onMouseEnter={() => setisOpen(true)}
                     onMouseLeave={() => setisOpen(false)}

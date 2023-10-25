@@ -27,13 +27,13 @@ export default function Logos() {
   ]
 
   return (
-    <div className="py-[200px] bg-gray-100">
-      <div className="flex flex-col justify-center items-center mb-10">
-        <div className='flex flex-col justify-center items-center'>
-          <div className="font-notoSans text-[50px] text-black">
-            Some of Chris’s recent clients
+    <div className="bg-white py-10">
+      <div className="flex flex-col items-center mb-10">
+        <div className='flex flex-col'>
+          <div className="font-zenKaku text-[30px] text-black">
+            <span className='text-logo'>C</span>hris’s Recent Clients:
           </div>
-          <div className='bg-logo w-full h-[5px]' />
+          {/* <div className='bg-logo w-full h-[2px]' /> */}
         </div>
       </div>
       <Slider className='mx-10 bg-white py-10'

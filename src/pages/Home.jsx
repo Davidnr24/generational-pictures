@@ -14,18 +14,18 @@ function Home({setCurrent}) {
 	}
 
 	return (
-		<div className='bg-white h-fit w-screen'>
+		<div className='bg-black h-fit w-screen'>
 			<HeroVideo />
 			{/* <img src={clapboard} className='mx-auto w-full' /> */}
 			<div className='flex flex-row grow w-full h-[20px]'>
-				<div className='bg-white h-full w-[75%]' />
+				<div className='h-full w-[75%]' />
 				<div
 					className='h-full w-[25%]'
 					style={underlineStyleC}
 				/>
 			</div>
 			<Intro />
-			<div className='flex flex-row grow w-full h-[20px] mt-20'>
+			<div className='flex flex-row grow w-full h-[20px]'>
 				<div
 					className='h-full w-[25%]'
 					style={underlineStyleC}
