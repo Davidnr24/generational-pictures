@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/kostianis-web/static/css/main.c8c8331e.css",
-    "main.js": "/kostianis-web/static/js/main.adf4bbad.js",
+    "main.css": "/kostianis-web/static/css/main.6bdf7cdd.css",
+    "main.js": "/kostianis-web/static/js/main.18650e5b.js",
     "static/js/787.ba86c4cf.chunk.js": "/kostianis-web/static/js/787.ba86c4cf.chunk.js",
     "static/media/hero_video.mp4": "/kostianis-web/static/media/hero_video.02e07a83794c39049d90.mp4",
     "static/media/marketing.png": "/kostianis-web/static/media/marketing.2d0bdf149cc55dbe2108.png",
     "static/media/storytelling.png": "/kostianis-web/static/media/storytelling.5ec23ed2dddac6511326.png",
     "static/media/hypevideos.png": "/kostianis-web/static/media/hypevideos.bf1a8c02cffb392cb4ec.png",
-    "static/media/logo2.png": "/kostianis-web/static/media/logo2.74ec92cb1bc92fb74bc2.png",
+    "static/media/logo6.png": "/kostianis-web/static/media/logo6.74ec92cb1bc92fb74bc2.png",
     "static/media/kostianis_logo.png": "/kostianis-web/static/media/kostianis_logo.209922bcd52ac0a25fd9.png",
     "static/media/logo8.png": "/kostianis-web/static/media/logo8.f7cc53da987fb071b7cc.png",
     "index.html": "/kostianis-web/index.html",
     "static/media/logo.svg": "/kostianis-web/static/media/logo.0b9ae72ec0c8cd855ac0b077849d4c2c.svg",
     "static/media/Clapboard.svg": "/kostianis-web/static/media/Clapboard.829781efb496f96100b2165c5a2649e6.svg",
-    "main.c8c8331e.css.map": "/kostianis-web/static/css/main.c8c8331e.css.map",
-    "main.adf4bbad.js.map": "/kostianis-web/static/js/main.adf4bbad.js.map",
+    "main.6bdf7cdd.css.map": "/kostianis-web/static/css/main.6bdf7cdd.css.map",
+    "main.18650e5b.js.map": "/kostianis-web/static/js/main.18650e5b.js.map",
     "787.ba86c4cf.chunk.js.map": "/kostianis-web/static/js/787.ba86c4cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8c8331e.css",
-    "static/js/main.adf4bbad.js"
+    "static/css/main.6bdf7cdd.css",
+    "static/js/main.18650e5b.js"
   ]
 }
