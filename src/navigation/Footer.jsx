@@ -8,8 +8,8 @@ import {
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import logo from '../assets/kostianis_logo.png';
 import { Link } from 'react-router-dom';
+import Logo from '../icons/Logo';
 
 
 const classNameLinks = "no-underline text-logo-white hover:text-logo w-fit"
@@ -48,14 +48,19 @@ const contact = {
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer className="bg-black bottom-0 font-notoSans">
+    <footer className="bg-black bottom-0 font-notoSans h-[320px]">
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <div className='flex flex-col justify-start items-start'>
-            <Link to="/" className="">
-              <img className="h-20 w-auto" src={logo} alt="" />
+            <Logo className='-ml-5 -mt-4' setCurrent={() => setCurrent("home")}/>
+            <p className={`text-xs mb-4 ${textColor}`}>
+              © 2023 Kostianis Productions
+            </p>
+            <Link className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
+              to='/kostianis-web/privacy-policy'>
+              Privacy Policy
             </Link>
-            <div className="flex mt-4 space-x-6">
+            <div className="flex mt-10 space-x-6">
               <a className={`${classNameIcons} flex flex-row gap-2`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
                 <span className="sr-only"> Linkedin </span>
                 <svg className="w-6 h-6" fill={icons_color} viewBox="0 0 24 24" aria-hidden="true">
@@ -64,13 +69,6 @@ function Footer({ current, setCurrent }) {
                 <span> Linkedin</span>
               </a>
             </div>
-            <p className={`mt-8 text-xs ${textColor}`}>
-              © 2023 Kostianis Productions
-            </p>
-            <Link className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
-              to='/kostianis-web/privacy-policy'>
-              Privacy Policy
-            </Link>
           </div>
           <div>
             <p className={classNameTitles}>

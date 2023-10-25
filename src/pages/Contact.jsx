@@ -11,7 +11,7 @@ function Contact() {
         <div className='text-4xl font-notoSans my-10 text-black font-semibold'>
           <span className='text-logo'>C</span>ONTACT US
         </div>
-        <div className='flex flex-row h-full justify-center items-stretch border-[1px] bg-gray-100 rounded-xl'>
+        <div className='flex flex-row h-full justify-center items-stretch border-[1px] mb-10 bg-gray-100 rounded-xl'>
           <ContactCard />
           <Formulary />
         </div>

@@ -26,18 +26,6 @@ export default function Logos() {
     logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13
   ]
 
-  const [settings] = useState({
-    infinite: true,
-    slidesToShow: 9,
-    slidesToScroll: 1,
-    autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
-    useCss: false,
-    pauseOnHover: false,
-  });
-
   return (
     <div className="py-[200px] bg-gray-100">
       <div className="flex flex-col justify-center items-center mb-10">
@@ -52,7 +40,6 @@ export default function Logos() {
         width="250px"
         duration={40}
         pauseOnHover={true}
-        blurBorders={true}
         blurBoderColor={'#fff'}
       >
         {logos.map((logo, index) => {

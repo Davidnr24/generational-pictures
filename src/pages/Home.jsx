@@ -7,7 +7,7 @@ import VideoWork from '../components/VideoWork';
 import clapboard from '../assets/Clapboard.svg'
 import Logos from '../components/Logos';
 
-function Home() {
+function Home({setCurrent}) {
 
 	const underlineStyleC = {
 		background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
@@ -32,7 +32,7 @@ function Home() {
 				/>
 				<div className='white h-full w-[75%]' />
 			</div>
-			<VideoWork />
+			<VideoWork setCurrent={setCurrent}/>
 
 			<Logos/>
 		</div>

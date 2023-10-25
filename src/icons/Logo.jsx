@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import logo from '../assets/kostianis_logo.png';
 
 
-export default function Logo({ setCurrent }) {
+export default function Logo({className, setCurrent }) {
 
 
   return (
 
-    <div className="w-auto h-16 relative">
+    <div className={`${className} w-auto h-16 relative`}>
       <Link to="/kostianis-web" onClick={setCurrent} className="">
         <img className="h-16 w-auto" src={logo} alt="" />
         <div className="absolute w-full h-full top-0 left-0 text-white ">

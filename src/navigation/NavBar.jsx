@@ -33,13 +33,13 @@ const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
-const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50 bg-logo"
+const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all duration-50 bg-logo"
 
 const navBarElements = [
 
-  { name: 'Home', href: 'kostianis-web/', current: 'home' },
+  { name: 'Home', href: 'kostianis-web', current: 'home' },
   { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'chris-work' },
-  { name: 'About Us', href: 'kostianis-web/about', current: 'work' },
+  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
   { name: 'Let\'s Talk', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
@@ -78,7 +78,7 @@ export default function NavBar({ current, setCurrent }) {
         {
           //logo
         }
-        <Logo setCurrent={() => setCurrent("home")}/>
+        <Logo setCurrent={() => setCurrent("home")} />
         {
           //mobile menu icon
         }
@@ -108,17 +108,23 @@ export default function NavBar({ current, setCurrent }) {
                   onMouseEnter={() => setisOpen(true)}
                   onMouseLeave={() => setisOpen(false)}
                 >
-                  <Link to={item.href} className='no-underline'>
+                  <Link
+                    to={item.href}
+                    className='no-underline'
+                    onClick={() => setCurrent("chris-work")}
+                  >
                     <div className={`transition ease-in-out duration-500 ${font} flex items-center gap-x-1 leading-6`}>
                       <span className={navBarElementsStyle}> {item.name} </span>
-                      <ChevronDownIcon 
-                      className={`h-5 w-5 flex-none text-white ${isOpen ? 'rotate-180':''} transition duration-300" aria-hidden="true" `}
+                      <ChevronDownIcon
+                        className={`h-5 w-5 flex-none text-white ${isOpen ? 'rotate-180' : ''} transition duration-300" aria-hidden="true" `}
                       />
-                      
+
                     </div>
-                    <div className={underlineStyle}
-                      // style={underlineStyleC} 
-                      />
+                    {current == item.current &&
+                      <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
+                      /> ||
+                      <div className={underlineStyle}
+                      />}
                   </Link>
                 </Popover.Button>
 
@@ -150,7 +156,11 @@ export default function NavBar({ current, setCurrent }) {
                               <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-logo" aria-hidden="true" />
                             </div>
                             <div className="flex-auto">
-                              <Link to={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
+                              <Link
+                                to={item.href}
+                                className={`block ${font} no-underline text-logo-white hover:text-black`}
+                                onClick={() => setCurrent("chris-work")}
+                              >
                                 {item.name}
                                 <span className="absolute inset-0" />
                               </Link>
@@ -169,14 +179,14 @@ export default function NavBar({ current, setCurrent }) {
               return <Link to={item.href}
                 onClick={() => setCurrent(item.current)}
                 className='group/talk transition duration-300 my-4 no-underline'
-                // style={underlineStyleC}
+              // style={underlineStyleC}
               >
                 {current == item.current &&
-                  <div className={`${navBarElementsStyle} bg-transparent border-logo bg-white text-black m-1 p-3`}> {item.name} </div> ||
+                  <div className={`${navBarElementsStyle} bg-white text-black p-3 border-[1px] border-logo`}> {item.name} </div> ||
 
                   <div
                     className={`${navBarElementsStyle} bg-tranparent border-[1px] border-logo  group-hover/talk:text-black group-hover/talk:bg-white transition duration-300
-                    m-1 p-3 `}
+                     p-3 `}
 
                   > {item.name} </div>
 
@@ -187,11 +197,11 @@ export default function NavBar({ current, setCurrent }) {
                 <div className={`pt-3 ${navBarElementsStyle}`}> {item.name} </div>
                 {current == item.current &&
                   <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
-                    // style={underlineStyleC} 
-                    /> ||
+                  // style={underlineStyleC} 
+                  /> ||
                   <div className={underlineStyle}
-                    // style={underlineStyleC} 
-                    />}
+                  // style={underlineStyleC} 
+                  />}
               </Link>
             }
           }
@@ -210,7 +220,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Logo setCurrent={() => setCurrent("home")}/>
+            <Logo setCurrent={() => setCurrent("home")} />
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"

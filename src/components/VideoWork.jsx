@@ -42,7 +42,7 @@ const works = [
 
 
 
-export default function VideoWork() {
+export default function VideoWork({setCurrent}) {
 
 
 	return (
@@ -68,6 +68,7 @@ export default function VideoWork() {
 								imageC={work.image}
 								href={work.href}
                 avg_color={work.avg_color}
+								setCurrent={setCurrent}
 							/>
 						))}
 					</div>

@@ -114,8 +114,11 @@ export default function Formulary() {
   return (
     <>
       {!isSent &&
-        <div className="flex items-center justify-center p-12">
+        <div className="flex items-center justify-center px-12 pt-4 pb-12">
           <div className="mx-auto w-full max-w-[550px]">
+          <div className='text-lg mb-10 font-notoSans font-semibold text-black'>
+                  If you prefer we will contact you:
+          </div>
             <form onSubmit={handleSubmit}>
               <div className="flex flex-row gap-3">
                 <div className="w-full sm:w-1/2">
@@ -221,10 +224,7 @@ export default function Formulary() {
                 Something went wrong, please try again later
               </div>
               }
-              <div className="mt-4 flex flex-row justify-between items-center">
-                <div className='text-base font-notoSans font-semibold text-black'>
-                  We will get back to you
-                </div>
+              <div className="mt-4 flex flex-row justify-center items-center">
                 <div className='inline-block relative w-[125px] h-[54px]'>
                   <button
                     className="absolute top-0 left-0 font-notoSans font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none
