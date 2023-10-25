@@ -22,11 +22,11 @@ export default function HeroVideo() {
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-gradient-to-r from-black to-black/40">
 					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-20 xl:ml-48'>
-						<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
+						<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-notoSans">
 							AN EMERGING VIDEO PRODUCTION HOUSE
 						</h1>
-						{/* <h2 className='font-poppins text-white text-3xl'>May be some text here?</h2> */}
-						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 font-poppins border-[1px] border-logo font-bold'>
+						{/* <h2 className='font-notoSans text-white text-3xl'>May be some text here?</h2> */}
+						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 font-notoSans border-[1px] border-logo font-bold'>
 							Learn More
 						</Link>
 					</div>

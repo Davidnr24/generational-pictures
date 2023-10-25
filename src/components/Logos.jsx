@@ -42,7 +42,7 @@ export default function Logos() {
     <div className="py-[200px] bg-gray-100">
       <div className="flex flex-col justify-center items-center mb-10">
         <div className='flex flex-col justify-center items-center'>
-          <div className="font-poppins text-[50px] text-black">
+          <div className="font-notoSans text-[50px] text-black">
             Some of Chris’s recent clients
           </div>
           <div className='bg-logo w-full h-[5px]' />

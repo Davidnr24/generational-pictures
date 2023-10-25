@@ -15,7 +15,9 @@ module.exports = {
       },
       fontFamily: {
         oxygen: ["Oxygen", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"]
+        poppins: ["Poppins", "sans-serif"],
+        cairoPlay: ["Cairo Play", "sans-serif"],
+        notoSans: ["Noto Sans", "sans-serif"]
       },
       colors: {
         'logo': {

@@ -11,9 +11,9 @@ import {
   SparklesIcon
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-import logo from '../assets/kostianis_logo.png';
 import { Link } from 'react-router-dom';
 import { usePopper } from 'react-popper';
+import Logo from '../icons/Logo';
 
 
 
@@ -28,7 +28,7 @@ const underlineStyleC = {
   background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
 }
 
-const font = "font-poppins"
+const font = "font-notoSans"
 const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
@@ -78,11 +78,7 @@ export default function NavBar({ current, setCurrent }) {
         {
           //logo
         }
-        <div className="">
-          <Link to="/kostianis-web" onClick={() => setCurrent("home")} className="">
-            <img className="h-16 w-auto" src={logo} alt="" />
-          </Link>
-        </div>
+        <Logo setCurrent={() => setCurrent("home")}/>
         {
           //mobile menu icon
         }
@@ -138,7 +134,7 @@ export default function NavBar({ current, setCurrent }) {
                 >
                   <Popover.Panel
                     static
-                    className="absolute -left-0 top-full z-10 font-poppins  
+                    className="absolute -left-0 top-full z-10 font-notoSans  
                   "
                     onMouseEnter={() => setisOpen(true)}
                     onMouseLeave={() => setisOpen(false)}
@@ -214,9 +210,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Link to="/kostianis-web" onClick={() => setMobileMenuOpen(false)} className="">
-              <img className="h-12 w-auto" src={logo} alt="" />
-            </Link>
+            <Logo setCurrent={() => setCurrent("home")}/>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"

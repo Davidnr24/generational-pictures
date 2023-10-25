@@ -46,12 +46,12 @@ export default function VideoWork() {
 
 
 	return (
-		<div className="w-screen min-h-[100vh] bg-black font-poppins overflow-hidden">
+		<div className="w-screen min-h-[100vh] bg-black font-notoSans overflow-hidden">
 			<div className="mx-auto">
 				<div>
 					<div className="text-center bg-black pt-28">
 						<Link to='/kostianis-web/chris-work' className='flex flex-col w-fit justify-center items-center no-underline mx-auto'>
-							<div className='font-poppins text-4xl text-white font-bold no-underline'> 
+							<div className='font-notoSans text-4xl text-white font-bold no-underline'> 
 							Chris's work
 							</div>
 							<div className='bg-logo w-full h-[5px]'/>

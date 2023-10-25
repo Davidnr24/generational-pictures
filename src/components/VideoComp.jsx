@@ -14,7 +14,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
   return (
     <>
       <div className="m-4 flex flex-col justify-center gap-3 items-center">
-        <div className="font-poppins font-extralight text-[20px] text-black">{title}</div>
+        <div className="font-notoSans font-extralight text-[20px] text-black">{title}</div>
         <div className="relative h-[300px] w-[500px]">
           <div
             className=" shadow-xl border-y-[10px] border-black h-[300px] w-[500px]">

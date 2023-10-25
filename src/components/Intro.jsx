@@ -1,6 +1,6 @@
 import IntroCard from "./IntroCard.jsx";
 
-const descriptionStyle = 'text-xl font-poppins text-black font-extralight pt-10'
+const descriptionStyle = 'text-xl font-notoSans text-black font-extralight pt-10'
 
 const columns = [
   {
