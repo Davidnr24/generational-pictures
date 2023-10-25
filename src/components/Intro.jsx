@@ -1,6 +1,6 @@
 import IntroCard from "./IntroCard.jsx";
 
-const descriptionStyle = 'text-xl text-gray-400 pt-10'
+const descriptionStyle = 'text-xl font-poppins text-black font-extralight pt-10'
 
 const columns = [
   {
@@ -33,7 +33,7 @@ const columns = [
 function Intro() {
 
   return (
-    <div className="mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 lg:grid-cols-3 items-start justify-evenly gap-5 pt-20">
+    <div className=" mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 lg:grid-cols-3 items-start justify-evenly gap-5 pt-20">
       {columns.map((col) => (
         <IntroCard title={col.title} description={col.description} />
       ))}

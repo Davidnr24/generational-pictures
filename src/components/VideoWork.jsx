@@ -46,12 +46,12 @@ export default function VideoWork() {
 
 
 	return (
-		<div className="w-screen h-fit bg-white font-poppins overflow-hidden px-10 py-20">
+		<div className="w-screen min-h-[100vh] bg-black font-poppins overflow-hidden">
 			<div className="mx-auto">
 				<div>
-					<div className="text-center mb-10">
+					<div className="text-center bg-black pt-28">
 						<Link to='/kostianis-web/chris-work' className='flex flex-col w-fit justify-center items-center no-underline mx-auto'>
-							<div className='font-poppins text-4xl text-black font-bold no-underline'> 
+							<div className='font-poppins text-4xl text-white font-bold no-underline'> 
 							Chris's work
 							</div>
 							<div className='bg-logo w-full h-[5px]'/>
@@ -59,7 +59,7 @@ export default function VideoWork() {
 						</Link>
 					</div>
 					<div
-						className="grid z-0 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-evenly gap-3"
+						className="grid z-0 grid-cols-1 md:grid-cols-3 bg-black lg:grid-cols-3 justify-evenly gap-3 px-3 border-x-[20px] border-b-[100px] border-black py-10"
 					>
 						{works.map((work) => (
 							<VideoWorkCard

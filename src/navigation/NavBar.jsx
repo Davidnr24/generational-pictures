@@ -33,7 +33,7 @@ const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
-const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50"
+const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full group-focus:max-w-0 transition-all duration-50 bg-logo"
 
 const navBarElements = [
 
@@ -63,7 +63,7 @@ export default function NavBar({ current, setCurrent }) {
 
   const changeNavBarColor = () => {
     if (window.scrollY >= 1) {
-      setNavBarColor('bg-black/90')
+      setNavBarColor('bg-black')
     } else {
       setNavBarColor('bg-transparent')
     }
@@ -121,7 +121,8 @@ export default function NavBar({ current, setCurrent }) {
                       
                     </div>
                     <div className={underlineStyle}
-                      style={underlineStyleC} />
+                      // style={underlineStyleC} 
+                      />
                   </Link>
                 </Popover.Button>
 
@@ -142,15 +143,15 @@ export default function NavBar({ current, setCurrent }) {
                     onMouseEnter={() => setisOpen(true)}
                     onMouseLeave={() => setisOpen(false)}
                   >
-                    <div className=' bg-black border-2 mt-3 w-[300px] rounded-sm border-logo-white shadow-lg'>
+                    <div className=' bg-black border-2 mt-3 w-[250px] rounded-sm border-logo-white shadow-lg'>
                       <div className="p-2 flex flex-col w-full">
                         {work.map((item) => (
                           <div
                             key={item.name}
-                            className="group/pop relative flex items-center gap-x-6 rounded-none p-4 text-md leading-6 hover:bg-logo-white"
+                            className="group/pop relative flex items-center rounded-none p-2 text-md leading-6 hover:bg-logo-white"
                           >
                             <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg group-hover/pop:bg-logo-white">
-                              <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-black" aria-hidden="true" />
+                              <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-logo" aria-hidden="true" />
                             </div>
                             <div className="flex-auto">
                               <Link to={item.href} className={`block ${font} no-underline text-logo-white hover:text-black`}>
@@ -160,7 +161,7 @@ export default function NavBar({ current, setCurrent }) {
                             </div>
                           </div>
                         ))}
-                        <div className='relative w-[250px] my-2 mx-auto h-[40px] rounded-sm' style={underlineStyleC} />
+                        {/* <div className='relative w-[250px] my-2 mx-auto h-[40px] rounded-sm' style={underlineStyleC} /> */}
                       </div>
                     </div>
                   </Popover.Panel>
@@ -172,13 +173,13 @@ export default function NavBar({ current, setCurrent }) {
               return <Link to={item.href}
                 onClick={() => setCurrent(item.current)}
                 className='group/talk transition duration-300 my-4 no-underline'
-                style={underlineStyleC}
+                // style={underlineStyleC}
               >
                 {current == item.current &&
-                  <div className={`${navBarElementsStyle} border-black bg-white text-black m-1 p-3`}> {item.name} </div> ||
+                  <div className={`${navBarElementsStyle} bg-transparent border-logo bg-white text-black m-1 p-3`}> {item.name} </div> ||
 
                   <div
-                    className={`${navBarElementsStyle} bg-logo-black  group-hover/talk:text-black group-hover/talk:bg-white transition duration-300
+                    className={`${navBarElementsStyle} bg-tranparent border-[1px] border-logo  group-hover/talk:text-black group-hover/talk:bg-white transition duration-300
                     m-1 p-3 `}
 
                   > {item.name} </div>
@@ -189,10 +190,12 @@ export default function NavBar({ current, setCurrent }) {
               return <Link to={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
                 <div className={`pt-3 ${navBarElementsStyle}`}> {item.name} </div>
                 {current == item.current &&
-                  <div className={`mt-2 h-1 max-w-full`}
-                    style={underlineStyleC} /> ||
+                  <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
+                    // style={underlineStyleC} 
+                    /> ||
                   <div className={underlineStyle}
-                    style={underlineStyleC} />}
+                    // style={underlineStyleC} 
+                    />}
               </Link>
             }
           }

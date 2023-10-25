@@ -19,14 +19,14 @@ module.exports = {
       },
       colors: {
         'logo': {
-          DEFAULT: '#9d5dc2 ',
-          'main': '#9d5dc2 ',
+          DEFAULT: '#711AAE',
+          'main': '#7000ff',
           'second': '#00d397',
           'secondDark': '#00845e',
           'light': '#9faeb7',
           'secLight': '#bff4e5',
           'white': '#ffffff',
-          'black': '#000000'
+          'black': '#2F012E'
         },
         'colorBar':{
           'white': '#c0c0c0',

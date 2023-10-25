@@ -25,8 +25,8 @@ export default function HeroVideo() {
 						<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-poppins">
 							AN EMERGING VIDEO PRODUCTION HOUSE
 						</h1>
-						<h2 className='font-poppins text-white text-3xl'>May be some text here?</h2>
-						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 mt-10 font-poppins border-[1px] border-logo font-bold'>
+						{/* <h2 className='font-poppins text-white text-3xl'>May be some text here?</h2> */}
+						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-transparent text-white w-auto h-auto p-3 font-poppins border-[1px] border-logo font-bold'>
 							Learn More
 						</Link>
 					</div>

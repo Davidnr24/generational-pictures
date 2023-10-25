@@ -17,20 +17,20 @@ function Home() {
 		<div className='bg-white h-fit w-screen'>
 			<HeroVideo />
 			{/* <img src={clapboard} className='mx-auto w-full' /> */}
-			<div className='flex flex-row grow w-full h-[70px]'>
-				<div className='bg-white h-full w-[60%]' />
+			<div className='flex flex-row grow w-full h-[20px]'>
+				<div className='bg-white h-full w-[75%]' />
 				<div
-					className='h-full w-[40%]'
+					className='h-full w-[25%]'
 					style={underlineStyleC}
 				/>
 			</div>
 			<Intro />
-			<div className='flex flex-row grow w-full h-[70px] mt-20'>
+			<div className='flex flex-row grow w-full h-[20px] mt-20'>
 				<div
-					className='h-full w-[40%]'
+					className='h-full w-[25%]'
 					style={underlineStyleC}
 				/>
-				<div className='white h-full w-[60%]' />
+				<div className='white h-full w-[75%]' />
 			</div>
 			<VideoWork />
 
