@@ -15,7 +15,7 @@ export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color,
 	return (
 		<Link 
 		to={href} 
-		className='group/work relative h-[400px] w-auto shadow-xl transition duration-500 overflow-hidden border-[2px] border-black'
+		className='group/work relative h-[400px] w-auto shadow-xl transition duration-500 overflow-hidden border-[1px] border-white'
 		onClick={() => setCurrent("chris-work")}>
 			<img
 				src={imageC} className="h-full w-full object-cover group-hover/work:scale-110 transition duration-300"

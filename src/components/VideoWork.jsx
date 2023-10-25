@@ -46,12 +46,12 @@ export default function VideoWork({setCurrent}) {
 
 
 	return (
-		<div className="w-screen min-h-[100vh] bg-white font-zenKaku overflow-hidden">
+		<div className="w-screen min-h-[100vh] bg-black font-zenKaku overflow-hidden">
 			<div className="mx-auto">
 				<div>
 					<div className="text-center pt-20 pb-10">
 						<Link to='/kostianis-web/chris-work' className='group/chris flex flex-col w-fit justify-center items-center no-underline mx-auto'>
-							<div className='font-zenKaku text-[42px] text-black font-bold no-underline'> 
+							<div className='font-zenKaku text-[42px] text-white font-bold no-underline'> 
 							<span className='text-logo'>C</span>hris's work
 							</div>
 							<div className='w-[30%] mt-2 h-[5px] self-start group-hover/chris:w-full transition-all duration-50 bg-logo'/>

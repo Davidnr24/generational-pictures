@@ -52,7 +52,7 @@ function Footer({ current, setCurrent }) {
       <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
           <div className='flex flex-col justify-start items-start'>
-            <Logo className='-ml-5 -mt-4' setCurrent={() => setCurrent("home")}/>
+            <Logo className='-ml-5 -mt-4 w-[200px] h-20' setCurrent={() => setCurrent("home")}/>
             <p className={`text-xs mb-4 ${textColor}`}>
               © 2023 Kostianis Productions
             </p>

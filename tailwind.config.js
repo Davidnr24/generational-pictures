@@ -29,7 +29,7 @@ module.exports = {
           'light': '#9faeb7',
           'secLight': '#bff4e5',
           'white': '#ffffff',
-          'black': '#2F012E'
+          'black': '#000000'
         },
         'colorBar':{
           'white': '#c0c0c0',
