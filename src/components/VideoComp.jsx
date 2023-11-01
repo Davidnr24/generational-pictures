@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ReactPlayer from "react-player";
+import Vimeo from '@u-wave/react-vimeo';
 //import { Dialog } from '@headlessui/react'
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import ReactModal from "react-modal";
@@ -9,27 +9,60 @@ import ReactModal from "react-modal";
 export default function VideoComp({ title, url, img_src, preview_src }) {
 
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isReady, setIsReady] = useState(false);
   const [showModal, setShowModal] = useState(false)
+
+  const videoH = 'xl:h-[245px] h-[245px] lg:h-[189px]'
+  const videoW = 'xl:w-[400px] w-[400px] lg:w-[300px]'
+
+  // const videoH = ''
+  // const videoW = 'w-[25vw]'
+
+  const doublecheck = () => {
+    console.log("playing")
+    if (!isPlaying) {
+      setIsReady(false)
+      console.log("isplaying is false")
+    } else
+      console.log("isplaying is true")
+  }
+
+
 
   return (
     <>
       <div className="m-4 flex flex-col justify-center gap-3 items-center">
-        <div className="font-zenKaku font-extralight text-[20px] text-black">{title}</div>
-        <div className="relative h-[300px] w-[500px]">
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
+        <div className={`relative ${videoH} ${videoW}`}
+        // onMouseIn={() => setIsPlaying(true)}
+        // onMouseOut={() => setIsPlaying(false)}
+        // onClick={() => setShowModal(true)}
+        >
           <div
-            className=" shadow-xl border-y-[10px] border-black h-[300px] w-[500px]">
-            <ReactPlayer
-              url={url}
-              loop
-              muted
-              playing={isPlaying}
-              width="100%"
-              height="100%"
+            className={`shadow-xl border-y-[10px] border-black ${videoH} ${videoW}`}>
+            <Vimeo
+              className="w-full h-full"//{`${videoH} ${videoW}`}
+              video={url}
+              loop={true}
+              volume={0}
+              paused={!isPlaying && !isReady}
+              controls={false}
+              responsive={true}
+              onPlay={() => console.log("play")}
+              onPlaying={() => console.log("playing")}
+              autopause={true}
             />
           </div>
-          <div className="absolute top-0 left-0 z-2 bg-transparent w-[500px] h-[300px] cursor-pointer"
-            onMouseEnter={() => setIsPlaying(true)}
-            onMouseLeave={() => setIsPlaying(false)}
+          <div className={`absolute top-0 left-0 z-2 bg-transparent ${videoH} ${videoW} cursor-pointer`}
+            onMouseOver={() => {
+              console.log("onmouseover")
+              setTimeout(() => setIsPlaying(true), 100);
+            }}
+            onMouseOut={() => {
+              console.log("onmouseOut")
+              setTimeout(() => setIsPlaying(false), 100);
+              console.log(isPlaying)
+            }}
             onClick={() => setShowModal(true)}
           />
 
@@ -40,7 +73,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
         shouldFocusAfterRender={false}
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
-        className='bg-black w-[80%] h-[80%] mx-auto mt-[120px] border-l-[20px] border-logo rounded-md '
+        className='bg-black w-[80%] h-[80%] mx-auto mt-[90px] border-l-[20px] border-logo rounded-md '
         style={{
           overlay: {
             position: 'fixed',
@@ -53,15 +86,16 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
         }}
       >
         <div className="flex flex-row item justify-center my-auto pt-4 pr-4 pl-10 w-full h-full">
-          <div className="flex flex-col items-center justify-center h-full pt-8 w-full">
-            <h1 className="text-white mx-auto text-[24px]">{title}</h1>
-            <ReactPlayer
-              className='grow'
-              controls='true'
-              url={url}
-              width="100%"
-              height="100%"
-            />
+          <div className="flex flex-col items-center justify-center h-full pt-8 gap-2 w-full">
+            <h1 className="text-white font-zenKaku mx-auto text-[24px]">{title}</h1>
+            <div className="grow max-w-full max-h-full w-full h-auto">
+              <Vimeo
+                className='w-full h-full'
+                video={url}
+                responsive={true}
+              />
+            </div>
+
           </div>
           <div className="w-fit flex flex-row items-start justify-end cursor-pointer">
             <XMarkIcon className="text-white h-10 w-10" aria-hidden="true" onClick={() => setShowModal(false)} />

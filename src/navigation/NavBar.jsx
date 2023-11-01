@@ -12,7 +12,6 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
-import { usePopper } from 'react-popper';
 import Logo from '../icons/Logo';
 
 
@@ -21,7 +20,7 @@ const work = [
 
   { name: 'Marketing', description: '', href: '/kostianis-web/chris-work/marketing', icon: PresentationChartLineIcon },
   { name: 'Hype Videos', description: '', href: '/kostianis-web/chris-work/hype-videos', icon: SparklesIcon },
-  { name: 'Story Telling', description: '', href: 'kostianis-web/chris-work/story-telling', icon: BookOpenIcon },
+  { name: 'Storytelling', description: '', href: 'kostianis-web/chris-work/storytelling', icon: BookOpenIcon },
 ]
 
 const underlineStyleC = {
@@ -30,8 +29,8 @@ const underlineStyleC = {
 
 const font = "font-zenKaku"
 const colorUnderline = "bg-logo-white "
-const navBarElementsStyle = "text-xl " + font + " text-logo-white leading-6 no-underline"
-const navBarElementsStyleMobile = "py-2 px-3 text-base " + font + " text-logo-white leading-6 no-underline"
+const navBarElementsStyle = "text-lg " + font + " text-logo-white leading-6 no-underline"
+const navBarElementsStyleMobile = "py-2 mx-3 text-base " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
 const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all duration-50 bg-logo"
 
@@ -73,12 +72,12 @@ export default function NavBar({ current, setCurrent }) {
 
 
   return (
-    <div className={`${navBarColor} z-10 fixed top-0 w-full`}>
-      <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-auto xl:px-48 px-20" aria-label="Global">
+    <div className={`${navBarColor} z-10 fixed top-0 w-full max-h-[80px]`}>
+      <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-auto max-h-[80px] xl:px-48 px-20" aria-label="Global">
         {
           //logo
         }
-        <Logo setCurrent={() => setCurrent("home")} />
+        <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
         {
           //mobile menu icon
         }
@@ -116,7 +115,7 @@ export default function NavBar({ current, setCurrent }) {
                     <div className={`transition ease-in-out duration-500 ${font} flex items-center gap-x-1 leading-6`}>
                       <span className={navBarElementsStyle}> {item.name} </span>
                       <ChevronDownIcon
-                        className={`h-5 w-5 flex-none text-white ${isOpen ? 'rotate-180' : ''} transition duration-300" aria-hidden="true" `}
+                        className={`h-5 w-5 flex-none  ${isOpen ? 'rotate-180 text-logo' : 'text-logo-white'}  transition-all duration-300" aria-hidden="true" `}
                       />
 
                     </div>
@@ -182,10 +181,10 @@ export default function NavBar({ current, setCurrent }) {
               // style={underlineStyleC}
               >
                 {current == item.current &&
-                  <div className={`${navBarElementsStyle} bg-white text-black p-3 border-[1px] border-logo`}> {item.name} </div> ||
+                  <div className={`${navBarElementsStyle} font-bold bg-black text-white p-3 border-[2px] border-logo`}> {item.name} </div> ||
 
                   <div
-                    className={`${navBarElementsStyle} bg-tranparent border-[1px] border-logo  group-hover/talk:text-black group-hover/talk:bg-white transition duration-300
+                    className={`${navBarElementsStyle} font-bold bg-tranparent border-[2px] border-logo-white group-hover/talk:border-logo  group-hover/talk:bg-black transition-all duration-300
                      p-3 `}
 
                   > {item.name} </div>
@@ -220,7 +219,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Logo setCurrent={() => setCurrent("home")} />
+            <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"
@@ -233,56 +232,72 @@ export default function NavBar({ current, setCurrent }) {
           {
             //navbar elements
           }
-          <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                {navBarElements.map(item => {
-                  if (item.name == 'Chris\'s Work') {
-                    return <Disclosure as="div" className="focus:outline-none">
-                      {({ open }) => (
-                        <>
-                          <Disclosure.Button className={`flex w-full items-center justify-between rounded-lg focus:outline-none
-                           pr-3.5 ${navBarElementsStyleMobile} ${navBarElementsStyleMobileHover}`}>
-                            {item.name}
-                            <ChevronDownIcon
-                              className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none')}
-                              aria-hidden="true"
-                            />
-                          </Disclosure.Button>
-                          <Disclosure.Panel className="mt-2 space-y-2">
-                            {work.map((item) => (
-                              <Disclosure.Button
-                                key={item.name}
-                                as="Link"
-                                to={item.href}
-                                onClick={() => setMobileMenuOpen(false)}
-                                className={`block rounded-lg ${navBarElementsStyleMobile} ${navBarElementsStyleMobileHover} py-2 pl-6 pr-3 no-underline text-sm`}
-                              >
-                                {item.name}
-                              </Disclosure.Button>
-                            ))}
-                          </Disclosure.Panel>
-                        </>
-                      )}
-                    </Disclosure>
-                  } else {
-                    return <Link
-                      onClick={() => setMobileMenuOpen(false)}
-                      to={item.href}
-                      className={`block rounded-lg ${navBarElementsStyleMobile} ${navBarElementsStyleMobileHover}`}
-                    > {item.name}
-                    </Link>
+          <div className="mt-6 flex flex-col w-full">
+            {navBarElements.map(item => {
+              if (item.name == 'Chris\'s Work') {
+                return <>
+                  <Disclosure as="div" className="focus:outline-none">
+                    {({ open }) => (
+                      <>
+                        <Disclosure.Button className={`flex w-full items-center justify-start gap-4 rounded-lg focus:outline-none
+                           pr-3.5  ${navBarElementsStyleMobile}`}>
+                          {item.name}
+                          <ChevronDownIcon
+                            className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none text-logo')}
+                            aria-hidden="true"
+                          />
+                        </Disclosure.Button>
+                        <Disclosure.Panel className="mt-2 space-y-2">
+                          {work.map((item) => (
+                            <Link
+                              to={item.href}
+                              onClick={() => setMobileMenuOpen(false)}
+                              className={`block rounded-lg ${navBarElementsStyleMobile} py-2 pl-6 pr-3 no-underline hover:text-white text-sm`}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                        </Disclosure.Panel>
+                      </>
+                    )}
+                  </Disclosure>
+                  <div className='w-[80%] mx-3 bg-logo h-[2px]' />
+                </>
+              } else if (item.name == 'Let\'s Talk') {
+                return <Link to={item.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className='group/talk w-fit transition duration-300 my-3 no-underline'
+                // style={underlineStyleC}
+                >
+                  {current == item.current &&
+                    <div className={`${navBarElementsStyleMobile} w-fit font-bold bg-black text-white p-3 border-[2px] border-logo`}> {item.name} </div> ||
+
+                    <div
+                      className={`${navBarElementsStyleMobile} font-bold bg-tranparent border-[2px] border-logo-white group-hover/talk:border-logo  group-hover/talk:bg-black transition-all duration-300
+                           p-3 `}
+
+                    > {item.name} </div>
+
                   }
-                })}
-              </div>
-              <div className="">
+                </Link>
+              } else {
+                return <>
+                  <Link
+                    onClick={() => setMobileMenuOpen(false)}
+                    to={item.href}
+                    className={`block rounded-lg ${navBarElementsStyleMobile} pl-0 hover:text-white`}
+                  > {item.name}
+                  </Link>
+                  <div className='w-[80%] mx-3 bg-logo h-[2px]' />
+                </>
+              }
+            })}
+          </div>
+          {/* <div className="">
                 <Link to='/es/' className="no-underline flex font-semibold items-center justify-start">
                   <span className={`${navBarElementsStyleMobile} font-bold`}>ENG</span>
-                  {/* <img className="h-3 w-auto mx-2" src={flag} alt="" /> */}
                 </Link>
-              </div>
-            </div>
-          </div>
+              </div> */}
         </Dialog.Panel>
       </Dialog>
     </div>

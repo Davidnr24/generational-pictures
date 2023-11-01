@@ -30,7 +30,7 @@ export default function Logos() {
     <div className="bg-white py-10">
       <div className="flex flex-col items-center mb-10">
         <div className='flex flex-col'>
-          <div className="font-zenKaku text-[30px] text-black">
+          <div className="font-zenKaku text-[30px] font-bold text-black">
             <span className='text-logo'>C</span>hris’s Recent Clients:
           </div>
           {/* <div className='bg-logo w-full h-[2px]' /> */}
@@ -39,7 +39,7 @@ export default function Logos() {
       <Slider className='mx-10 bg-white py-10'
         width="250px"
         duration={40}
-        pauseOnHover={true}
+        pauseOnHover={false}
         blurBoderColor={'#fff'}
       >
         {logos.map((logo, index) => {

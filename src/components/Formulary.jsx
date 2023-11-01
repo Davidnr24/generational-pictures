@@ -227,8 +227,8 @@ export default function Formulary() {
               <div className="mt-4 flex flex-row justify-center items-center">
                 <div className='inline-block relative w-[125px] h-[54px]'>
                   <button
-                    className="absolute top-0 left-0 font-zenKaku font-semibold border-[1px] rounded-sm bg-black py-3 px-8 text-center text-base text-white outline-none
-                   hover:border-2 transition duration-1000"
+                    className="absolute top-0 left-0 font-zenKaku font-semibold border-[3px] border-logo rounded-sm hover:bg-logo-black py-3 px-8 text-center text-base hover:text-logo-white outline-none
+                   bg-logo-white text-logo-black transition-all duration-300"
                     type='submit'
                   >
                     Submit

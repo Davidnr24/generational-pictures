@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import VideoComp from '../components/VideoComp';
+import VideoWork from '../components/VideoWork';
 
 export default function ChrisWork() {
 
+    const whiteBackground = 'text-logo [text-shadow:3px_0px_0px_rgba(255,255,255,1),0px_3px_0px_rgba(255,255,255,1),-3px_0px_0px_rgba(255,255,255,1),0px_-3px_0px_rgba(255,255,255,1),3px_3px_0px_rgba(255,255,255,1)]'
+
     return (
-        <div className='flex pt-[200px] bg-black flex-col justify-center items-center min-h-[calc(100vh-304px)]'>
-            <h1 className='font-zenKaku font-extrabold text-[100px] text-white'>
-                <span className='text-logo [text-shadow:3px_0px_0px_rgba(255,255,255,0.8),0px_3px_0px_rgba(255,255,255,0.8),-3px_0px_0px_rgba(255,255,255,0.8),0px_-3px_0px_rgba(255,255,255,0.8),3px_3px_0px_rgba(255,255,255,0.8),-3px_-3px_0px_rgba(255,255,255,0.8)] '>C</span>hris's Work
+        <div className='flex pt-[150px] bg-black flex-col justify-center items-center min-h-[calc(100vh-304px)]'>
+            <h1 className='relative font-zenKaku font-extrabold text-4xl text-white'>
+                {/* <span className={`${whiteBackground}`}>C</span>hris<span className={`${whiteBackground}`}>'</span>s Work */}
+                <span className='text-logo'>C</span>
+                hris
+                <span className='text-logo'>'</span>
+                s Work
             </h1>
-            <div className='grid col-span-3'>
-            </div>
+            <h3 className="text-white font-zenKaku font-extralight mt-2 mb-12 text-lg">May be some text here to point the 3 categories?</h3>
+            <VideoWork hidden={true} />
 
         </div>
     );
