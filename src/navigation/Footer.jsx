@@ -54,7 +54,7 @@ function Footer({ current, setCurrent }) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className='flex flex-col justify-start items-start'>
             <Logo className='-ml-7 -mt-4' width='w-auto' height='h-24' text='ml-[67px] mt-[18px] text-[24px]' setCurrent={() => setCurrent("home")}/>
-            <p className={`text-xs -mt-3 mb-4 ${textColor}`}>
+            <p className={`text-xs -mt-3 mb-2 ${textColor}`}>
               © 2023 Kostianis Productions
             </p>
             <Link className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
@@ -64,11 +64,11 @@ function Footer({ current, setCurrent }) {
             </Link>
             
           </div>
-          <div>
+          <div className='hidden md:inline'>
             <p className={classNameTitles}>
               Company
             </p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm">
+            <nav className="flex flex-col mt-2 space-y-2 text-sm">
               {company.map(item => {
                 return <Link
                   to={item.href}
@@ -77,11 +77,11 @@ function Footer({ current, setCurrent }) {
               })}
             </nav>
           </div>
-          <div>
+          <div className='hidden md:inline'>
             <p className={classNameTitles}>
               Chris's Work
             </p>
-            <nav className="flex flex-col mt-4 space-y-2 text-sm">
+            <nav className="flex flex-col mt-2 space-y-2 text-sm">
               {chrisWork.map(item => {
                 return <Link
                   to={item.href}
@@ -94,7 +94,7 @@ function Footer({ current, setCurrent }) {
             <p className={classNameTitles}>
               Contact
             </p>
-            <div className="flex flex-col mt-4 space-y-2 text-sm">
+            <div className="flex flex-col mt-2 space-y-2 text-sm">
               <span className={classNameText}> {contact.name}</span>
               <span className={classNameText}> {contact.phone}</span>
               <span className={classNameText}> {contact.email}</span>

@@ -4,7 +4,7 @@
 export default function ContactCard(){
 
   return (
-    <div className="py-10 px-4 m-2 rounded-md bg-black grow w-[400px] flex flex-col items-start justify-start text-white font-zenKaku">
+    <div className="py-10 px-4 m-2 rounded-md bg-black grow md:w-[400px] w-[350px] flex flex-col items-start justify-start text-white font-zenKaku">
       <div className="w-full text-[24px] font-semibold">Contact Information </div>
 
       <div className="w-full text-[16px] mt-3 font-normal">Phone Number</div>

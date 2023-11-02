@@ -22,7 +22,7 @@ export default function HeroVideo() {
 
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-gradient-to-r from-black to-black/40">
-					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-20 xl:ml-48'>
+					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-10 md:ml-20 xl:ml-48'>
 						<h1 className="text-logo-white font-bold text-[10vw] xl:text-[4vw] md:text-[4vw] md:max-w-[60vw] h-fit font-zenKaku">
 							<span className='text-logo'>A</span>N EMERGING VIDEO PRODUCTION HOUSE
 						</h1>

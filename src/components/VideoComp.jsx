@@ -31,7 +31,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
 
   return (
     <>
-      <div className="m-4 flex flex-col justify-center gap-3 items-center">
+      <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
         <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
         <div className={`relative ${videoH} ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
@@ -51,6 +51,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
               onPlay={() => console.log("play")}
               onPlaying={() => console.log("playing")}
               autopause={true}
+              playsinline={true}
             />
           </div>
           <div className={`absolute top-0 left-0 z-2 bg-transparent ${videoH} ${videoW} cursor-pointer`}
@@ -69,11 +70,36 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
 
         </div>
       </div>
+      <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
+        <div className={`relative ${videoH} ${videoW}`}
+        // onMouseIn={() => setIsPlaying(true)}
+        // onMouseOut={() => setIsPlaying(false)}
+        // onClick={() => setShowModal(true)}
+        >
+          <div
+            className={`shadow-xl border-y-[10px] border-black ${videoH} ${videoW}`}>
+            <Vimeo
+              className="lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
+              video={url}
+              loop={true}
+              controls={true}
+              responsive={true}
+              onPlay={() => console.log("play")}
+              onPlaying={() => console.log("playing")}
+              autopause={true}
+              playsinline={true}
+            />
+          </div>
+
+
+        </div>
+      </div>
       <ReactModal
         shouldFocusAfterRender={false}
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
-        className='bg-black w-[80%] h-[80%] mx-auto mt-[90px] border-l-[20px] border-logo rounded-md '
+        className='bg-black w-[57%] h-fit mx-auto mt-[90px] border-l-[20px] border-logo rounded-md '
         style={{
           overlay: {
             position: 'fixed',
@@ -82,15 +108,16 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
             right: 0,
             bottom: 0,
             backgroundColor: 'rgba(0,0,0, 0.75)'
+            
           },
         }}
       >
-        <div className="flex flex-row item justify-center my-auto pt-4 pr-4 pl-10 w-full h-full">
+        <div className="flex flex-row item justify-center my-auto py-4 pr-4 pl-10 w-full h-full">
           <div className="flex flex-col items-center justify-center h-full pt-8 gap-2 w-full">
             <h1 className="text-white font-zenKaku mx-auto text-[24px]">{title}</h1>
-            <div className="grow max-w-full max-h-full w-full h-auto">
+            <div className="grow w-full h-auto">
               <Vimeo
-                className='w-full h-full'
+                className=''
                 video={url}
                 responsive={true}
               />
