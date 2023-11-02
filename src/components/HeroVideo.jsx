@@ -18,6 +18,7 @@ export default function HeroVideo() {
 					muted
 					width="100%"
 					height="100%"
+					playsinline={true}
 
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-gradient-to-r from-black to-black/40">
