@@ -107,9 +107,9 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
         }}
       >
         <div className="flex flex-row item justify-center my-auto py-4 pr-4 pl-10 w-full h-full">
-          <div className="flex flex-col items-center justify-center h-full pt-8 gap-2 w-full">
+          <div className="flex flex-col items-center justify-center h-full pt-2 gap-2 w-full">
             <h1 className="text-white font-zenKaku mx-auto text-[24px]">{title}</h1>
-            <div className="grow lg:w-[650px] xl:w-[750px] 2xl:w-[900px] h-auto">
+            <div className="grow lg:w-[530px] xl:w-[750px] 2xl:w-[900px] h-auto">
               <Vimeo
                 className='h-full w-full'
                 video={url}
@@ -119,7 +119,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
 
           </div>
           <div className="w-fit flex flex-row items-start justify-end cursor-pointer">
-            <XMarkIcon className="text-white h-10 w-10" aria-hidden="true" onClick={() => setShowModal(false)} />
+            <XMarkIcon className="text-white h-8 w-8" aria-hidden="true" onClick={() => setShowModal(false)} />
           </div>
         </div>
       </ReactModal>
