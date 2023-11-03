@@ -20,7 +20,7 @@ function App() {
     const currentPath = window.location.pathname;
     console.log(currentPath)
 
-    if (currentPath == '/kostianis-web') return 'home';
+    if (currentPath == '/kostianis-web/' || currentPath == '/kostianis-web') return 'home';
     else if (currentPath == '/kostianis-web/chris-work') return 'chris-work';
     else if (currentPath == '/kostianis-web/about') return 'about';
     else if (currentPath == '/kostianis-web/contact') return 'contact';
@@ -33,7 +33,7 @@ function App() {
   const marginTop = 'mt-[120px]'
 
   const paths = [
-    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/kostianis-web' },
+    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/kostianis-web/' },
     { name: 'Chris Work', element: <ChrisWork className={marginTop} />, path: 'kostianis-web/chris-work' },
     { name: 'About Us', element: <About />, path: 'kostianis-web/about' },
     { name: 'About Us', element: <Privacy />, path: 'kostianis-web/privacy' },

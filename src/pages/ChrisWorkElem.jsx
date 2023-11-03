@@ -109,7 +109,7 @@ export default function ChrisWorkElem({ displayPage }) {
         },
         {
           title: 'Orange Bowl, Father and Son Legacy',
-          url: 'https://vimeo.com/178461801'
+          url: 'https://vimeo.com/178462845'
         },
         {
           title: 'ABC Eyewitness News',

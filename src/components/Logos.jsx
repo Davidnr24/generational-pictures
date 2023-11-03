@@ -9,7 +9,7 @@ import logo7 from '../assets/logos/logo7.png';
 import logo8 from '../assets/logos/logo8.png';
 import logo9 from '../assets/logos/logo9.png';
 import logo10 from '../assets/logos/logo10.png';
-import logo11 from '../assets/logos/logo11.jpg';
+import logo11 from '../assets/logos/logo11.png';
 import logo12 from '../assets/logos/logo12.png';
 import logo13 from '../assets/logos/logo13.png';
 import Slider from 'react-infinite-logo-slider'

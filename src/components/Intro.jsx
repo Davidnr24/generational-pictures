@@ -16,7 +16,7 @@ const columns = [
   {
     title: 'What we do',
     description: <div className={descriptionStyle}>
-      <span> Whether you seek corporate videos, marketing content, creative media, or any form of high-quality visuals to elevate your project bring your ideas to life, Kostianis Productions aims to transform your ideas into compelling visual realities.
+      <span> Whether you seek corporate videos, marketing content, creative media, or high-quality visuals to elevate your project and bring your ideas to life, Kostianis Productions aims to transform your ideas into compelling visual realities.
       </span>
     </div>,
   },

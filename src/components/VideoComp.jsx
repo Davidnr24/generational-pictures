@@ -33,28 +33,25 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
     <>
       <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
         <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
-        <div className={`relative ${videoH} ${videoW}`}
+        <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}
         // onClick={() => setShowModal(true)}
         >
-          <div
-            className={`shadow-xl border-y-[10px] border-black ${videoH} ${videoW}`}>
-            <Vimeo
-              className="w-full h-full"//{`${videoH} ${videoW}`}
-              video={url}
-              loop={true}
-              volume={0}
-              paused={!isPlaying && !isReady}
-              controls={false}
-              responsive={true}
-              onPlay={() => console.log("play")}
-              onPlaying={() => console.log("playing")}
-              autopause={true}
-              playsinline={true}
-            />
-          </div>
-          <div className={`absolute top-0 left-0 z-2 bg-transparent ${videoH} ${videoW} cursor-pointer`}
+          <Vimeo
+            className="shadow-xl w-full h-full"//{`${videoH} ${videoW}`}
+            video={url}
+            loop={true}
+            volume={0}
+            paused={!isPlaying && !isReady}
+            controls={false}
+            responsive={true}
+            onPlay={() => console.log("play")}
+            onPlaying={() => console.log("playing")}
+            autopause={true}
+            playsinline={true}
+          />
+          <div className={`absolute top-0 left-0 z-2 bg-transparent h-full ${videoW} cursor-pointer`}
             onMouseOver={() => {
               console.log("onmouseover")
               setTimeout(() => setIsPlaying(true), 100);
@@ -72,34 +69,31 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
       </div>
       <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
         <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
-        <div className={`relative ${videoH} ${videoW}`}
+        <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}
         // onClick={() => setShowModal(true)}
         >
-          <div
-            className={`shadow-xl border-y-[10px] border-black ${videoH} ${videoW}`}>
-            <Vimeo
-              className="lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
-              video={url}
-              loop={true}
-              controls={true}
-              responsive={true}
-              onPlay={() => console.log("play")}
-              onPlaying={() => console.log("playing")}
-              autopause={true}
-              playsinline={true}
-            />
-          </div>
-
-
+          <Vimeo
+            className="shadow-xl lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
+            video={url}
+            loop={true}
+            controls={true}
+            responsive={true}
+            onPlay={() => console.log("play")}
+            onPlaying={() => console.log("playing")}
+            autopause={true}
+            playsinline={true}
+          />
         </div>
+
+
       </div>
       <ReactModal
         shouldFocusAfterRender={false}
         isOpen={showModal}
         onRequestClose={() => setShowModal(false)}
-        className='bg-black w-[57%] h-fit mx-auto mt-[90px] border-l-[20px] border-logo rounded-md '
+        className='bg-black w-fit h-fit mx-auto mt-[90px] border-l-[20px] border-logo rounded-md '
         style={{
           overlay: {
             position: 'fixed',
@@ -108,16 +102,16 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
             right: 0,
             bottom: 0,
             backgroundColor: 'rgba(0,0,0, 0.75)'
-            
+
           },
         }}
       >
         <div className="flex flex-row item justify-center my-auto py-4 pr-4 pl-10 w-full h-full">
           <div className="flex flex-col items-center justify-center h-full pt-8 gap-2 w-full">
             <h1 className="text-white font-zenKaku mx-auto text-[24px]">{title}</h1>
-            <div className="grow w-full h-auto">
+            <div className="grow lg:w-[650px] xl:w-[750px] 2xl:w-[900px] h-auto">
               <Vimeo
-                className=''
+                className='h-full w-full'
                 video={url}
                 responsive={true}
               />

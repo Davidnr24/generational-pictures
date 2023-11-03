@@ -29,7 +29,7 @@ const underlineStyleC = {
 
 const font = "font-zenKaku"
 const colorUnderline = "bg-logo-white "
-const navBarElementsStyle = "text-lg " + font + " text-logo-white leading-6 no-underline"
+const navBarElementsStyle = "text-lg " + font + " font-bold text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 mx-3 text-base " + font + " text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
 const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all duration-50 bg-logo"
