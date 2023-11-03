@@ -11,7 +11,7 @@ const icons_color = "white"
 
 const classNameIcons = "no-underline text-logo-white hover:text-logo"
 
-const classNameTitles = "font-bold text-logo-white text-xl mb-2"
+const classNameTitles = "font-bold text-logo-white text-xl mb-2 w-fit"
 
 const textColor = "text-logo-white"
 
@@ -41,25 +41,19 @@ function Footer({ current, setCurrent }) {
 
   return (
     <footer className="bg-black bottom-0 font-zenKaku h-fit">
-      <div className="max-w-screen-xl px-4 pt-4 pb-3 mx-auto sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+      <div className="px-22 pt-4 pb-3 mx-auto sm:px-6 lg:px-8">
+        <div className="w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           <div className='flex flex-col justify-start items-start'>
-            <Logo className='-ml-7 -mt-4' width='w-auto' height='h-24' text='ml-[67px] mt-[18px] text-[24px]' setCurrent={() => setCurrent("home")}/>
+            <Logo className='-ml-7 -mt-4' width='w-auto' height='h-24' text='ml-[67px] mt-[18px] text-[24px]' setCurrent={() => setCurrent("home")} />
             <p className={`text-xs -mt-3 mb-2 ${textColor}`}>
               © 2023 Kostianis Productions
             </p>
-            <Link className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
+            <Link className={`no-underline font-bold text-xs ${textColor} hover:text-logo mb-10`}
               to='/kostianis-web/privacy'
               onClick={() => setCurrent('')}>
               Privacy Policy
             </Link>
-            <div className='mt-16 flex flex-row justify-center items-center'>
-              <span className='font-zenKaku text-sm text-white'>Website by</span>
-              <a className='no-underline' href='https://www.navarsolutions.com'>
-                <img src={navarLogo} className='w-20 h-full'/>
-              </a>
-            </div>
-            
+
           </div>
           <div className='hidden md:inline'>
             <p className={classNameTitles}>
@@ -87,25 +81,32 @@ function Footer({ current, setCurrent }) {
               })}
             </nav>
           </div>
-          <div>
+          <div className=''>
             <p className={classNameTitles}>
               Contact
             </p>
-            <div className="flex flex-col mt-2 space-y-1 text-sm">
+            <div className="flex flex-col mt-2 space-y-1 text-sm w-fit">
               <span className={classNameText}> {contact.name}</span>
               <span className={classNameText}> {contact.phone}</span>
               <span className={classNameText}> {contact.email}</span>
-              <div className="flex mt-10 space-x-6">
-              <a className={`${classNameIcons} mt-3 flex flex-row gap-2`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
-                <span className="sr-only"> Linkedin </span>
-                <svg className="w-6 h-6 fill-logo"  viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                </svg>
-                <span> Linkedin</span>
-              </a>
-            </div>
+              <div className="flex mt-10">
+                <a className={`${classNameIcons} mt-3 flex flex-row gap-2`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
+                  <span className="sr-only"> Linkedin </span>
+                  <svg className="w-6 h-6 fill-[#0a66c2] bg-white rounded-md" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                  </svg>
+                  <span> Linkedin</span>
+                </a>
+              </div>
             </div>
           </div>
+        </div>
+
+        <div className='mt-2 flex flex-row justify-center items-center'>
+          <span className='font-zenKaku text-sm text-white'>Website by</span>
+          <a className='no-underline' href='https://www.navarsolutions.com'>
+            <img src={navarLogo} className='w-20 h-full' />
+          </a>
         </div>
 
       </div>
