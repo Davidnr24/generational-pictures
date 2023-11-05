@@ -142,7 +142,7 @@ export default function ChrisWorkElem({ displayPage }) {
   }
 
   return (
-    <div className='font-zenKaku min-h-[calc(100vh-304px)]'>
+    <div className='font-zenKaku min-h-[100vh]'>
       <div className='w-full h-[80px] bg-black' />
       <div className='flex flex-col justify-center items-center w-full gap-4 my-20'>
         {pages.map((elem) => {
