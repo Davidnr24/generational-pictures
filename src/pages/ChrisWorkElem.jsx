@@ -14,32 +14,28 @@ export default function ChrisWorkElem({ displayPage }) {
       subtitle: <h2 className='font-zenKaku text-center'>Chris Kostianis, Director of Photography</h2>,
       videos: [
         {
-          title: 'New York Public Library, Library Lions 2022',
+          title: 'New York Public Library, Library Lions',
           url: 'https://vimeo.com/861398689'
         },
         {
-          title: 'New York Public Library, Library Lions 2022',
+          title: 'New York Public Library, Library Lions',
           url: 'https://vimeo.com/861391896'
+        },
+        {
+          title: 'JT Van Zandt Generation Strong',
+          url: 'https://vimeo.com/861381848'
         },
         {
           title: 'Alzheimer’s Drug Discovery Foundation, Hope is Here',
           url: 'https://vimeo.com/874411040'
         },
         {
-          title: 'Dr. Marla J. Keller, Albert Einstein College of Medicine Women’s Division Honoree',
+          title: 'Dr. Marla J. Keller, Albert Einstein College of Medicine Women’s Division',
           url: 'https://vimeo.com/877577662'
         },
         {
-          title: 'Karen Mandelbaum, Albert Einstein College of Medicine Women’s Division Honoree',
+          title: 'Karen Mandelbaum, Albert Einstein College of Medicine Women’s Division',
           url: 'https://vimeo.com/877614533'
-        },
-        {
-          title: 'JT Van Zandt Generation Strong',
-          url: 'https://vimeo.com/861389930'
-        },
-        {
-          title: 'JT Van Zandt Generation Strong',
-          url: 'https://vimeo.com/861381848'
         },
         {
           title: 'Suzy Guess, UPMC Magee-Womens Hospital',
@@ -92,7 +88,7 @@ export default function ChrisWorkElem({ displayPage }) {
           url: 'https://vimeo.com/861594566'
         },
         {
-          title: 'National Hockey League, GameCenter Live',
+          title: 'NHL, GameCenter Live',
           url: 'https://vimeo.com/179695142'
         },
         {
@@ -123,7 +119,27 @@ export default function ChrisWorkElem({ displayPage }) {
     },
   ]
 
+  const [showModalMobile, setShowModalMobile] = useState(() => {
+    const mapAux = []
+    pages.map((elem) => {
+      if(elem.id == displayPage){
+        elem.videos.map((elem) => {
+          mapAux.push(false)
+        })
+      }
+    })
+    return mapAux
+  })
 
+  const handleSet = (bool,index) => {
+    const aux = []
+    showModalMobile.map((elem,indexAux) => {
+      if(index==indexAux) aux.push(bool)
+      else aux.push(false)
+      return
+    })
+    setShowModalMobile(aux)
+  }
 
   return (
     <div className='font-zenKaku min-h-[calc(100vh-304px)]'>
@@ -135,10 +151,12 @@ export default function ChrisWorkElem({ displayPage }) {
               {elem.title}
               {elem.subtitle}
               <div className='grid lg:grid-cols-3 grid-cols-1 items-end w-full mx-32'>
-                {elem.videos.map(video => {
+                {elem.videos.map((video,index) => {
                   return <VideoComp
                     title={video.title}
-                    url={video.url} />
+                    url={video.url}
+                    showModalMobile={showModalMobile[index]} 
+                    setShowModalMobile={(bool)=>{handleSet(bool,index)}}/>
                 }
                 )}
 

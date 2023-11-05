@@ -52,7 +52,7 @@ export default function VideoWork({setCurrent, hidden=false}) {
 					{!hidden && <div className="text-center pt-20 pb-20">
 						<Link to='/kostianis-web/chris-work' className='group/chris flex flex-col w-fit justify-center items-center no-underline mx-auto'>
 							<div className='font-zenKaku text-4xl text-white font-bold no-underline'> 
-							<span className='text-logo'>C</span>hris's work
+							Chris<span className='text-logo'>'</span>s work<span className='text-logo'>:</span>
 							</div>
 							<div className='w-[30%] mt-2 h-[5px] self-start group-hover/chris:w-full transition-all duration-50 bg-logo'/>
 							

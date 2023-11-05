@@ -6,27 +6,15 @@ import ReactModal from "react-modal";
 
 
 
-export default function VideoComp({ title, url, img_src, preview_src }) {
+export default function VideoComp({ title, url, showModalMobile, setShowModalMobile }) {
 
   const [isPlaying, setIsPlaying] = useState(false)
   const [isReady, setIsReady] = useState(false);
   const [showModal, setShowModal] = useState(false)
 
+
   const videoH = 'xl:h-[245px] h-[245px] lg:h-[189px]'
   const videoW = 'xl:w-[400px] w-[400px] lg:w-[300px]'
-
-  // const videoH = ''
-  // const videoW = 'w-[25vw]'
-
-  const doublecheck = () => {
-    console.log("playing")
-    if (!isPlaying) {
-      setIsReady(false)
-      console.log("isplaying is false")
-    } else
-      console.log("isplaying is true")
-  }
-
 
 
   return (
@@ -39,7 +27,7 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
         // onClick={() => setShowModal(true)}
         >
           <Vimeo
-            className="shadow-xl w-full h-full"//{`${videoH} ${videoW}`}
+            className="shadow-xl w-full h-full"
             video={url}
             loop={true}
             volume={0}
@@ -66,28 +54,6 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
 
 
         </div>
-      </div>
-      <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
-        <div className={`relative h-auto ${videoW}`}
-        // onMouseIn={() => setIsPlaying(true)}
-        // onMouseOut={() => setIsPlaying(false)}
-        // onClick={() => setShowModal(true)}
-        >
-          <Vimeo
-            className="shadow-xl lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
-            video={url}
-            loop={true}
-            controls={true}
-            responsive={true}
-            onPlay={() => console.log("play")}
-            onPlaying={() => console.log("playing")}
-            autopause={true}
-            playsinline={true}
-          />
-        </div>
-
-
       </div>
       <ReactModal
         shouldFocusAfterRender={false}
@@ -123,27 +89,47 @@ export default function VideoComp({ title, url, img_src, preview_src }) {
           </div>
         </div>
       </ReactModal>
-      {/* <Dialog className="absolute top-[114px] left-0 w-screen h-screen overflow-scroll bg-black/80 " open={showModal} onClose={() => setShowModal(false)}>
-        <div className="flex flex-col gap-10 justify-center my-auto pb-12 pt-3 px-12 border-l-[20px] border-logo bg-black w-[80%] h-[80%] rounded-md mx-auto">
-          <div className="w-full flex flex-row items-start justify-end">
-            <XMarkIcon className="text-white h-10 w-10" aria-hidden="true" onClick={() => setShowModal(false)} />
-          </div>
-          <div className="flex flex-col items-center justify-center h-full w-full">
-            <Dialog.Panel className='h-full w-full flex flex-col justify-between gap-10 items-center'>
-              <Dialog.Title className="text-white mx-auto text-[24px]">{title}</Dialog.Title>
-              <ReactPlayer
-                className='grow'
-                controls='true'
-                url={url}
-                width="100%"
-                height="100%"
-              />
 
-            </Dialog.Panel>
+
+      <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
+        <div className={`relative h-auto ${videoW}`}
+        // onMouseIn={() => setIsPlaying(true)}
+        // onMouseOut={() => setIsPlaying(false)}
+        // onClick={() => setShowControls(true)}
+        >
+          <Vimeo
+            className="shadow-xl lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
+            video={url}
+            loop={true}
+            controls={false}
+            responsive={true}
+            onPlay={() => console.log("play")}
+            onPlaying={() => console.log("playing")}
+            autopause={true}
+            playsinline={true}
+          />
+          <div className={`peer absolute top-0 left-0 z-4 bg-transparent h-full ${videoW} cursor-pointer`}
+            onClick={() => setShowModalMobile(true)}
+          />
+          <div className={`absolute top-0 left-0 z-2 ${showModalMobile ? videoW : 'w-0'} h-full cursor-pointer transition-all duration-300`}>
+            <Vimeo
+              className="shadow-xl lg:hidden w-full h-full"//{`${videoH} ${videoW}`}
+              video={url}
+              loop={true}
+              controls={true}
+              responsive={true}
+              paused={!showModalMobile}
+              onPlay={() => console.log("play")}
+              onPlaying={() => console.log("playing")}
+              autopause={true}
+              playsinline={true}
+            />
           </div>
 
         </div>
-      </Dialog> */}
+
+      </div>
     </>
   )
 }

@@ -31,7 +31,7 @@ export default function Logos() {
       <div className="flex flex-col items-center mb-10">
         <div className='flex flex-col'>
           <div className="font-zenKaku text-[30px] font-bold text-black">
-            <span className='text-logo'>C</span>hris’s Recent Clients:
+            Chris<span className='text-logo'>'</span>s Recent Clients<span className='text-logo'>:</span>
           </div>
           {/* <div className='bg-logo w-full h-[2px]' /> */}
         </div>

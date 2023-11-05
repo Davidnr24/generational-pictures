@@ -11,7 +11,7 @@ export default function TitleDomino({ className }) {
     <h1 className={`${className} group`}>
       {'AN EMERGING VIDEO PRODUCTION HOUSE'.split('').map((letter,index) => (
         <span key={index}
-        style={{transitionDelay: (index*20)+"ms"}}
+        style={{transitionDelay: (index*25)+"ms"}}
         className={`text-logo-white transition-all lg:group-hover:text-logo `}>{letter}</span>
       ))}
     </h1>

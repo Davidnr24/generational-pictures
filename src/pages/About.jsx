@@ -4,9 +4,7 @@ import chris_image from '../assets/chris_profile.jpeg'
 function About() {
 
     return (
-        <>
-        <div className='w-full h-[80px] bg-black' />
-        <div className='px-10 lg:px-32 xl:px-48 pb-32 w-screen max-w-screen 2xl:h-[calc(100vh-301px)] h-fit bg-black flex flex-col justify-start items-start min-h-[calc(100vh-304px)] '>
+        <div className='px-10 lg:px-32 pt-[80px] xl:px-48 pb-32 w-screen max-w-screen h-fit bg-black flex flex-col justify-start items-start min-h-[100vh] '>
             <div className='flex flex-col mt-[50px] justify-start items-start gap-3 lg:w-1/2'>
                 <h1 className='font-zenKaku text-white text-4xl w-full font-semibold'>Our Story</h1>
                 <p className='font-zenKaku text-white h-fit w-full'> Kostianis Productions is a recently founded video production company backed by the expertise of founder and Emmy Award Winning Director of Photography,
@@ -26,7 +24,6 @@ function About() {
 
 
         </div>
-        </>
     );
 
 }

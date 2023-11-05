@@ -10,7 +10,7 @@ import Logos from '../components/Logos';
 function Home({setCurrent}) {
 
 	const underlineStyleColor = {
-		background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%)'
+		background: 'linear-gradient(90deg, rgba(192,192,192,1) 14%, rgba(192,192,0,1) 14%, rgba(192,192,0,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%)'
 	}
 
 	const underlineStyleGray = {
@@ -21,7 +21,7 @@ function Home({setCurrent}) {
 		<div className='bg-black h-fit w-screen'>
 			<HeroVideo />
 			{/* <img src={clapboard} className='mx-auto w-full' /> */}
-			<div className='flex flex-row grow w-full h-[20px]'>
+			<div className='flex flex-row justify-between grow w-full h-[20px]'>
 				<div className='h-full w-[33%]' />
 				<div
 					className='h-full w-[66%]'
@@ -29,7 +29,7 @@ function Home({setCurrent}) {
 				/>
 			</div>
 			<Intro />
-			<div className='flex flex-row grow w-full h-[20px]'>
+			<div className='flex flex-row justify-between grow w-full h-[20px]'>
 				<div
 					className='h-full w-[66%]'
 					style={underlineStyleGray}

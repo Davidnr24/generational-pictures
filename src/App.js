@@ -35,12 +35,12 @@ function App() {
   const paths = [
     { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/kostianis-web/' },
     { name: 'Chris Work', element: <ChrisWork className={marginTop} />, path: 'kostianis-web/chris-work' },
-    { name: 'About Us', element: <About />, path: 'kostianis-web/about' },
-    { name: 'About Us', element: <Privacy />, path: 'kostianis-web/privacy' },
-    { name: 'Lets talk', element: <Contact />, path: 'kostianis-web/contact' },
-    { name: 'Marketing', element: <ChrisWorkElem displayPage='marketing' />, path: 'kostianis-web/chris-work/marketing' },
-    { name: 'Storytelling', element: <ChrisWorkElem displayPage='storytelling'/>, path: 'kostianis-web/chris-work/storytelling' },
-    { name: 'Hype Videos', element: <ChrisWorkElem displayPage='hype-videos'/>, path: 'kostianis-web/chris-work/hype-videos' },
+    { name: 'About Us', element: <About className={marginTop} />, path: 'kostianis-web/about' },
+    { name: 'About Us', element: <Privacy className={marginTop}/>, path: 'kostianis-web/privacy' },
+    { name: 'Lets talk', element: <Contact className={marginTop}/>, path: 'kostianis-web/contact' },
+    { name: 'Marketing', element: <ChrisWorkElem className={marginTop} displayPage='marketing' />, path: 'kostianis-web/chris-work/marketing' },
+    { name: 'Storytelling', element: <ChrisWorkElem className={marginTop} displayPage='storytelling'/>, path: 'kostianis-web/chris-work/storytelling' },
+    { name: 'Hype Videos', element: <ChrisWorkElem  className={marginTop} displayPage='hype-videos'/>, path: 'kostianis-web/chris-work/hype-videos' },
 
   ]
 

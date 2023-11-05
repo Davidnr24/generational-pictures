@@ -8,10 +8,10 @@ export default function ContactCard(){
       <div className="w-full text-[24px] font-semibold">Contact Information </div>
 
       <div className="w-full text-[16px] mt-3 font-normal">Phone Number</div>
-      <a className="no-underline w-full text-[14px] mt-1 font-light" href="tel:9177102682"><span className=" text-white decoration-logo underline underline-offset-4">+1 (917) 710-2682</span></a>
+      <a className="no-underline w-full text-[14px] mt-1 font-bold" href="tel:9177102682"><span className=" text-white decoration-logo underline underline-offset-4">+1 (917) 710-2682</span></a>
 
       <div className="w-full text-[16px] mt-3 font-normal">Email</div>
-      <a  href='mailto:contact@kostianisproductions.com' className="no-underline w-full text-[14px] mt-1 font-light"><span className=" text-white decoration-logo underline-offset-4 underline">contact@kostianisproductions.com</span></a>
+      <a  href='mailto:contact@kostianisproductions.com' className="no-underline w-full text-[14px] mt-1 font-bold"><span className=" text-white decoration-logo underline-offset-4 underline">contact@kostianisproductions.com</span></a>
 
       <div className=""></div>
     </div>
