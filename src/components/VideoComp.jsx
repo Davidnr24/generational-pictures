@@ -14,13 +14,13 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
 
 
   const videoH = 'xl:h-[245px] h-[245px] lg:h-[189px]'
-  const videoW = 'xl:w-[400px] w-[400px] lg:w-[300px]'
+  const videoW = 'xl:w-[400px] w-[100vw] md:w-[400px] lg:w-[300px]'
 
 
   return (
     <>
       <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
         <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}
@@ -92,7 +92,7 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
 
 
       <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto max-${videoW}`}>{title}</div>
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
         <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}

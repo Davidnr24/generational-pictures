@@ -5,13 +5,13 @@ import navarLogo from '../assets/navarIconNoBg.png'
 
 const classNameLinks = "no-underline text-logo-white hover:text-logo w-fit"
 
-const classNameText = "no-underline text-logo-white w-fit"
+const classNameText = "no-underline text-logo-white w-full text-clip"
 
 const icons_color = "white"
 
 const classNameIcons = "no-underline text-logo-white hover:text-logo"
 
-const classNameTitles = "font-bold text-logo-white text-xl mb-2 w-fit"
+const classNameTitles = "font-bold text-logo-white text-xl mb-2 w-full"
 
 const textColor = "text-logo-white"
 
@@ -40,7 +40,7 @@ const contact = {
 function Footer({ current, setCurrent }) {
 
   return (
-    <footer className="bg-black bottom-0 font-zenKaku h-fit">
+    <footer className="bg-black bottom-0 font-zenKaku h-fit w-[100vw] overflow-hidden">
       <div className="px-22 pt-4 pb-3 mx-auto sm:px-6 lg:px-8">
         <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           <div className='flex flex-col mt-2 ml-1 justify-start items-start'>
@@ -85,13 +85,13 @@ function Footer({ current, setCurrent }) {
             <p className={classNameTitles}>
               Contact
             </p>
-            <div className="flex flex-col mt-2 space-y-1 text-sm w-fit">
-              <span className={classNameText}> {contact.name}</span>
-              <span className={classNameText}> {contact.phone}</span>
-              <span className={classNameText}> {contact.email}</span>
+            <div className="flex flex-col mt-2 space-y-1 text-[12px] md:text-sm w-full">
+              <div className={classNameText}> {contact.name}</div>
+              <div className={classNameText}> {contact.phone}</div>
+              <div className={classNameText}> {contact.email}</div>
               <div className="flex">
                 <a className={`${classNameIcons} flex flex-row gap-2`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
-                  <span className="sr-only"> Linkedin </span>
+                  <div className="sr-only"> Linkedin </div>
                   <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24" aria-hidden="true">
                     <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                   </svg>

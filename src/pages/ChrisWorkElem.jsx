@@ -92,6 +92,10 @@ export default function ChrisWorkElem({ displayPage }) {
           url: 'https://vimeo.com/179695142'
         },
         {
+          title: 'AGL Credit Management',
+          url: 'https://vimeo.com/878400630'
+        },
+        {
           title: 'Ford, Unsung Extra',
           url: 'https://vimeo.com/170016013'
         },

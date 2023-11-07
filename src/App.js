@@ -46,7 +46,7 @@ function App() {
 
 
   return (
-    <div className='h-full'>
+    <div className='h-full w-[100vw]'>
       <Router className="bg-black">
 
         <Navbar current={current} setCurrent={(current) => setCurrent(current)} />

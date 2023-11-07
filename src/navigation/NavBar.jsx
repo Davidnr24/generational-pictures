@@ -72,7 +72,7 @@ export default function NavBar({ current, setCurrent }) {
 
 
   return (
-    <div className={`${navBarColor} z-10 fixed top-0 w-full max-h-[80px]`}>
+    <header className={`${navBarColor} z-10 fixed top-0 w-[100vw] max-h-[80px]`}>
       <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-auto max-h-[80px] xl:px-44 md:px-[70px] px-6" aria-label="Global">
         {
           //logo
@@ -300,6 +300,6 @@ export default function NavBar({ current, setCurrent }) {
               </div> */}
         </Dialog.Panel>
       </Dialog>
-    </div>
+    </header>
   )
 }

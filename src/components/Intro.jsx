@@ -1,6 +1,6 @@
 import IntroCard from "./IntroCard.jsx";
 
-const descriptionStyle = 'text-lg font-zenKaku text-white font-extralight pt-10'
+const descriptionStyle = 'text-lg font-zenKaku text-white pt-10'
 
 const columns = [
   {
@@ -9,7 +9,7 @@ const columns = [
       className={descriptionStyle}>A
       <span className="font-bold text-logo"> dynamic</span>,
       <span className="font-bold text-logo"> detail-oriented</span>, and
-      <span className="font-bold text-logo"> cross-cultural</span>
+      <span className="font-bold text-logo"> multicultural</span>
       <span> video production company dedicated to filming and producing powerful visual experiences.</span>
     </div>,
   },
