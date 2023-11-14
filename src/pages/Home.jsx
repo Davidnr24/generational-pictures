@@ -30,7 +30,7 @@ function Home({ setCurrent }) {
 			<HeroVideo />
 			{/* <img src={clapboard} className='mx-auto w-full' /> */}
 			{/* <div className='md:min-h-[calc(100vh-150px)] flex flex-col w-full justify-between '> */}
-			<div className=' pl-4 pr-4 md:pl-10 md:pr-10 lg:pl-0 lg:pr-0'>
+			<div className='flex flex-col pl-4 pr-4 md:pl-10 md:pr-10 lg:pl-10 lg:pr-10'>
 
 				<div className='min-h-[calc(100vh)] flex flex-col w-full justify-evenly'>
 					<Intro />
@@ -41,8 +41,15 @@ function Home({ setCurrent }) {
 						<p className='h-fit w-fit lg:text-center px-4 text-white font-zenKaku text-2xl'>Our multicultural identities inform the way we operate: with an above and beyond mindset. <span className='text-logo'>Never settling for ordinary.</span></p>
 					</div>
 
+					<div
+						className='hidden lg:flex min-h-[1px] w-[66%] self-center relative md:mb-0 mb-10'
+						style={underlineStyleColor}
+					>
+						<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
+					</div>
+
 					{/* Mobile */}
-					<div className='lg:hidden flex flex-col md:pb-48 md:py-48 py-48'>
+					<div className='lg:hidden flex flex-col md:pb-48 md:py-48 py-40'>
 						<div
 							className='flex h-[1px] w-[66%] bg-logo self-center'
 						/>
@@ -61,7 +68,12 @@ function Home({ setCurrent }) {
 
 				<VideoWork setCurrent={setCurrent} />
 
-
+				<div
+					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
+					style={underlineStyleGray}
+				>
+					<div className='w-full h-full bg-black/0 top-0 left-0 absolute' />
+				</div>
 
 
 			</div>
