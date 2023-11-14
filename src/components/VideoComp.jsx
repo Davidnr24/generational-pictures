@@ -20,7 +20,7 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
   return (
     <>
       <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
+        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>{title}</div>
         <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}

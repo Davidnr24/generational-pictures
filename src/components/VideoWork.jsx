@@ -49,17 +49,20 @@ export default function VideoWork({ setCurrent, hidden = false }) {
 		<div className="w-full bg-black font-zenKaku overflow-hidden pb-32">
 			<div className="">
 				<div>
-					{!hidden && <div className="text-center pt-0 pb-20 lg:pt-20 lg:pb-20 flex justify-center items-center">
-						<Link to='/kostianis-web/chris-work' className='hidden group/chris lg:flex flex-col w-fit justify-center items-center no-underline px-3'>
+					{!hidden && <div className="text-center pt-0 pb-10 md:pb-20 lg:pt-20 lg:pb-20 flex justify-center items-center">
+
+						<Link to='/kostianis-web/chris-work'
+							className='hidden group/chris lg:flex flex-col w-fit justify-center items-center no-underline px-3'>
 							<div className='font-zenKaku text-4xl text-white font-bold no-underline'>
 								Emmy-Award-Winning Director of Photography
 							</div>
 							<div className='w-[50%] lg:w-[30%] mt-2 h-[5px] lg:self-start group-hover/chris:w-full transition-all duration-50 bg-logo' />
-
 						</Link>
+
+
 						<div className='lg:hidden group/chris flex flex-col w-fit justify-center items-center no-underline px-3'>
-							<div className='font-zenKaku md:text-5xl text-3xl text-white font-bold no-underline'>
-								Emmy-Award-Winning <br/>Director of Photography 
+							<div className='font-zenKaku md:text-5xl text-[28px] text-white font-bold no-underline'>
+								Emmy-Award-Winning <br />Director of Photography
 							</div>
 							{/* <div className='w-full lg:w-[30%] mt-3 h-[5px] lg:self-start group-hover/chris:w-full transition-all duration-50 bg-logo' /> */}
 

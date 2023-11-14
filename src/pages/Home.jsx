@@ -42,7 +42,7 @@ function Home({ setCurrent }) {
 					</div>
 
 					{/* Mobile */}
-					<div className='lg:hidden flex flex-col md:pb-48 md:py-48 pb-32 py-32'>
+					<div className='lg:hidden flex flex-col md:pb-48 md:py-48 py-48'>
 						<div
 							className='flex h-[1px] w-[66%] bg-logo self-center'
 						/>

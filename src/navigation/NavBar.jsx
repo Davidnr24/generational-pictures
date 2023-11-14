@@ -30,7 +30,7 @@ const underlineStyleC = {
 const font = "font-zenKaku"
 const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-lg " + font + " font-bold text-logo-white leading-6 no-underline"
-const navBarElementsStyleMobile = "py-2 mx-3 text-base " + font + " text-logo-white leading-6 no-underline"
+const navBarElementsStyleMobile = "py-2 mx-3 text-base " + font + "font-bold text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
 const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all duration-50 bg-logo"
 
@@ -239,11 +239,11 @@ export default function NavBar({ current, setCurrent }) {
                   <Disclosure as="div" className="focus:outline-none">
                     {({ open }) => (
                       <>
-                        <Disclosure.Button className={`flex w-full items-center justify-start gap-4 rounded-lg focus:outline-none
-                           pr-3.5  ${navBarElementsStyleMobile}`}>
+                        <Disclosure.Button className={`flex w-full items-center justify-start gap-2 rounded-lg focus:outline-none
+                           pr-3  ${navBarElementsStyleMobile}`}>
                           {item.name}
                           <ChevronDownIcon
-                            className={classNames(open ? 'rotate-180' : '', 'h-5 w-5 flex-none text-logo')}
+                            className={classNames(open ? 'rotate-180 text-logo' : 'text-logo-white', 'h-5 w-5 flex-none transition-all duration-300')}
                             aria-hidden="true"
                           />
                         </Disclosure.Button>
@@ -261,7 +261,7 @@ export default function NavBar({ current, setCurrent }) {
                       </>
                     )}
                   </Disclosure>
-                  <div className='w-[80%] mx-3 bg-logo h-[2px]' />
+                  <div className='w-[80%] mx-3 bg-logo h-[1px]' />
                 </>
               } else if (item.name == 'Let\'s Talk') {
                 return <Link to={item.href}
@@ -273,7 +273,7 @@ export default function NavBar({ current, setCurrent }) {
                     <div className={`${navBarElementsStyleMobile} w-fit font-bold bg-black text-white p-3 border-[2px] border-logo`}> {item.name} </div> ||
 
                     <div
-                      className={`${navBarElementsStyleMobile} font-bold bg-tranparent border-[2px] border-logo-white group-hover/talk:border-logo  group-hover/talk:bg-black transition-all duration-300
+                      className={`${navBarElementsStyleMobile} font-bold bg-tranparent border-[2px] border-logo-white
                            p-3 `}
 
                     > {item.name} </div>
@@ -288,7 +288,7 @@ export default function NavBar({ current, setCurrent }) {
                     className={`block rounded-lg ${navBarElementsStyleMobile} pl-0 hover:text-white`}
                   > {item.name}
                   </Link>
-                  <div className='w-[80%] mx-3 bg-logo h-[2px]' />
+                  <div className='w-[80%] mx-3 bg-logo h-[1px]' />
                 </>
               }
             })}

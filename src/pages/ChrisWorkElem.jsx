@@ -46,11 +46,11 @@ export default function ChrisWorkElem({ displayPage }) {
           url: 'https://vimeo.com/170018472'
         },
         {
-          title: 'Eukanaba, Steve Mize “Reveille”',
+          title: 'Eukanaba, Steve Mize “Reveille"',
           url: 'https://vimeo.com/251264604'
         },
         {
-          title: 'Kendall Herr, Royal Canine Feature”',
+          title: 'Kendall Herr, Royal Canine Feature',
           url: 'https://vimeo.com/251264657'
         },
       ]

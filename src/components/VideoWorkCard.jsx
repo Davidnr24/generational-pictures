@@ -28,12 +28,13 @@ export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color,
 					</div>
 				</div>
 			</Link>
+			{/* Mobile */}
 			<Link
 				to={href}
 				className='lg:hidden group/work relative aspect-w-3 aspect-w-4 w-full shadow-xl transition duration-500 overflow-hidden border-[1px] border-white'
 				onClick={() => setCurrent("chris-work")}>
 				<img
-					src={imageC} className="h-full w-full object-cover group-hover/work:scale-110 transition duration-300"
+					src={imageC} className="h-full w-full object-cover"
 				/>
 				<div className={`absolute top-0 left-0 items-start z-2 w-full h-full ${avg_color} flex flex-col justify-end bg-transparent`}>
 					<div className='flex flex-col ml-5 md:ml-10 mb-3 p-3 border-[1px] bg-black border-logo'>

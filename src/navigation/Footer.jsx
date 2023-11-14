@@ -20,7 +20,7 @@ const textColor = "text-logo-white"
 const company = [
 
   { name: 'Home', href: 'kostianis-web/', current: 'home' },
-  { name: 'Chris\'s Work', href: 'kostianis-web/work', current: 'work' },
+  { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'work' },
   { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
   { name: 'Contact', href: 'kostianis-web/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
@@ -30,7 +30,7 @@ const chrisWork = [
 
   { name: 'Marketing', href: 'kostianis-web/chris-work/marketing', current: 'chris-work' },
   { name: 'Hype Videos', href: 'kostianis-web/chris-work/hype-videos', current: 'chris-work' },
-  { name: 'Storytelling', href: 'kostianis-web/chris-work/story-telling', current: 'chris-work' },
+  { name: 'Storytelling', href: 'kostianis-web/chris-work/storytelling', current: 'chris-work' },
 ]
 
 const contact = {
@@ -90,36 +90,25 @@ function Footer({ current, setCurrent }) {
             </p>
             <div className="flex flex-col mt-2 space-y-1 text-[12px] md:text-sm w-full">
               <div className={classNameText}> {contact.name}</div>
-              {/* <a href={`tel:${contact.phone}`} className={`${classNameText} `}><span className='decoration-logo hover:decoration-white underline-offset-4 underline'>{contact.phone}</span></a>
-              <a href={`mailto:${contact.email}`} className={`${classNameText}`}><span className='decoration-logo hover:decoration-white underline-offset-4 underline'>{contact.email}</span></a>
 
-              <div className="flex mt-2">
-                <a className={`${classNameIcons} flex flex-row gap-2`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
-                  <div className="sr-only"> Linkedin </div>
-                  <svg className="w-6 h-6 fill-white" viewBox="0 0 24 24" aria-hidden="true">
-                    <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-                  </svg>
-                  <span> Linkedin</span>
-                </a>
-              </div> */}
               <div className='flex flex-col w-fit'>
                 <div className={`${classNameIcons} flex flex-row gap-4 items-center -ml-1 mt-2`}>
                   <div className='flex flex-col'>
                     <a href={`mailto:${contact.email}`} className=''>
-                      <LuMail className='fill-white w-8 h-8 text-black' />
+                      <LuMail className='fill-white w-6 h-6 text-black hover:fill-logo' />
                     </a>
                     <div className='mt-2 h-[4px] w-full bg-logo' />
                   </div>
 
                   <div className='flex flex-col'>
                     <a href={`tel:${contact.phone}`} className=''>
-                      <BsTelephone className='fill-white w-6 h-6 mx-1 my-1' />
+                      <BsTelephone className='fill-white w-4 h-4 mx-1 my-1 hover:fill-logo' />
                     </a>
                     <div className='mt-2 h-[4px] w-full bg-logo' />
                   </div>
                   <div className='flex flex-col'>
                     <a className={`${classNameIcons} flex flex-row gap-4 items-center`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
-                      <svg className="w-6 h-6 fill-white my-1 mx-1" viewBox="0 0 24 24" aria-hidden="true">
+                      <svg className="fill-white w-4 h-4 my-1 mx-1 hover:fill-logo" viewBox="0 0 24 24" aria-hidden="true">
                         <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
                     </a>
@@ -150,20 +139,20 @@ function Footer({ current, setCurrent }) {
           <div className={`${classNameIcons} flex flex-row gap-4 items-center`}>
             <div className='flex flex-col'>
               <a href={`mailto:${contact.email}`} className=''>
-                <LuMail className='fill-white w-8 h-8 text-black' />
+                <LuMail className='fill-white w-6 h-6 text-black' />
               </a>
               <div className='mt-2 h-[4px] w-full bg-logo' />
             </div>
 
             <div className='flex flex-col'>
               <a href={`tel:${contact.phone}`} className=''>
-                <BsTelephone className='fill-white w-6 h-6 mx-1 my-1' />
+                <BsTelephone className='fill-white w-5 h-5 mx-[2px] my-[2px]' />
               </a>
               <div className='mt-2 h-[4px] w-full bg-logo' />
             </div>
             <div className='flex flex-col'>
               <a className={`${classNameIcons} flex flex-row gap-4 items-center`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
-                <svg className="w-6 h-6 fill-white my-1 mx-1" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="fill-white  w-5 h-5 mx-[2px] my-[2px]" viewBox="0 0 24 24" aria-hidden="true">
                   <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </a>
@@ -185,13 +174,13 @@ function Footer({ current, setCurrent }) {
             © 2023 Kostianis Productions, All Rights Reserved
           </p>
           <div className='flex flex-row gap-1 justify-center items-center'>
-            <a className={`no-underline font-bold text-sm ${textColor} hover:text-logo`}
+            <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
               href='/kostianis-web/privacy'
               onClick={() => setCurrent('')}>
               Privacy Policy -
             </a>
             <div className='flex flex-row justify-center items-center'>
-              <span className='font-zenKaku text-sm text-white'>Website by</span>
+              <span className='font-zenKaku text-xs text-white'>Website by</span>
               <a className='no-underline' href='https://navarsolutions.com'>
                 <img src={navarLogo} className='w-20 h-full' />
               </a>
