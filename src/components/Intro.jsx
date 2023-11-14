@@ -33,7 +33,8 @@ const columns = [
 function Intro() {
 
   return (
-    <div className=" mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 bg-black lg:grid-cols-3 items-start justify-evenly gap-5 py-32">
+    <div className="h-fit mx-auto grid grid-cols-1 2xl:max-w-[2000px] md:grid-cols-1 bg-black lg:grid-cols-3 items-start justify-evenly gap-16 md:gap-28 lg:gap-5 lg:pt-0 pt-20
+    ">
       {columns.map((col) => (
         <IntroCard title={col.title} description={col.description} />
       ))}

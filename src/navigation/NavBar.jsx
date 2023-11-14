@@ -72,8 +72,8 @@ export default function NavBar({ current, setCurrent }) {
 
 
   return (
-    <header className={`${navBarColor} z-10 fixed top-0 w-[100vw] max-h-[80px]`}>
-      <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-auto max-h-[80px] xl:px-44 md:px-[70px] px-6" aria-label="Global">
+    <header className={`${navBarColor} z-10 fixed top-0 w-[100vw] h-[80px] max-h-[80px]`}>
+      <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-full xl:px-44 md:px-[70px] px-6" aria-label="Global">
         {
           //logo
         }

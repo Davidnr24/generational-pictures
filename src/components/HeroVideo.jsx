@@ -25,7 +25,7 @@ export default function HeroVideo() {
 				/>
 				<div className="absolute flex justify-start items-center w-full h-full grow top-0 left-0 bg-gradient-to-r from-black to-black/40">
 					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-10 md:ml-20 xl:ml-48'>
-						<TitleDomino className="text-logo-white font-bold text-[25px] md:text-[35px] lg:text-[45px] xl:text-[60px] h-fit w-3/4 lg:w-1/2 font-zenKaku"/>
+						<TitleDomino className="text-logo-white font-bold text-[30px] md:text-[35px] lg:text-[45px] xl:text-[60px] h-fit w-3/4 lg:w-1/2 font-zenKaku"/>
 						{/* <h2 className='font-zenKaku text-white text-3xl'>Maypx be some text here?</h2> */}
 						<Link to='/kostianis-web/about' className='no-underline lg:text-xl bg-[transparent] text-white w-auto h-auto p-3 font-zenKaku border-[1px] font-bold border-logo-white hover:border-logo  hover:bg-black transition-all duration-300'>
 							Learn More
@@ -39,31 +39,6 @@ export default function HeroVideo() {
 
 
 		</div >
-		// <div
-		// 	style={{
-		// 		backgroundImage: `linear-gradient(rgba(191, 244, 229, 0.25), rgba(0, 0, 0, 0.6)), url(${hero_video})`
-		// 	}}
-		// 	className="flex shadow-2xl 2xl:h-3/5 my-[80px] min-h-[90vh] 2xl:min-h-[70vh] rounded-md w-auto max-w-max mx-auto bg-cover 
-		// 	bg-center bg-no-repeat text-white">
-		// 	<div className="flex h-full w-full justify-start self-end items-end lg:pl-20 md:pl-5 sm:pl-0 pb-10">
-		// 		<div className='flex flex-col justify-center items-center gap-20'>
-		// 			<div
-		// 				// style={{
-		// 				// 	background: `radial-gradient(circle, rgba(0,40,63,1) 30%, rgba(159,174,183,1) 100%)`
-		// 				// }}
-		// 				className="text-center rounded-md p-2">
-		// 				<h1 className="text-7xl text-logo-white font-oxygen font-light mb-4">Software Specialists</h1>
-		// 				<p className="text-2xl text-logo-white font-oxygen">Your business matters</p>
-		// 			</div>
-		// 			<a
-		// 				href='contact'
-		// 				className="w-3/5 block bg-logo-main font-oxygen text-logo-white no-underline font-medium text-center
-		// 					text-xl py-4 rounded-md hover:shadow-lg hover:text-logo-main hover:scale-105 transition duration-300 ease-in-out hover:bg-logo-secLight"
-		// 			>Contact us!
-		// 			</a>
-		// 		</div>
-		// 	</div>
-		// </div>
 	)
 }
 

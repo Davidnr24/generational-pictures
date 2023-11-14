@@ -8,7 +8,7 @@ function IntroCard({title, description}){
 
 
   return (
-    <div className="flex flex-col w-full justify-center text-center font-zenKaku md:px-2 px-4 grow">
+    <div className="flex flex-col w-full justify-center text-center font-zenKaku px-4 grow">
       <div className="text-4xl text-white grow">{title}</div>
       {description}
     </div>

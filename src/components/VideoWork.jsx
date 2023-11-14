@@ -21,45 +21,52 @@ const works = [
 		subtitle: 'Brief description',
 		href: '/kostianis-web/chris-work/marketing',
 		image: marketing_image,
-    avg_color: "bg-[#584f55]/50"
+		avg_color: "bg-[#584f55]/50"
 	},
 	{
 		name: 'Hype Videos',
 		subtitle: 'Brief description',
 		href: '/kostianis-web/chris-work/hype-videos',
 		image: hype_image,
-    avg_color: "bg-[#3f3862]/50"
+		avg_color: "bg-[#3f3862]/50"
 	},
 	{
 		name: 'Storytelling',
 		subtitle: 'Brief description',
 		href: '/kostianis-web/chris-work/storytelling',
 		image: storytelling_image,
-    avg_color: "bg-[#736969]/50"
+		avg_color: "bg-[#736969]/50"
 	},
 ]
 
 
 
 
-export default function VideoWork({setCurrent, hidden=false}) {
+export default function VideoWork({ setCurrent, hidden = false }) {
 
 
 	return (
-		<div className="w-screen bg-black font-zenKaku overflow-hidden pb-32">
-			<div className="mx-auto">
+		<div className="w-full bg-black font-zenKaku overflow-hidden pb-32">
+			<div className="">
 				<div>
-					{!hidden && <div className="text-center pt-20 pb-20">
-						<Link to='/kostianis-web/chris-work' className='group/chris flex flex-col w-fit justify-center items-center no-underline mx-auto'>
-							<div className='font-zenKaku text-4xl text-white font-bold no-underline'> 
-							Chris<span className='text-logo'>'</span>s work<span className='text-logo'>:</span>
+					{!hidden && <div className="text-center pt-0 pb-20 lg:pt-20 lg:pb-20 flex justify-center items-center">
+						<Link to='/kostianis-web/chris-work' className='hidden group/chris lg:flex flex-col w-fit justify-center items-center no-underline px-3'>
+							<div className='font-zenKaku text-4xl text-white font-bold no-underline'>
+								Emmy-Award-Winning Director of Photography
 							</div>
-							<div className='w-[30%] mt-2 h-[5px] self-start group-hover/chris:w-full transition-all duration-50 bg-logo'/>
-							
+							<div className='w-[50%] lg:w-[30%] mt-2 h-[5px] lg:self-start group-hover/chris:w-full transition-all duration-50 bg-logo' />
+
 						</Link>
+						<div className='lg:hidden group/chris flex flex-col w-fit justify-center items-center no-underline px-3'>
+							<div className='font-zenKaku md:text-5xl text-3xl text-white font-bold no-underline'>
+								Emmy-Award-Winning <br/>Director of Photography 
+							</div>
+							{/* <div className='w-full lg:w-[30%] mt-3 h-[5px] lg:self-start group-hover/chris:w-full transition-all duration-50 bg-logo' /> */}
+
+						</div>
 					</div>}
 					<div
-						className="grid z-0 grid-cols-1 md:grid-cols-3 lg:grid-cols-3 justify-evenly gap-3 px-3"
+						className="grid z-0 grid-cols-1 lg:grid-cols-3 justify-evenly gap-10 lg:gap-3"
 					>
 						{works.map((work) => (
 							<VideoWorkCard
@@ -67,7 +74,7 @@ export default function VideoWork({setCurrent, hidden=false}) {
 								subtitle={work.subtitle}
 								imageC={work.image}
 								href={work.href}
-                avg_color={work.avg_color}
+								avg_color={work.avg_color}
 								setCurrent={setCurrent}
 							/>
 						))}
