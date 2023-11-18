@@ -26,10 +26,16 @@ function Home({ setCurrent }) {
 
 
 	return (
-		<div className='bg-black h-fit w-screen '>
+		<div className='bg-black h-fit w-screen flex flex-col'>
 			<HeroVideo />
-			{/* <img src={clapboard} className='mx-auto w-full' /> */}
-			{/* <div className='md:min-h-[calc(100vh-150px)] flex flex-col w-full justify-between '> */}
+
+			<div
+				className='hidden lg:flex min-h-[15px] w-[66%] self-end relative md:mb-0 mb-10'
+				style={underlineStyleColor}
+			>
+				<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
+			</div>
+
 			<div className='flex flex-col pl-4 pr-4 md:pl-10 md:pr-10 lg:pl-10 lg:pr-10'>
 
 				<div className='min-h-[calc(100vh)] flex flex-col w-full justify-evenly'>
@@ -42,8 +48,8 @@ function Home({ setCurrent }) {
 					</div>
 
 					<div
-						className='hidden lg:flex min-h-[1px] w-[66%] self-center relative md:mb-0 mb-10'
-						style={underlineStyleColor}
+						className='hidden lg:flex min-h-[15px] w-[66%] self-start relative -ml-10 md:mb-0 mb-10'
+						style={underlineStyleGray}
 					>
 						<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
 					</div>
@@ -68,12 +74,12 @@ function Home({ setCurrent }) {
 
 				<VideoWork setCurrent={setCurrent} />
 
-				<div
+				{/* <div
 					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
 					style={underlineStyleGray}
 				>
 					<div className='w-full h-full bg-black/0 top-0 left-0 absolute' />
-				</div>
+				</div> */}
 
 
 			</div>

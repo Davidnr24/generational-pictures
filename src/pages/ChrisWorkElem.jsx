@@ -61,6 +61,10 @@ export default function ChrisWorkElem({ displayPage }) {
       subtitle: <h2 className='font-zenKaku text-center'>Chris Kostianis, Director of Photography</h2>,
       videos: [
         {
+          title: 'NYC Football Club \'22',
+          url: 'https://vimeo.com/885844938'
+        },
+        {
           title: 'New York Islanders, Media Day (BTS)',
           url: 'https://vimeo.com/861674202'
         },

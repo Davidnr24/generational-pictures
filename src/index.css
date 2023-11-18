@@ -1,5 +1,13 @@
-@tailwind base;
+@tailwind base; /* Preflight will be injected here */
+
+@layer base {
+  a {
+    @apply no-underline;
+  }
+}
+
 @tailwind components;
+
 @tailwind utilities;
 
 * {

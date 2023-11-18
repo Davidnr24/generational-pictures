@@ -47,7 +47,7 @@ export default function Logos() {
   }, []); // Empty dependency array means this effect runs once on mount
 
   return (
-    <div className="bg-white pt-5 pb-2 lg:pt-10 lg:pb-10">
+    <div className="flex flex-col bg-white pt-5 pb-[4px] lg:pt-10 lg:pb-20">
       <div className="flex flex-col items-center mb-10">
         <div className='flex flex-col'>
           <div className="font-zenKaku text-[30px] font-bold text-black">

@@ -20,27 +20,27 @@ function App() {
     const currentPath = window.location.pathname;
     console.log(currentPath)
 
-    if (currentPath == '/kostianis-web/' || currentPath == '/kostianis-web') return 'home';
-    else if (currentPath == '/kostianis-web/chris-work') return 'chris-work';
-    else if (currentPath == '/kostianis-web/about') return 'about';
-    else if (currentPath == '/kostianis-web/contact') return 'contact';
-    else if (currentPath == '/kostianis-web/chris-work/marketing') return 'chris-work';
-    else if (currentPath == '/kostianis-web/chris-work/hype-videos') return 'chris-work';
-    else if (currentPath == '/kostianis-web/chris-work/storytelling') return 'chris-work';
+    if (currentPath == '/' || currentPath == '') return 'home';
+    else if (currentPath == '/chris-work') return 'chris-work';
+    else if (currentPath == '/about') return 'about';
+    else if (currentPath == '/contact') return 'contact';
+    else if (currentPath == '/chris-work/marketing') return 'chris-work';
+    else if (currentPath == '/chris-work/hype-videos') return 'chris-work';
+    else if (currentPath == '/chris-work/storytelling') return 'chris-work';
     else return ""
   });
 
   const marginTop = 'mt-[120px]'
 
   const paths = [
-    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/kostianis-web/' },
-    { name: 'Chris Work', element: <ChrisWork className={marginTop} />, path: 'kostianis-web/chris-work' },
-    { name: 'About Us', element: <About className={marginTop} />, path: 'kostianis-web/about' },
-    { name: 'About Us', element: <Privacy className={marginTop}/>, path: 'kostianis-web/privacy' },
-    { name: 'Lets talk', element: <Contact className={marginTop}/>, path: 'kostianis-web/contact' },
-    { name: 'Marketing', element: <ChrisWorkElem className={marginTop} displayPage='marketing' />, path: 'kostianis-web/chris-work/marketing' },
-    { name: 'Storytelling', element: <ChrisWorkElem className={marginTop} displayPage='storytelling'/>, path: 'kostianis-web/chris-work/storytelling' },
-    { name: 'Hype Videos', element: <ChrisWorkElem  className={marginTop} displayPage='hype-videos'/>, path: 'kostianis-web/chris-work/hype-videos' },
+    { name: 'Home', element: <Home className={marginTop} setCurrent={setCurrent} />, path: '/' },
+    { name: 'Chris Work', element: <ChrisWork className={marginTop} />, path: '/chris-work' },
+    { name: 'About Us', element: <About className={marginTop} />, path: '/about' },
+    { name: 'About Us', element: <Privacy className={marginTop}/>, path: '/privacy' },
+    { name: 'Lets talk', element: <Contact className={marginTop}/>, path: '/contact' },
+    { name: 'Marketing', element: <ChrisWorkElem className={marginTop} displayPage='marketing' />, path: '/chris-work/marketing' },
+    { name: 'Storytelling', element: <ChrisWorkElem className={marginTop} displayPage='storytelling'/>, path: '/chris-work/storytelling' },
+    { name: 'Hype Videos', element: <ChrisWorkElem  className={marginTop} displayPage='hype-videos'/>, path: '/chris-work/hype-videos' },
 
   ]
 

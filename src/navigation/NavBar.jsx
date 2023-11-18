@@ -18,9 +18,10 @@ import Logo from '../icons/Logo';
 
 const work = [
 
-  { name: 'Marketing', description: '', href: '/kostianis-web/chris-work/marketing', icon: PresentationChartLineIcon },
-  { name: 'Hype Videos', description: '', href: '/kostianis-web/chris-work/hype-videos', icon: SparklesIcon },
-  { name: 'Storytelling', description: '', href: 'kostianis-web/chris-work/storytelling', icon: BookOpenIcon },
+  { name: 'Marketing', description: '', href: '/chris-work/marketing', icon: PresentationChartLineIcon },
+  { name: 'Storytelling', description: '', href: '/chris-work/storytelling', icon: BookOpenIcon },
+  { name: 'Hype Videos', description: '', href: '/chris-work/hype-videos', icon: SparklesIcon },
+  
 ]
 
 const underlineStyleC = {
@@ -36,10 +37,10 @@ const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all d
 
 const navBarElements = [
 
-  { name: 'Home', href: 'kostianis-web', current: 'home' },
-  { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'chris-work' },
-  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
-  { name: 'Let\'s Talk', href: 'kostianis-web/contact', current: 'contact' },
+  { name: 'Home', href: '/', current: 'home' },
+  { name: 'Chris\'s Work', href: '/chris-work', current: 'chris-work' },
+  { name: 'About Us', href: '/about', current: 'about' },
+  { name: 'Let\'s Talk', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [
@@ -107,7 +108,7 @@ export default function NavBar({ current, setCurrent }) {
                   onMouseEnter={() => setisOpen(true)}
                   onMouseLeave={() => setisOpen(false)}
                 >
-                  <Link
+                  <a
                     to={item.href}
                     className='no-underline'
                     onClick={() => setCurrent("chris-work")}
@@ -124,7 +125,7 @@ export default function NavBar({ current, setCurrent }) {
                       /> ||
                       <div className={underlineStyle}
                       />}
-                  </Link>
+                  </a>
                 </Popover.Button>
 
                 <Transition
@@ -132,10 +133,10 @@ export default function NavBar({ current, setCurrent }) {
                   show={isOpen}
                   enter="transition ease-out duration-200"
                   enterFrom="opacity-0 translate-y-1"
-                  enterTo="opacity-100 translate-y-0"
+                  enterhref="opacity-100 translate-y-0"
                   leave="transition ease-in duration-150"
                   leaveFrom="opacity-100 translate-y-0"
-                  leaveTo="opacity-0 translate-y-1"
+                  leavehref="opacity-0 translate-y-1"
                 >
                   <Popover.Panel
                     static
@@ -155,14 +156,14 @@ export default function NavBar({ current, setCurrent }) {
                               <item.icon className="h-6 w-6 text-logo-white group-hover/pop:text-logo" aria-hidden="true" />
                             </div>
                             <div className="flex-auto">
-                              <Link
-                                to={item.href}
+                              <a
+                                href={item.href}
                                 className={`block ${font} no-underline text-logo-white hover:text-black`}
                                 onClick={() => setCurrent("chris-work")}
                               >
                                 {item.name}
                                 <span className="absolute inset-0" />
-                              </Link>
+                              </a>
                             </div>
                           </div>
                         ))}
@@ -175,7 +176,7 @@ export default function NavBar({ current, setCurrent }) {
 
             }
             else if (item.name == 'Let\'s Talk') {
-              return <Link to={item.href}
+              return <a href={item.href}
                 onClick={() => setCurrent(item.current)}
                 className='group/talk transition duration-300 my-4 no-underline'
               // style={underlineStyleC}
@@ -190,9 +191,9 @@ export default function NavBar({ current, setCurrent }) {
                   > {item.name} </div>
 
                 }
-              </Link>
+              </a>
             } else {
-              return <Link to={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
+              return <a href={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
                 <div className={`pt-3 ${navBarElementsStyle}`}> {item.name} </div>
                 {current == item.current &&
                   <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
@@ -201,7 +202,7 @@ export default function NavBar({ current, setCurrent }) {
                   <div className={underlineStyle}
                   // style={underlineStyleC} 
                   />}
-              </Link>
+              </a>
             }
           }
           )}
@@ -249,13 +250,13 @@ export default function NavBar({ current, setCurrent }) {
                         </Disclosure.Button>
                         <Disclosure.Panel className="mt-2 space-y-2">
                           {work.map((item) => (
-                            <Link
-                              to={item.href}
+                            <a
+                              href={item.href}
                               onClick={() => setMobileMenuOpen(false)}
                               className={`block rounded-lg ${navBarElementsStyleMobile} py-2 pl-6 pr-3 no-underline hover:text-white text-sm`}
                             >
                               {item.name}
-                            </Link>
+                            </a>
                           ))}
                         </Disclosure.Panel>
                       </>
@@ -264,7 +265,7 @@ export default function NavBar({ current, setCurrent }) {
                   <div className='w-[80%] mx-3 bg-logo h-[1px]' />
                 </>
               } else if (item.name == 'Let\'s Talk') {
-                return <Link to={item.href}
+                return <a href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className='group/talk w-fit transition duration-300 my-3 no-underline'
                 // style={underlineStyleC}
@@ -279,24 +280,24 @@ export default function NavBar({ current, setCurrent }) {
                     > {item.name} </div>
 
                   }
-                </Link>
+                </a>
               } else {
                 return <>
-                  <Link
+                  <a
                     onClick={() => setMobileMenuOpen(false)}
-                    to={item.href}
+                    href={item.href}
                     className={`block rounded-lg ${navBarElementsStyleMobile} pl-0 hover:text-white`}
                   > {item.name}
-                  </Link>
+                  </a>
                   <div className='w-[80%] mx-3 bg-logo h-[1px]' />
                 </>
               }
             })}
           </div>
           {/* <div className="">
-                <Link to='/es/' className="no-underline flex font-semibold items-center justify-start">
+                <a href='/es/' className="no-underline flex font-semibold items-center justify-start">
                   <span className={`${navBarElementsStyleMobile} font-bold`}>ENG</span>
-                </Link>
+                </a>
               </div> */}
         </Dialog.Panel>
       </Dialog>

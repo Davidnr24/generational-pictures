@@ -20,11 +20,14 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
   return (
     <>
       <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>{title}</div>
+        <div className="flex flex-col">
+          <div className={`font-zenKaku font-italic text-lg text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>{title}</div>
+          {title == 'New York Mets, Amazin\' Call Center' &&
+            <div className={`font-zenKaku italic text-sm text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>(Aired during the 2023 Superbowl Playoffs)</div>
+          }
+        </div>
+
         <div className={`relative h-auto ${videoW}`}
-        // onMouseIn={() => setIsPlaying(true)}
-        // onMouseOut={() => setIsPlaying(false)}
-        // onClick={() => setShowModal(true)}
         >
           <Vimeo
             className="shadow-xl w-full h-full"
@@ -92,7 +95,12 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
 
 
       <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
-        <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
+        <div className="flex flex-col">
+          <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
+          {title == 'New York Mets, Amazin\' Call Center' &&
+            <div className={`font-zenKaku italic text-sm text-center text-black mx-auto w-full`}>(Aired during the 2023 Superbowl Playoffs)</div>
+          }
+        </div>
         <div className={`relative h-auto ${videoW}`}
         // onMouseIn={() => setIsPlaying(true)}
         // onMouseOut={() => setIsPlaying(false)}

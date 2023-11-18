@@ -14,8 +14,8 @@ export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color,
 
 	return (
 		<>
-			<Link
-				to={href}
+			<a
+				href={href}
 				className='lg:flex hidden group/work relative aspect-w-3 aspect-w-4 w-full shadow-xl transition duration-500 overflow-hidden border-[1px] border-white'
 				onClick={() => setCurrent("chris-work")}>
 				<img
@@ -27,10 +27,10 @@ export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color,
 						<div className='text-logo-white text-2xl'>{name}</div>
 					</div>
 				</div>
-			</Link>
+			</a>
 			{/* Mobile */}
-			<Link
-				to={href}
+			<a
+				href={href}
 				className='lg:hidden group/work relative aspect-w-3 aspect-w-4 w-full shadow-xl transition duration-500 overflow-hidden border-[1px] border-white'
 				onClick={() => setCurrent("chris-work")}>
 				<img
@@ -41,7 +41,7 @@ export default function VideoWorkCard({ name, subtitle, imageC, href, avg_color,
 						<div className='text-logo-white text-xl md:text-3xl'>{name}</div>
 					</div>
 				</div>
-			</Link>
+			</a>
 		</>
 
 
