@@ -19,18 +19,18 @@ const textColor = "text-logo-white"
 
 const company = [
 
-  { name: 'Home', href: 'kostianis-web/', current: 'home' },
-  { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'work' },
-  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
-  { name: 'Contact', href: 'kostianis-web/contact', current: 'contact' },
+  { name: 'Home', href: '/', current: 'home' },
+  { name: 'Chris\'s Work', href: '/chris-work', current: 'work' },
+  { name: 'About Us', href: '/about', current: 'about' },
+  { name: 'Contact', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 
 const chrisWork = [
 
-  { name: 'Marketing', href: 'kostianis-web/chris-work/marketing', current: 'chris-work' },
-  { name: 'Hype Videos', href: 'kostianis-web/chris-work/hype-videos', current: 'chris-work' },
-  { name: 'Storytelling', href: 'kostianis-web/chris-work/storytelling', current: 'chris-work' },
+  { name: 'Marketing', href: '/chris-work/marketing', current: 'chris-work' },
+  { name: 'Hype Videos', href: '/chris-work/hype-videos', current: 'chris-work' },
+  { name: 'Storytelling', href: '/chris-work/storytelling', current: 'chris-work' },
 ]
 
 const contact = {
@@ -51,7 +51,7 @@ function Footer({ current, setCurrent }) {
               © 2023 Kostianis Productions
             </p>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo mb-10`}
-              href='/kostianis-web/privacy'
+              href='/privacy'
               onClick={() => setCurrent('')}>
               Privacy Policy
             </a>
@@ -175,7 +175,7 @@ function Footer({ current, setCurrent }) {
           </p>
           <div className='flex flex-row gap-1 justify-center items-center'>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
-              href='/kostianis-web/privacy'
+              href='/privacy'
               onClick={() => setCurrent('')}>
               Privacy Policy -
             </a>

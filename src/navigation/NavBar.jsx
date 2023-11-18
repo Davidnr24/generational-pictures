@@ -18,9 +18,9 @@ import Logo from '../icons/Logo';
 
 const work = [
 
-  { name: 'Marketing', description: '', href: '/kostianis-web/chris-work/marketing', icon: PresentationChartLineIcon },
-  { name: 'Hype Videos', description: '', href: '/kostianis-web/chris-work/hype-videos', icon: SparklesIcon },
-  { name: 'Storytelling', description: '', href: 'kostianis-web/chris-work/storytelling', icon: BookOpenIcon },
+  { name: 'Marketing', description: '', href: '/chris-work/marketing', icon: PresentationChartLineIcon },
+  { name: 'Hype Videos', description: '', href: '/chris-work/hype-videos', icon: SparklesIcon },
+  { name: 'Storytelling', description: '', href: '/chris-work/storytelling', icon: BookOpenIcon },
 ]
 
 const underlineStyleC = {
@@ -36,10 +36,10 @@ const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all d
 
 const navBarElements = [
 
-  { name: 'Home', href: 'kostianis-web', current: 'home' },
-  { name: 'Chris\'s Work', href: 'kostianis-web/chris-work', current: 'chris-work' },
-  { name: 'About Us', href: 'kostianis-web/about', current: 'about' },
-  { name: 'Let\'s Talk', href: 'kostianis-web/contact', current: 'contact' },
+  { name: 'Home', href: '', current: 'home' },
+  { name: 'Chris\'s Work', href: '/chris-work', current: 'chris-work' },
+  { name: 'About Us', href: '/about', current: 'about' },
+  { name: 'Let\'s Talk', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
 const callsToAction = [

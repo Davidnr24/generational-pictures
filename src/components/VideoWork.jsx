@@ -19,21 +19,21 @@ const works = [
 	{
 		name: 'Marketing',
 		subtitle: 'Brief description',
-		href: '/kostianis-web/chris-work/marketing',
+		href: '/chris-work/marketing',
 		image: marketing_image,
 		avg_color: "bg-[#584f55]/50"
 	},
 	{
 		name: 'Hype Videos',
 		subtitle: 'Brief description',
-		href: '/kostianis-web/chris-work/hype-videos',
+		href: '/chris-work/hype-videos',
 		image: hype_image,
 		avg_color: "bg-[#3f3862]/50"
 	},
 	{
 		name: 'Storytelling',
 		subtitle: 'Brief description',
-		href: '/kostianis-web/chris-work/storytelling',
+		href: '/chris-work/storytelling',
 		image: storytelling_image,
 		avg_color: "bg-[#736969]/50"
 	},
@@ -51,7 +51,7 @@ export default function VideoWork({ setCurrent, hidden = false }) {
 				<div>
 					{!hidden && <div className="text-center pt-0 pb-10 md:pb-20 lg:pt-20 lg:pb-20 flex justify-center items-center">
 
-						<Link to='/kostianis-web/chris-work'
+						<Link to='/chris-work'
 							className='hidden group/chris lg:flex flex-col w-fit justify-center items-center no-underline px-3'>
 							<div className='font-zenKaku text-4xl text-white font-bold no-underline'>
 								Emmy-Award-Winning Director of Photography
