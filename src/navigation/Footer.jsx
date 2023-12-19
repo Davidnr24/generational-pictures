@@ -91,28 +91,33 @@ function Footer({ current, setCurrent }) {
             <div className="flex flex-col mt-2 space-y-1 text-[12px] md:text-sm w-full">
               <div className={classNameText}> {contact.name}</div>
 
-              <div className='flex flex-col w-fit'>
-                <div className={`${classNameIcons} flex flex-row gap-4 items-center -ml-1 mt-2`}>
-                  <div className='flex flex-col'>
-                    <a href={`mailto:${contact.email}`} className=''>
-                      <LuMail className='fill-white w-6 h-6 text-black hover:fill-logo' />
+              <div className='flex flex-col  w-fit'>
+                <div className={`${classNameIcons} flex flex-col space-y-1 items-start`}>
+
+                  <div className='flex flex-row flex-grow gap-2 items-center'>
+                    {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
+                    <a href={`mailto:${contact.email}`} className='no-underline'>
+                      {/* <LuMail className='fill-white w-6 h-6 text-black hover:fill-logo' /> */}
+                      <div className='hover:underline hover:decoration-logo text-logo-white '>{contact.email}</div>
                     </a>
-                    <div className='mt-2 h-[4px] w-full bg-logo' />
+
                   </div>
 
-                  <div className='flex flex-col'>
-                    <a href={`tel:${contact.phone}`} className=''>
-                      <BsTelephone className='fill-white w-4 h-4 mx-1 my-1 hover:fill-logo' />
+                  <div className='flex flex-row flex-grow gap-2 items-center'>
+                    {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
+                    <a href={`tel:${contact.phone}`} className='no-underline'>
+                      {/* <BsTelephone className='fill-white w-4 h-4 mx-1 my-1 hover:fill-logo' /> */}
+                      <div className='hover:underline hover:decoration-logo text-logo-white'>{contact.phone}</div>
                     </a>
-                    <div className='mt-2 h-[4px] w-full bg-logo' />
                   </div>
-                  <div className='flex flex-col'>
+                  <div className='flex flex-row flex-grow gap-2 items-center'>
+                    {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
                     <a className={`${classNameIcons} flex flex-row gap-4 items-center`} href='https://www.linkedin.com/company/kostianis-productions/' rel="noreferrer">
                       <svg className="fill-white w-4 h-4 my-1 mx-1 hover:fill-logo" viewBox="0 0 24 24" aria-hidden="true">
                         <path fillRule='evenodd' clipRule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                       </svg>
                     </a>
-                    <div className='mt-2 h-[4px] w-full bg-logo' />
+
                   </div>
 
                 </div>

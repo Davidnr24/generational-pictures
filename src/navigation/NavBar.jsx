@@ -108,7 +108,7 @@ export default function NavBar({ current, setCurrent }) {
                   onMouseEnter={() => setisOpen(true)}
                   onMouseLeave={() => setisOpen(false)}
                 >
-                  <a
+                  <Link
                     to={item.href}
                     className='no-underline'
                     onClick={() => setCurrent("chris-work")}
@@ -125,7 +125,7 @@ export default function NavBar({ current, setCurrent }) {
                       /> ||
                       <div className={underlineStyle}
                       />}
-                  </a>
+                  </Link>
                 </Popover.Button>
 
                 <Transition
