@@ -21,7 +21,7 @@ function About() {
             bgSize: "[background-size:100%]"
         },
         {
-            name: 'Felicita',
+            name: 'Felícita',
             ps: [
                 'Felícita Kostianis, a proud Puerto Rican and Greek woman, is a recent Boston College graduate and a driven entrepreneur. Motivated by her empathy, curiosity, and passion for creating \
                 positive change in the world, she joined forces with her father to build a video production company aimed at addressing diversity challenges in the industry. She is dedicated to creating \
