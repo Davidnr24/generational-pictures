@@ -38,7 +38,7 @@ const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all d
 const navBarElements = [
 
   { name: 'Home', href: '/', current: 'home' },
-  { name: 'Chris\'s Work', href: '/chris-work', current: 'chris-work' },
+  { name: 'What we can do', href: '/chris-work', current: 'chris-work' },
   { name: 'About Us', href: '/about', current: 'about' },
   { name: 'Let\'s Talk', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
@@ -100,7 +100,7 @@ export default function NavBar({ current, setCurrent }) {
             //navBar elements
           }
           {navBarElements.map(item => {
-            if (item.name == 'Chris\'s Work') {
+            if (item.name == 'What we can do') {
               return <Popover className="relative group" open={isOpen}>
 
                 <Popover.Button
@@ -182,13 +182,16 @@ export default function NavBar({ current, setCurrent }) {
               // style={underlineStyleC}
               >
                 {current == item.current &&
-                  <div className={`${navBarElementsStyle} font-bold bg-black text-white p-3 border-[2px] border-logo`}> {item.name} </div> ||
-
                   <div
-                    className={`${navBarElementsStyle} font-bold bg-tranparent border-[2px] border-logo-white group-hover/talk:border-logo  group-hover/talk:bg-black transition-all duration-300
+                    className={`${navBarElementsStyle} font-bold bg-tranparent border-[2px] border-logo-white 
                      p-3 `}
 
-                  > {item.name} </div>
+                  > {item.name} </div> ||
+
+                  <div className={`${navBarElementsStyle} font-bold bg-logo-black text-logo-white p-3 border-[2px] border-logo 
+                  group-hover/talk:border-white transition-all duration-300
+                  `}> {item.name} </div>
+
 
                 }
               </a>
@@ -235,7 +238,7 @@ export default function NavBar({ current, setCurrent }) {
           }
           <div className="mt-6 flex flex-col w-full">
             {navBarElements.map(item => {
-              if (item.name == 'Chris\'s Work') {
+              if (item.name == 'What we can do') {
                 return <>
                   <Disclosure as="div" className="focus:outline-none">
                     {({ open }) => (

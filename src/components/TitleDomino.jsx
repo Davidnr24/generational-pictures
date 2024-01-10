@@ -9,13 +9,13 @@ export default function TitleDomino({ className }) {
 
   return (
     <h1 className={`${className} group`}>
-      {'AN EMERGING VIDEO'.split('').map((letter, index) => (
+      {'BRINGING YOUR IDEAS'.split('').map((letter, index) => (
         <span key={index}
           style={{ transitionDelay: (index * 25) + "ms" }}
           className={`text-logo-white transition-all lg:group-hover:text-logo `}>{letter}</span>
       ))}
       <br/>
-      {'PRODUCTION HOUSE'.split('').map((letter, index) => (
+      {'TO LIFE, TOGETHER.'.split('').map((letter, index) => (
         <span key={index}
           style={{ transitionDelay: (index * 25 + 17*25) + "ms" }}
           className={`text-logo-white transition-all lg:group-hover:text-logo `}>{letter}</span>

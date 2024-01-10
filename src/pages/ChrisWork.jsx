@@ -12,12 +12,12 @@ export default function ChrisWork() {
                 <h1 className='relative font-zenKaku font-extrabold text-4xl text-white'>
                     {/* <span className={`${whiteBackground}`}>C</span>hris<span className={`${whiteBackground}`}>'</span>s Work */}
 
-                    Chris's Work
+                    What we can do
                 </h1>
                 <div className='w-full h-[5px] bg-logo'/>
             </div>
 
-            <h3 className="text-white font-zenKaku font-extralight mt-5 mb-12 text-2xl">Emmy-Award-Winning Director of Photography</h3>
+            <h3 className="text-white font-zenKaku font-extralight mt-5 mb-12 text-2xl">Co-founder & Emmy-Award-winning Director of Photography, Chris Kostianis</h3>
             <VideoWork hidden={true} />
 
         </div>

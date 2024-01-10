@@ -27,7 +27,7 @@ export default function HeroVideo() {
 					<div className='flex flex-col justify-center items-start gap-0 lg:gap-20 ml-10 md:ml-20 xl:ml-48'>
 						<TitleDomino className="text-logo-white font-bold text-[30px] md:text-[35px] lg:text-[45px] xl:text-[60px] h-fit w-full font-zenKaku"/>
 						{/* <h2 className='font-zenKaku text-white text-3xl'>Maypx be some text here?</h2> */}
-						<a href='/about' className='no-underline lg:text-xl bg-[transparent] text-white w-auto h-auto p-3 font-zenKaku border-[1px] font-bold border-logo lg:border-logo-white lg:hover:border-logo  lg:hover:bg-black transition-all duration-300'>
+						<a href='/chris-work' className='no-underline lg:text-xl bg-[transparent] text-white w-auto h-auto p-3 font-zenKaku border-[1px] font-bold border-logo lg:border-logo-white lg:hover:border-logo  lg:hover:bg-black transition-all duration-300'>
 							Learn More
 						</a>
 					</div>
