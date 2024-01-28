@@ -10,13 +10,13 @@ import { Link } from 'react-router-dom';
 import storytelling_image from '../assets/storytelling.png';
 
 
-export default function VideoWorkCard({ name, imageC, href, avg_color, setCurrent }) {
+export default function VideoWorkCard({ name, imageC, href, avg_color, setCurrent, width="w-1/3" }) {
 
 	return (
 		<>
 			<a
 				href={href}
-				className='lg:flex hidden group/work relative aspect-w-3 aspect-w-4 w-1/3 shadow-xl transition duration-500 overflow-hidden border-[1px] border-white'
+				className={`lg:flex hidden group/work relative aspect-w-3 aspect-w-4 ${width} shadow-xl transition duration-500 overflow-hidden border-[1px] border-white`}
 				onClick={() => setCurrent("chris-work")}>
 				<img
 					src={imageC} className="h-full w-full object-cover group-hover/work:scale-110 transition duration-300"

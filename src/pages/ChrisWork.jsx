@@ -18,7 +18,7 @@ export default function ChrisWork() {
             </div>
 
             <h3 className="text-white font-zenKaku font-extralight mt-5 mb-12 text-2xl">Co-founder & Emmy-Award-winning Director of Photography, Chris Kostianis</h3>
-            <VideoWork hidden={true} />
+            <VideoWork hidden={true} width={"w-full"}/>
 
         </div>
     );

@@ -42,7 +42,7 @@ const works = [
 
 
 
-export default function VideoWork({ setCurrent, hidden = false }) {
+export default function VideoWork({ setCurrent, hidden = false, width }) {
 
 
 	return (
@@ -79,6 +79,7 @@ export default function VideoWork({ setCurrent, hidden = false }) {
 								href={work.href}
 								avg_color={work.avg_color}
 								setCurrent={setCurrent}
+								width={width}
 							/>
 						))}
 					</div>
