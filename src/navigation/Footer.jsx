@@ -3,6 +3,7 @@ import Logo from '../icons/Logo';
 import navarLogo from '../assets/navarIconNoBg.png'
 import { BsTelephone } from 'react-icons/bs'
 import { LuMail } from 'react-icons/lu'
+import NewLogo from '../icons/NewLogo';
 
 
 const classNameLinks = "no-underline text-logo-white hover:text-logo w-fit"
@@ -34,7 +35,7 @@ const chrisWork = [
 ]
 
 const contact = {
-  name: 'Kostianis Productions',
+  name: 'Generational Pictures',
   phone: '+1 (917) 710-2682',
   email: 'contact@kostianisproductions.com',
 }
@@ -46,9 +47,10 @@ function Footer({ current, setCurrent }) {
       <footer className="hidden lg:flex flex-col bg-black bottom-0 font-zenKaku h-fit pb-3 pt-10 w-screen overflow-hidden">
         <div className="w-full pl-20 grid grid-cols-4">
           <div className='flex flex-col mt-2 ml-1 justify-start items-start'>
-            <Logo className='-ml-7 -mt-4' width='w-auto' height='h-20' text='ml-[60px] mt-[15px] text-[20px]' setCurrent={() => setCurrent("home")} />
-            <p className={`text-xs -mt-3 mb-2 ${textColor}`}>
-              © 2023 Kostianis Productions
+            {/* <Logo className='-ml-7 -mt-4' width='w-auto' height='h-20' text='ml-[60px] mt-[15px] text-[20px]' setCurrent={() => setCurrent("home")} /> */}
+            <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto'/>
+            <p className={`text-xs mt-4 mb-2 ${textColor}`}>
+              © 2023 Generational Pictures
             </p>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo mb-10`}
               href='/privacy'
@@ -128,18 +130,19 @@ function Footer({ current, setCurrent }) {
           </div>
         </div>
 
-        <div className='mt-2 flex flex-row justify-center items-center'>
+        {/* <div className='mt-2 flex flex-row justify-center items-center'>
           <span className='font-zenKaku text-sm text-white'>Website by</span>
           <a className='no-underline' href='https://navarsolutions.com'>
             <img src={navarLogo} className='w-20 h-full' />
           </a>
-        </div>
+        </div> */}
       </footer>
 
       {/* Mobile */}
       <footer className="lg:hidden bg-black bottom-0 font-zenKaku h-fit w-[100vw] overflow-hidden p-4">
         <div className="flex w-full flex-col justify-center items-center gap-2">
-          <Logo className='-mb-4' width='w-auto' height='h-24' text='ml-[70px] mt-[17px] text-[24px]' setCurrent={() => setCurrent("home")} />
+          {/* <Logo className='-mb-4' width='w-auto' height='h-24' text='ml-[70px] mt-[17px] text-[24px]' setCurrent={() => setCurrent("home")} /> */}
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto'/>
 
           <div className={`${classNameIcons} flex flex-row gap-4 items-center`}>
             <div className='flex flex-col'>
@@ -176,7 +179,7 @@ function Footer({ current, setCurrent }) {
 
 
           <p className={`text-xs ${textColor}`}>
-            © 2023 Kostianis Productions, All Rights Reserved
+            © 2023 Generational Pictures, All Rights Reserved
           </p>
           <div className='flex flex-row gap-1 justify-center items-center'>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
@@ -184,12 +187,12 @@ function Footer({ current, setCurrent }) {
               onClick={() => setCurrent('')}>
               Privacy Policy -
             </a>
-            <div className='flex flex-row justify-center items-center'>
+            {/* <div className='flex flex-row justify-center items-center'>
               <span className='font-zenKaku text-xs text-white'>Website by</span>
               <a className='no-underline' href='https://navarsolutions.com'>
                 <img src={navarLogo} className='w-20 h-full' />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </footer>

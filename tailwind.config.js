@@ -19,7 +19,7 @@ module.exports = {
         cairoPlay: ["Cairo Play", "sans-serif"],
         notoSans: ["Noto Sans", "sans-serif"],
         zenKaku: ["Zen Kaku Gothic New", "sans-serif"],
-              },
+      },
       colors: {
         'logo': {
           DEFAULT: '#711AAE',

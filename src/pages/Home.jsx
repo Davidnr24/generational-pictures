@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import HeroVideo from '../components/HeroVideo';
-import Intro from '../components/Intro';
+import AlterIntro from '../components/AlterIntro';
 import NavbarTail from '../navigation/NavBar';
 import Team from '../components/Team';
 import VideoWork from '../components/VideoWork';
@@ -39,10 +39,10 @@ function Home({ setCurrent }) {
 			<div className='flex flex-col pl-4 pr-4 md:pl-10 md:pr-10 lg:pl-10 lg:pr-10'>
 
 				<div className='min-h-[calc(100vh)] flex flex-col w-full justify-evenly'>
-					<Intro />
+					{/* <Intro /> */}
+					<AlterIntro setCurrent={setCurrent}/>
 
-
-					{/* Laptop */}
+					{/* Laptop
 					<div className='hidden lg:flex flex-row items-center gap-3 justify-center w-full my-b'>
 						<p className='h-fit w-fit lg:text-center px-4 text-white font-zenKaku text-2xl'>Our multicultural identities inform the way we operate: with an above and beyond mindset. <span className='text-logo'>Never settling for ordinary.</span></p>
 					</div>
@@ -54,7 +54,7 @@ function Home({ setCurrent }) {
 						<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
 					</div>
 
-					{/* Mobile */}
+					
 					<div className='lg:hidden flex flex-col md:pb-48 md:py-48 py-40'>
 						<div
 							className='flex h-[1px] w-[66%] bg-logo self-center'
@@ -67,13 +67,16 @@ function Home({ setCurrent }) {
 						<div
 							className='flex h-[1px] w-[66%] bg-logo self-center'
 						/>
-					</div>
+					</div> */}
 				</div>
 
 
 
-				<VideoWork setCurrent={setCurrent} />
+				{/* <VideoWork setCurrent={setCurrent} /> */}
 
+				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku py-20 font-bold'>An approach tailored to your projects and your goals.</div>
+				
+				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 pb-32 text-center'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
 				{/* <div
 					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
 					style={underlineStyleGray}

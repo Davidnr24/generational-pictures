@@ -13,6 +13,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
 import Logo from '../icons/Logo';
+import NewLogo from '../icons/NewLogo';
 
 
 
@@ -77,9 +78,10 @@ export default function NavBar({ current, setCurrent }) {
       <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-full xl:px-44 md:px-[70px] px-6" aria-label="Global">
         {
           //logo
-        }
-        <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
-        {
+        // }
+        // <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
+        // {
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto ml-3'/>
           //mobile menu icon
         }
         <div className="flex lg:hidden">
