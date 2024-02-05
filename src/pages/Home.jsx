@@ -6,6 +6,7 @@ import Team from '../components/Team';
 import VideoWork from '../components/VideoWork';
 import clapboard from '../assets/Clapboard.svg'
 import Logos from '../components/Logos';
+import separator from '../assets/separator.png'
 
 function Home({ setCurrent }) {
 
@@ -29,18 +30,18 @@ function Home({ setCurrent }) {
 		<div className='bg-black h-fit w-screen flex flex-col'>
 			<HeroVideo />
 
-			<div
+			{/* <div
 				className='hidden lg:flex min-h-[15px] w-[66%] self-end relative md:mb-0 mb-10'
 				style={underlineStyleColor}
 			>
 				<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
-			</div>
+			</div> */}
 
 			<div className='flex flex-col pl-4 pr-4 md:pl-10 md:pr-10 lg:pl-10 lg:pr-10'>
 
 				<div className='min-h-[calc(100vh)] flex flex-col w-full justify-evenly'>
 					{/* <Intro /> */}
-					<AlterIntro setCurrent={setCurrent}/>
+					<AlterIntro setCurrent={setCurrent} />
 
 					{/* Laptop
 					<div className='hidden lg:flex flex-row items-center gap-3 justify-center w-full my-b'>
@@ -70,13 +71,13 @@ function Home({ setCurrent }) {
 					</div> */}
 				</div>
 
-
+				<img className='mx-auto h-auto w-[300px] -mt-[50px] -mb-[100px]' src={separator}></img>
 
 				{/* <VideoWork setCurrent={setCurrent} /> */}
 
-				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku py-20 font-bold'>An approach tailored to your projects and your goals.</div>
-				
-				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 pb-32 text-center'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
+				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku pt-10 pb-6 font-bold'>An approach tailored to your projects and your goals.</div>
+
+				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 pb-24 text-center w-[85%]'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
 				{/* <div
 					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
 					style={underlineStyleGray}
@@ -84,6 +85,7 @@ function Home({ setCurrent }) {
 					<div className='w-full h-full bg-black/0 top-0 left-0 absolute' />
 				</div> */}
 
+				<img className='mx-auto h-auto w-[300px] -mt-[100px] -mb-[px]' src={separator}></img>
 
 			</div>
 			<Logos />

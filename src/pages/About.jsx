@@ -9,8 +9,8 @@ function About() {
         {
             name: 'Felícita',
             ps: [
-                'Felícita Kostianis, co-founder, majority owner, and a proud Puerto Rican and Greek woman, is a recent Boston College graduate and a driven entrepreneur. Motivated by her empathy, curiosity, \
-                and passion for creating positive change in the world, she joined forces with her father to build a video production company with a fresh, modern perspective aimed at addressing diversity challenges in the industry. \
+                'Felícita Kostianis, co-founder, majority owner, driven entrepreneur and a proud Puerto Rican and Greek woman. Motivated by her empathy, curiosity, \
+                and passion for creating positive change in the world, she joined forces with her father to build a video production company aimed at addressing diversity challenges in the industry. \
                 She is dedicated to creating a space within the industry that not only produces high-quality work, but also uplifts the voices of the underrepresented, aspiring to carve a path that champions both excellence and diversity in filmmaking.',
 
                 'Beyond her commitment to learning and developing the business, Felícita loves to travel, with her best trip as of late being a road trip spanning the north of Spain. Her journey reflects a \

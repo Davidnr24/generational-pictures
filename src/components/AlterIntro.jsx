@@ -4,7 +4,7 @@ import marketing_image from '../assets/marketing.png';
 import hype_image from '../assets/hypevideos.png';
 import storytelling_image from '../assets/storytelling.png';
 
-const descriptionStyle = 'text-lg font-zenKaku text-white'
+const descriptionStyle = 'text-lg md:text-xl font-zenKaku text-white'
 
 
 const columns = [
@@ -20,8 +20,7 @@ const columns = [
   {
     title: 'Storytelling',
     description: <div className={descriptionStyle}>
-      <span> Tell your stories visually - uniquely creative and modern approaches to give your story a captivating visual life
-      </span>
+      Tell your stories visually - uniquely creative and modern approaches to give your story a captivating visual life
     </div>,
     href: '/chris-work/storytelling',
     image: storytelling_image,

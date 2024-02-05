@@ -12,7 +12,7 @@ export default function AlterIntroCard({ title, description, href, image, avg_co
     <div className="flex lg:flex-row flex-col gap-10 w-full lg:odd:flex-row lg:even:flex-row-reverse justify-center items-center text-center font-zenKaku px-4 py-5 lg:py-[10vh]">
       {/* <div className="text-4xl w-1/2 text-white grow">{title}</div> */}
       <VideoWorkCard name={title} href={href} imageC={image} avg_color={avg_color} setCurrent={setCurrent} />
-      <div className="text-xl w-full lg:w-1/2 text-white font-semibold">{description}</div>
+      <div className="w-full lg:w-1/2">{description}</div>
     </div>
   )
 }
