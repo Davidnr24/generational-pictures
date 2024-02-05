@@ -20,7 +20,7 @@ const columns = [
   {
     title: 'Storytelling',
     description: <div className={descriptionStyle}>
-      Tell your stories visually - uniquely creative and modern approaches to give your story a captivating visual life
+      Tell your stories visually - Uniquely creative and modern approaches to give your story a captivating visual life.
     </div>,
     href: '/chris-work/storytelling',
     image: storytelling_image,

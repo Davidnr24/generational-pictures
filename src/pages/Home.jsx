@@ -71,13 +71,15 @@ function Home({ setCurrent }) {
 					</div> */}
 				</div>
 
-				<img className='mx-auto h-auto w-[300px] -mt-[50px] -mb-[100px]' src={separator}></img>
+				{/* <img className='mx-auto h-auto w-[300px] -mt-[50px] -mb-[100px]' src={separator}></img> */}
+
+				<div className='bg-transparent mt-20 mb-16 w-[300px] h-[10px] border-1 border-logo-white border-t-[1px] border-x-[1px] mx-auto'/>
 
 				{/* <VideoWork setCurrent={setCurrent} /> */}
 
-				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku pt-10 pb-6 font-bold'>An approach tailored to your projects and your goals.</div>
+				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku pb-6 font-bold'>An approach tailored to your projects and your goals.</div>
 
-				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 pb-24 text-center w-[85%]'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
+				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 text-center w-[85%]'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
 				{/* <div
 					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
 					style={underlineStyleGray}
@@ -85,7 +87,8 @@ function Home({ setCurrent }) {
 					<div className='w-full h-full bg-black/0 top-0 left-0 absolute' />
 				</div> */}
 
-				<img className='mx-auto h-auto w-[300px] -mt-[100px] -mb-[px]' src={separator}></img>
+				{/* <img className='mx-auto h-auto w-[300px] -mt-[100px] -mb-[px]' src={separator}></img> */}
+				<div className='bg-transparent w-[300px] h-[10px] mt-16 mb-32 border-1 border-logo-white border-b-[1px] border-x-[1px] mx-auto'/>
 
 			</div>
 			<Logos />

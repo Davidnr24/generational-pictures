@@ -81,7 +81,7 @@ export default function NavBar({ current, setCurrent }) {
         // }
         // <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
         // {
-          <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto ml-3'/>
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto ml-3'/>
           //mobile menu icon
         }
         <div className="flex lg:hidden">

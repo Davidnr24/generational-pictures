@@ -48,7 +48,7 @@ function Footer({ current, setCurrent }) {
         <div className="w-full pl-20 grid grid-cols-4">
           <div className='flex flex-col mt-2 ml-1 justify-start items-start'>
             {/* <Logo className='-ml-7 -mt-4' width='w-auto' height='h-20' text='ml-[60px] mt-[15px] text-[20px]' setCurrent={() => setCurrent("home")} /> */}
-            <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto'/>
+            <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto'/>
             <p className={`text-xs mt-4 mb-2 ${textColor}`}>
               © 2023 Generational Pictures
             </p>
@@ -142,7 +142,7 @@ function Footer({ current, setCurrent }) {
       <footer className="lg:hidden bg-black bottom-0 font-zenKaku h-fit w-[100vw] overflow-hidden p-4">
         <div className="flex w-full flex-col justify-center items-center gap-2">
           {/* <Logo className='-mb-4' width='w-auto' height='h-24' text='ml-[70px] mt-[17px] text-[24px]' setCurrent={() => setCurrent("home")} /> */}
-          <NewLogo setCurrent={() => setCurrent("home")} className='w-[200px] h-auto'/>
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto'/>
 
           <div className={`${classNameIcons} flex flex-row gap-4 items-center`}>
             <div className='flex flex-col'>
