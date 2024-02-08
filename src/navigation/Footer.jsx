@@ -50,7 +50,7 @@ function Footer({ current, setCurrent }) {
             {/* <Logo className='-ml-7 -mt-4' width='w-auto' height='h-20' text='ml-[60px] mt-[15px] text-[20px]' setCurrent={() => setCurrent("home")} /> */}
             <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto'/>
             <p className={`text-xs mt-4 mb-2 ${textColor}`}>
-              © 2023 Generational Pictures
+              © 2024 Generational Pictures
             </p>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo mb-10`}
               href='/privacy'
@@ -179,7 +179,7 @@ function Footer({ current, setCurrent }) {
 
 
           <p className={`text-xs ${textColor}`}>
-            © 2023 Generational Pictures, All Rights Reserved
+            © 2024 Generational Pictures, All Rights Reserved
           </p>
           <div className='flex flex-row gap-1 justify-center items-center'>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
