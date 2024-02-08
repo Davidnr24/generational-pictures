@@ -16,7 +16,7 @@ const columns = [
   {
     title: 'What we do',
     description: <div className={descriptionStyle}>
-      <span> Whether you seek corporate videos, marketing content, creative media, or high-quality visuals to elevate your project and bring your ideas to life, Kostianis Productions aims to transform your ideas into compelling visual realities.
+      <span> Whether you seek corporate videos, marketing content, creative media, or high-quality visuals to elevate your project and bring your ideas to life, Generational Pictures aims to transform your ideas into compelling visual realities.
       </span>
     </div>,
   },
@@ -24,7 +24,7 @@ const columns = [
     title: 'Our principles',
     description: <div className={descriptionStyle}>
       <span>Led by Chris Kostianis, Emmy-Award-Winning Director of Photography, 
-        <span className="font-oxygen"> Kostianis Productions </span>
+        <span className="font-oxygen"> Generational Pictures </span>
         is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</span>
     </div>,
   },

@@ -225,7 +225,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-            <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto ml-3'/>
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"

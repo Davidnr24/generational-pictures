@@ -1,4 +1,4 @@
-# kostianis Solutions Website
+# Generational Pictures Website
 
 https://Dhakernator24.github.io/kostianis-web
 
