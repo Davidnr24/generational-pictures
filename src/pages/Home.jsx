@@ -79,7 +79,7 @@ function Home({ setCurrent }) {
 
 				<div className='text-white text-center mx-auto md:text-3xl text-2xl font-zenKaku pb-6 font-bold'>An approach tailored to your projects and your goals.</div>
 
-				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 text-center w-[85%]'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
+				<div className='text-white mx-auto md:text-xl text-lg font-zenKaku pt-10 text-center w-[70%]'>Backed by the expertise of Chris Kostianis, Emmy-Award-Winning Director of Photography, Generational Pictures is dedicated to his diligent work ethic. Exceeding expectations by consistently delivering our finest work.</div>
 				{/* <div
 					className='hidden lg:flex min-h-[1px] w-[66%] self-center relative mb-40'
 					style={underlineStyleGray}

@@ -39,6 +39,7 @@ const contact = {
   name: 'Generational Pictures',
   phone: '+1 (917) 710-2682',
   email: 'contact@generational-pictures.com',
+  address: '140 E. Ridgewood Avenue Suite 415\nSouth Tower Paramus, NJ',
   instagram: "https://www.instagram.com/generationalpictures/",
   linkedin: "https://www.linkedin.com/company/generational-pic/"
 }
@@ -51,7 +52,7 @@ function Footer({ current, setCurrent }) {
         <div className="w-full pl-20 grid grid-cols-4">
           <div className='flex flex-col mt-2 ml-1 justify-start items-start'>
             {/* <Logo className='-ml-7 -mt-4' width='w-auto' height='h-20' text='ml-[60px] mt-[15px] text-[20px]' setCurrent={() => setCurrent("home")} /> */}
-            <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto -mt-4 -mb-8' size='mid' />
+            <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto -mt-4 -mb-8' size='mid' />
             <p className={`text-xs mt-4 mb-2 ${textColor}`}>
               © 2024 Generational Pictures
             </p>
@@ -66,7 +67,7 @@ function Footer({ current, setCurrent }) {
             <p className={classNameTitles}>
               Company
             </p>
-            <nav className="flex flex-col space-y-1 text-sm">
+            <nav className="flex flex-col space-y-2 text-sm">
               {company.map(item => {
                 return <a
                   href={item.href}
@@ -79,7 +80,7 @@ function Footer({ current, setCurrent }) {
             <p className={classNameTitles}>
               Chris's Work
             </p>
-            <nav className="flex flex-col space-y-1 text-sm">
+            <nav className="flex flex-col space-y-2 text-sm">
               {chrisWork.map(item => {
                 return <a
                   href={item.href}
@@ -93,11 +94,11 @@ function Footer({ current, setCurrent }) {
             <p className={classNameTitles}>
               Contact
             </p>
-            <div className="flex flex-col mt-2 space-y-1 text-[12px] md:text-sm w-full">
-              <div className={classNameText}> {contact.name}</div>
+            <div className="flex flex-col mt-2 space-y-2 text-[12px] md:text-sm w-full">
+              {/* <div className={classNameText}> {contact.name}</div> */}
 
               <div className='flex flex-col  w-fit'>
-                <div className={`${classNameIcons} flex flex-col space-y-1 items-start`}>
+                <div className={`${classNameIcons} flex flex-col space-y-2 items-start`}>
 
                   <div className='flex flex-row flex-grow gap-2 items-center'>
                     {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
@@ -115,6 +116,15 @@ function Footer({ current, setCurrent }) {
                       <div className='hover:underline hover:decoration-logo text-logo-white'>{contact.phone}</div>
                     </a>
                   </div>
+
+                  <div className='flex flex-row flex-grow gap-2 items-center w-[60%]'>
+                    {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
+                    {/* <a href={`tel:${contact.address}`} className='no-underline'> */}
+                    {/* <BsTelephone className='fill-white w-4 h-4 mx-1 my-1 hover:fill-logo' /> */}
+                    <div className='hover:underline hover:decoration-logo text-logo-white'>{contact.address}</div>
+                    {/* </a> */}
+                  </div>
+
                   <div className='flex flex-row flex-grow gap-2 items-center'>
                     {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
                     <a className={`${classNameIcons} flex flex-row gap-4 items-center`} href={contact.linkedin} rel="noreferrer">
@@ -194,6 +204,14 @@ function Footer({ current, setCurrent }) {
           <p className={`text-xs ${textColor}`}>
             © 2024 Generational Pictures, All Rights Reserved
           </p>
+
+          <div className='flex flex-row flex-grow gap-2 items-center text-center text-xs pb-2 w-[200px]'>
+            {/* <div className='mt-1 h-[20px] w-[4px] bg-logo' /> */}
+            {/* <a href={`tel:${contact.address}`} className='no-underline'> */}
+            {/* <BsTelephone className='fill-white w-4 h-4 mx-1 my-1 hover:fill-logo' /> */}
+            <div className='hover:underline hover:decoration-logo text-logo-white'>{contact.address}</div>
+            {/* </a> */}
+          </div>
           <div className='flex flex-row gap-1 justify-center items-center'>
             <a className={`no-underline font-bold text-xs ${textColor} hover:text-logo`}
               href='/privacy'

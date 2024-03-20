@@ -74,14 +74,14 @@ export default function NavBar({ current, setCurrent }) {
 
 
   return (
-    <header className={`${navBarColor} z-10 fixed top-0 w-[100vw] h-[80px] max-h-[80px]`}>
+    <header className={`${navBarColor} z-10 fixed top-0 w-[100vw] h-[85px] max-h-[85px]`}>
       <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-full xl:px-44 md:px-[70px] px-6" aria-label="Global">
         {
           //logo
         // }
         // <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
         // {
-          <NewLogo setCurrent={() => setCurrent("home")} className='w-[150px] h-auto ml-3'/>
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[130px] h-auto -mt-7 -mb-8' size='mid' />
           //mobile menu icon
         }
         <div className="flex lg:hidden">
@@ -225,7 +225,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-          <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto ml-3'/>
+          <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto -mt-4 -mb-8' size='mid' />
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"

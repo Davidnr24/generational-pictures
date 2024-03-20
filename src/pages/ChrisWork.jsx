@@ -7,7 +7,7 @@ export default function ChrisWork() {
     const whiteBackground = 'text-logo [text-shadow:3px_0px_0px_rgba(255,255,255,1),0px_3px_0px_rgba(255,255,255,1),-3px_0px_0px_rgba(255,255,255,1),0px_-3px_0px_rgba(255,255,255,1),3px_3px_0px_rgba(255,255,255,1)]'
 
     return (
-        <div className='flex pt-[80px] bg-black flex-col justify-center items-center min-h-[100vh] px-5'>
+        <div className='flex pt-[85px] bg-black flex-col justify-center items-center min-h-[100vh] px-5'>
             <div className='flex flex-col w-fit mt-4'>
                 <h1 className='relative font-zenKaku font-extrabold text-4xl text-white'>
                     {/* <span className={`${whiteBackground}`}>C</span>hris<span className={`${whiteBackground}`}>'</span>s Work */}

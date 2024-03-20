@@ -4,14 +4,14 @@ import marketing_image from '../assets/marketing.png';
 import hype_image from '../assets/hypevideos.png';
 import storytelling_image from '../assets/storytelling.png';
 
-const descriptionStyle = 'text-lg md:text-xl font-zenKaku text-white'
+const descriptionStyle = 'text-lg md:text-[23px] font-zenKaku text-white'
 
 
 const columns = [
   {
     title: 'Marketing',
     description: <div
-      className={descriptionStyle}>Achieve your marketing goals - Engaging, polished content. We’ll use our fresh perspective to work with you to impact your target audience and exceed your objectives.
+      className={descriptionStyle}><span className="font-bold">Achieve your marketing goals</span> - Engaging, polished content. We’ll use our fresh perspective to work with you to impact your target audience and exceed your objectives.
     </div>,
     href: '/chris-work/marketing',
     image: marketing_image,
@@ -20,7 +20,7 @@ const columns = [
   {
     title: 'Storytelling',
     description: <div className={descriptionStyle}>
-      Tell your stories visually - Uniquely creative and modern approaches to give your story a captivating visual life.
+      <span className="font-bold">Tell your stories visually</span> - Uniquely creative and modern approaches to give your story a captivating visual life.
     </div>,
     href: '/chris-work/storytelling',
     image: storytelling_image,
@@ -29,7 +29,7 @@ const columns = [
   {
     title: 'Hype Videos',
     description: <div className={descriptionStyle}>
-      Energize your audience - Take your media day to the next level, with clips that electrify crowds.
+      <span className="font-bold">Energize your audience</span> - Take your media day to the next level, with clips that electrify crowds.
     </div>,
     href: '/chris-work/hype-videos',
     image: hype_image,

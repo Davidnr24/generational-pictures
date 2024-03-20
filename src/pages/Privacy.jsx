@@ -3,7 +3,7 @@
 export default function Privacy() {
 
   return (<>
-  <div className='w-full h-[80px] bg-black' />
+  <div className='w-full h-[85px] bg-black' />
   <div className="my-12 mx-20 font-zenKaku">
     <h1>Privacy Policy</h1>
     <p>Last updated: October 25, 2023</p>
