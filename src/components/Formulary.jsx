@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
+import {FORM_URL} from "../constants/constants"
 
 
 export default function Formulary() {
@@ -71,7 +72,7 @@ export default function Formulary() {
     // console.log(formData);
 
     // Submit form data to a specific URL
-    const url = 'https://nocodeform.io/f/652f1e5c4081185a963d2639';
+    const url = FORM_URL
     //const url = 'localhost:3006/kostianis-web'
     const formData = {
       firstName: firstName,

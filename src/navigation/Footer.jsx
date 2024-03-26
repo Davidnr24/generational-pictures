@@ -5,6 +5,7 @@ import { BsTelephone } from 'react-icons/bs'
 import { LuMail } from 'react-icons/lu'
 import NewLogo from '../icons/NewLogo';
 import { FaInstagram } from "react-icons/fa";
+import {contact } from "../constants/constants"
 
 
 const classNameLinks = "no-underline text-logo-white hover:text-logo w-fit"
@@ -34,15 +35,6 @@ const chrisWork = [
   { name: 'Hype Videos', href: '/chris-work/hype-videos', current: 'chris-work' },
   { name: 'Storytelling', href: '/chris-work/storytelling', current: 'chris-work' },
 ]
-
-const contact = {
-  name: 'Generational Pictures',
-  phone: '+1 (917) 710-2682',
-  email: 'contact@generational-pictures.com',
-  address: '140 E. Ridgewood Avenue Suite 415\nSouth Tower Paramus, NJ',
-  instagram: "https://www.instagram.com/generationalpictures/",
-  linkedin: "https://www.linkedin.com/company/generational-pic/"
-}
 
 function Footer({ current, setCurrent }) {
 
