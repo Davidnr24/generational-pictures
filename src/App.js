@@ -1,4 +1,3 @@
-import logo from './icons/logo.svg';
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -7,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from './navigation/NavBar';
 import Footer from './navigation/Footer';
-import { Fragment, useState } from 'react'
+import { useState } from 'react'
 import ScrollToTop from './navigation/ScrollToTop';
 import Privacy from './pages/Privacy';
 import ChrisWorkElem from './pages/ChrisWorkElem';
@@ -20,13 +19,13 @@ function App() {
     const currentPath = window.location.pathname;
     console.log(currentPath)
 
-    if (currentPath == '/' || currentPath == '') return 'home';
-    else if (currentPath == '/chris-work') return 'chris-work';
-    else if (currentPath == '/about') return 'about';
-    else if (currentPath == '/contact') return 'contact';
-    else if (currentPath == '/chris-work/marketing') return 'chris-work';
-    else if (currentPath == '/chris-work/hype-videos') return 'chris-work';
-    else if (currentPath == '/chris-work/storytelling') return 'chris-work';
+    if (currentPath === '/' || currentPath === '') return 'home';
+    else if (currentPath === '/chris-work') return 'chris-work';
+    else if (currentPath === '/about') return 'about';
+    else if (currentPath === '/contact') return 'contact';
+    else if (currentPath === '/chris-work/marketing') return 'chris-work';
+    else if (currentPath === '/chris-work/hype-videos') return 'chris-work';
+    else if (currentPath === '/chris-work/storytelling') return 'chris-work';
     else return ""
   });
 
