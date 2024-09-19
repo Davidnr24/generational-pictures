@@ -1,0 +1,64 @@
+version: 2.1
+orbs:
+  node: circleci/node@6.1.0
+  python: circleci/python@2.1.1
+
+
+jobs:
+  build:
+    executor: node/default
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Build React App
+          command: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - build
+
+  deploy-staging:
+    executor: python/default
+    steps:
+      - attach_workspace:
+          at: /workspace
+      - run:
+          name: Deploy to Staging FTP
+          command: |
+            cd /workspace/build
+            # Replace with your FTP upload script
+            # lftp -u $FTP_USER,$FTP_PASS -e "mirror -R ./ /path/to/staging/server/; quit" $FTP_HOST
+            echo "Deploying to Staging FTP..."
+
+  deploy-production:
+    executor: python/default
+    steps:
+      - attach_workspace:
+          at: /workspace
+      - run:
+          name: Deploy to Production FTP
+          command: |
+            cd /workspace/build
+            # Replace with your FTP upload script
+            # lftp -u $FTP_USER,$FTP_PASS -e "mirror -R ./ /path/to/production/server/; quit" $FTP_HOST
+            echo "Deploying to Production FTP..."
+
+workflows:
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy-staging:
+          requires:
+            - build
+          filters:
+            branches:
+              ignore: main
+      - deploy-production:
+          requires:
+            - build
+          filters:
+            branches:
+              only: main
