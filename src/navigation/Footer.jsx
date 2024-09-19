@@ -1,6 +1,3 @@
-import { Link } from 'react-router-dom';
-import Logo from '../icons/Logo';
-import navarLogo from '../assets/navarIconNoBg.png'
 import { BsTelephone } from 'react-icons/bs'
 import { LuMail } from 'react-icons/lu'
 import NewLogo from '../icons/NewLogo';
@@ -10,9 +7,9 @@ import {contact } from "../constants/constants"
 
 const classNameLinks = "no-underline text-logo-white hover:text-logo w-fit"
 
-const classNameText = "no-underline text-logo-white text-clip w-fit md:hover:text-white"
+// const classNameText = "no-underline text-logo-white text-clip w-fit md:hover:text-white"
 
-const icons_color = "white"
+// const icons_color = "white"
 
 const classNameIcons = "no-underline text-logo-white hover:text-logo"
 

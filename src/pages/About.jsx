@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react';
 import chris_image from '../assets/chris_profile.jpeg'
 import felicita_image from '../assets/felicita_profile.jpg'
 import AboutName from '../components/AboutName';

@@ -2,9 +2,9 @@
 
 export default function TitleDomino({ className }) {
 
-  const calculateDelay = (index) => {
-    return "delay-[" + (index * 10) + "ms]"
-  }
+  // const calculateDelay = (index) => {
+  //   return "delay-[" + (index * 10) + "ms]"
+  // }
 
 
   return (

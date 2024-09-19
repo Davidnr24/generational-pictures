@@ -3,16 +3,12 @@ import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {
   Bars3Icon,
   XMarkIcon,
-  GlobeAltIcon,
-  CodeBracketIcon,
-  RocketLaunchIcon,
   BookOpenIcon,
   PresentationChartLineIcon,
   SparklesIcon
 } from '@heroicons/react/24/outline'
-import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Link } from 'react-router-dom';
-import Logo from '../icons/Logo';
 import NewLogo from '../icons/NewLogo';
 
 
@@ -22,18 +18,18 @@ const work = [
   { name: 'Marketing', description: '', href: '/chris-work/marketing', icon: PresentationChartLineIcon },
   { name: 'Storytelling', description: '', href: '/chris-work/storytelling', icon: BookOpenIcon },
   { name: 'Hype Videos', description: '', href: '/chris-work/hype-videos', icon: SparklesIcon },
-  
+
 ]
 
-const underlineStyleC = {
-  background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
-}
+// const underlineStyleC = {
+//   background: 'linear-gradient(90deg, rgba(192,192,0,1) 14%, rgba(192,192,192,1) 14%, rgba(192,192,192,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 42%, rgba(0,192,0,1) 42%, rgba(0,192,0,1) 56%, rgba(192,0,192,1) 56%, rgba(192,0,192,1) 70%, rgba(192,0,0,1) 70%, rgba(192,0,0,1) 84%, rgba(0,0,192,1) 84%'
+// }
 
 const font = "font-zenKaku"
-const colorUnderline = "bg-logo-white "
+// const colorUnderline = "bg-logo-white "
 const navBarElementsStyle = "text-lg " + font + " font-bold text-logo-white leading-6 no-underline"
 const navBarElementsStyleMobile = "py-2 mx-3 text-base " + font + "font-bold text-logo-white leading-6 no-underline"
-const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
+// const navBarElementsStyleMobileHover = "hover:bg-logo-white hover:text-black"
 const underlineStyle = "max-w-0 mt-2 h-1 group-hover:max-w-full transition-all duration-50 bg-logo"
 
 const navBarElements = [
@@ -44,12 +40,10 @@ const navBarElements = [
   { name: 'Let\'s Talk', href: '/contact', current: 'contact' },
   //{ name: 'Reviews', href: 'reviews'},
 ]
-const callsToAction = [
-
-
-  { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-  { name: 'Contact sales', href: '#', icon: PhoneIcon },
-]
+// const callsToAction = [
+//   { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
+//   { name: 'Contact sales', href: '#', icon: PhoneIcon },
+// ]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -78,9 +72,9 @@ export default function NavBar({ current, setCurrent }) {
       <nav className="sticky top-0 mx-auto text-logo-white flex items-center justify-between h-full xl:px-44 md:px-[70px] px-6" aria-label="Global">
         {
           //logo
-        // }
-        // <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
-        // {
+          // }
+          // <Logo setCurrent={() => setCurrent("home")} className='w-auto h-16' height='h-16' width='w-auto' text='text-[16px] mt-[12px] ml-[45px]' />
+          // {
           <NewLogo setCurrent={() => setCurrent("home")} className='w-[130px] h-auto -mt-7 -mb-8' size='mid' />
           //mobile menu icon
         }
@@ -102,7 +96,7 @@ export default function NavBar({ current, setCurrent }) {
             //navBar elements
           }
           {navBarElements.map(item => {
-            if (item.name == 'What we can do') {
+            if (item.name === 'What we can do') {
               return <Popover className="relative group" open={isOpen}>
 
                 <Popover.Button
@@ -122,9 +116,8 @@ export default function NavBar({ current, setCurrent }) {
                       />
 
                     </div>
-                    {current == item.current &&
-                      <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
-                      /> ||
+                    {(current === item.current && <div className={`${underlineStyle} mt-2 h-1 max-w-full`} />)
+                      ||
                       <div className={underlineStyle}
                       />}
                   </Link>
@@ -177,36 +170,35 @@ export default function NavBar({ current, setCurrent }) {
               </Popover>
 
             }
-            else if (item.name == 'Let\'s Talk') {
+            else if (item.name === 'Let\'s Talk') {
               return <a href={item.href}
                 onClick={() => setCurrent(item.current)}
                 className='group/talk transition duration-300 my-4 no-underline'
               // style={underlineStyleC}
               >
-                {current == item.current &&
-                  <div
-                    className={`${navBarElementsStyle} font-bold bg-tranparent border-[2px] border-logo-white 
-                     p-3 `}
-
-                  > {item.name} </div> ||
-
-                  <div className={`${navBarElementsStyle} font-bold bg-logo-black text-logo-white p-3 border-[2px] border-logo 
-                  group-hover/talk:border-white transition-all duration-300
-                  `}> {item.name} </div>
-
-
+                {
+                  (
+                    current === item.current
+                    &&
+                    <div className={`${navBarElementsStyle} font-bold bg-tranparent border-[2px] border-logo-white p-3 `}> {item.name} </div>
+                  )
+                  ||
+                  <div className={`${navBarElementsStyle} font-bold bg-logo-black text-logo-white p-3 border-[2px] border-logo group-hover/talk:border-white transition-all duration-300`}>
+                    {item.name}
+                  </div>
                 }
               </a>
             } else {
               return <a href={item.href} onClick={() => setCurrent(item.current)} className='group transition duration-300 py-4 no-underline' >
                 <div className={`pt-3 ${navBarElementsStyle}`}> {item.name} </div>
-                {current == item.current &&
-                  <div className={`${underlineStyle} mt-2 h-1 max-w-full`}
-                  // style={underlineStyleC} 
-                  /> ||
-                  <div className={underlineStyle}
-                  // style={underlineStyleC} 
-                  />}
+                {
+                  (
+                    current === item.current &&
+                    <div className={`${underlineStyle} mt-2 h-1 max-w-full`} />
+                  )
+                  ||
+                  <div className={underlineStyle} />
+                }
               </a>
             }
           }
@@ -225,7 +217,7 @@ export default function NavBar({ current, setCurrent }) {
             //logo and X
           }
           <div className="flex items-center justify-between">
-          <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto -mt-4 -mb-8' size='mid' />
+            <NewLogo setCurrent={() => setCurrent("home")} className='w-[100px] h-auto -mt-4 -mb-8' size='mid' />
             <button
               type="button"
               className="-m-2.5 rounded-md p-2.5 text-logo-white"
@@ -240,7 +232,7 @@ export default function NavBar({ current, setCurrent }) {
           }
           <div className="mt-6 flex flex-col w-full">
             {navBarElements.map(item => {
-              if (item.name == 'What we can do') {
+              if (item.name === 'What we can do') {
                 return <>
                   <Disclosure as="div" className="focus:outline-none">
                     {({ open }) => (
@@ -269,21 +261,24 @@ export default function NavBar({ current, setCurrent }) {
                   </Disclosure>
                   <div className='w-[80%] mx-3 bg-logo h-[1px]' />
                 </>
-              } else if (item.name == 'Let\'s Talk') {
+              } else if (item.name === 'Let\'s Talk') {
                 return <a href={item.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className='group/talk w-fit transition duration-300 my-3 no-underline'
                 // style={underlineStyleC}
                 >
-                  {current == item.current &&
-                    <div className={`${navBarElementsStyleMobile} w-fit font-bold bg-black text-white p-3 border-[2px] border-logo`}> {item.name} </div> ||
-
-                    <div
-                      className={`${navBarElementsStyleMobile} font-bold bg-tranparent border-[2px] border-logo-white
-                           p-3 `}
-
-                    > {item.name} </div>
-
+                  {
+                    (
+                      current === item.current
+                      &&
+                      <div className={`${navBarElementsStyleMobile} w-fit font-bold bg-black text-white p-3 border-[2px] border-logo`}>
+                        {item.name}
+                      </div>
+                    )
+                    ||
+                    <div className={`${navBarElementsStyleMobile} font-bold bg-tranparent border-[2px] border-logo-white p-3 `}>
+                      {item.name}
+                    </div>
                   }
                 </a>
               } else {
@@ -299,11 +294,6 @@ export default function NavBar({ current, setCurrent }) {
               }
             })}
           </div>
-          {/* <div className="">
-                <a href='/es/' className="no-underline flex font-semibold items-center justify-start">
-                  <span className={`${navBarElementsStyleMobile} font-bold`}>ENG</span>
-                </a>
-              </div> */}
         </Dialog.Panel>
       </Dialog>
     </header>

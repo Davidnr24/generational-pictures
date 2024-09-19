@@ -1,30 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import HeroVideo from '../components/HeroVideo';
 import AlterIntro from '../components/AlterIntro';
-import NavbarTail from '../navigation/NavBar';
-import Team from '../components/Team';
-import VideoWork from '../components/VideoWork';
-import clapboard from '../assets/Clapboard.svg'
 import Logos from '../components/Logos';
-import separator from '../assets/separator.png'
 
 function Home({ setCurrent }) {
 
-	const underlineStyleColor = {
-		background: 'linear-gradient(90deg, rgba(192,192,192,1) 14.29%, rgba(192,192,0,1) 14.29%, rgba(192,192,0,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 43%, rgba(0,192,0,1) 43%, rgba(0,192,0,1) 57%, rgba(192,0,192,1) 57%, rgba(192,0,192,1) 71%, rgba(192,0,0,1) 71%, rgba(192,0,0,1) 86.5%, rgba(0,0,192,1) 86%)'
-	}
+	// const underlineStyleColor = {
+	// 	background: 'linear-gradient(90deg, rgba(192,192,192,1) 14.29%, rgba(192,192,0,1) 14.29%, rgba(192,192,0,1) 28%, rgba(0,192,192,1) 28%, rgba(0,192,192,1) 43%, rgba(0,192,0,1) 43%, rgba(0,192,0,1) 57%, rgba(192,0,192,1) 57%, rgba(192,0,192,1) 71%, rgba(192,0,0,1) 71%, rgba(192,0,0,1) 86.5%, rgba(0,0,192,1) 86%)'
+	// }
 
-	const underlineStyleGray = {
-		background: 'linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(28,28,28,1) 10%, rgba(28,28,28,1) 20%, rgba(56,56,56,1) 20%, rgba(56,56,56,1) 30%, rgba(85,85,85,1) 30%, rgba(85,85,85,1) 40%, rgba(113,113,113,1) 40%, rgba(113,113,113,1) 50%, rgba(141,141,141,1) 50%, rgba(141,141,141,1) 60%, rgba(170,170,170,1) 60%, rgba(170,170,170,1) 70%, rgba(198,198,198,1) 70%, rgba(198,198,198,1) 80%, rgba(226,226,226,1) 80%, rgba(226,226,226,1) 90%, rgba(255,255,255,1) 90%)'
-	}
-
-	{/* <div
-					className='hidden lg:flex min-h-[20px] w-[66%] self-end relative md:mb-0 mb-10'
-					style={underlineStyleColor}
-				>
-					<div className='w-full h-full bg-black/20 top-0 left-0 absolute' />
-				</div> */}
-
+	// const underlineStyleGray = {
+	// 	background: 'linear-gradient(90deg, rgba(0,0,0,1) 10%, rgba(28,28,28,1) 10%, rgba(28,28,28,1) 20%, rgba(56,56,56,1) 20%, rgba(56,56,56,1) 30%, rgba(85,85,85,1) 30%, rgba(85,85,85,1) 40%, rgba(113,113,113,1) 40%, rgba(113,113,113,1) 50%, rgba(141,141,141,1) 50%, rgba(141,141,141,1) 60%, rgba(170,170,170,1) 60%, rgba(170,170,170,1) 70%, rgba(198,198,198,1) 70%, rgba(198,198,198,1) 80%, rgba(226,226,226,1) 80%, rgba(226,226,226,1) 90%, rgba(255,255,255,1) 90%)'
+	// }
 
 	return (
 		<div className='bg-black h-fit w-screen flex flex-col'>

@@ -9,11 +9,10 @@ import ReactModal from "react-modal";
 export default function VideoComp({ title, url, showModalMobile, setShowModalMobile }) {
 
   const [isPlaying, setIsPlaying] = useState(false)
-  const [isReady, setIsReady] = useState(false);
   const [showModal, setShowModal] = useState(false)
 
 
-  const videoH = 'xl:h-[245px] h-[245px] lg:h-[189px]'
+  //const videoH = 'xl:h-[245px] h-[245px] lg:h-[189px]'
   const videoW = 'xl:w-[400px] w-[100vw] md:w-[400px] lg:w-[300px]'
 
 
@@ -22,7 +21,7 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
       <div className="hidden m-4 lg:flex flex-col justify-center gap-3 items-center">
         <div className="flex flex-col">
           <div className={`font-zenKaku font-italic text-lg text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>{title}</div>
-          {title == 'New York Mets, Amazin\' Call Center' &&
+          {title === 'New York Mets, Amazin\' Call Center' &&
             <div className={`font-zenKaku italic text-sm text-center text-black mx-auto xl:max-w-[400px] lg:max-w-[300px] w-full`}>(Aired during the 2023 Superbowl Playoffs)</div>
           }
         </div>
@@ -34,7 +33,7 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
             video={url}
             loop={true}
             volume={0}
-            paused={!isPlaying && !isReady}
+            paused={!isPlaying}
             controls={false}
             responsive={true}
             onPlay={() => console.log("play")}
@@ -97,7 +96,7 @@ export default function VideoComp({ title, url, showModalMobile, setShowModalMob
       <div className="lg:hidden m-4 flex flex-col justify-center gap-3 items-center">
         <div className="flex flex-col">
           <div className={`font-zenKaku font-extralight text-lg text-center text-black mx-auto w-full`}>{title}</div>
-          {title == 'New York Mets, Amazin\' Call Center' &&
+          {title === 'New York Mets, Amazin\' Call Center' &&
             <div className={`font-zenKaku italic text-sm text-center text-black mx-auto w-full`}>(Aired during the 2023 Superbowl Playoffs)</div>
           }
         </div>

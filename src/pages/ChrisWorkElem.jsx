@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import VideoComp from '../components/VideoComp';
 
 
@@ -130,11 +130,13 @@ export default function ChrisWorkElem({ displayPage }) {
   const [showModalMobile, setShowModalMobile] = useState(() => {
     const mapAux = []
     pages.map((elem) => {
-      if(elem.id == displayPage){
+      if(elem.id === displayPage){
         elem.videos.map((elem) => {
           mapAux.push(false)
+          return <></>
         })
       }
+      return <></>
     })
     return mapAux
   })
@@ -142,9 +144,9 @@ export default function ChrisWorkElem({ displayPage }) {
   const handleSet = (bool,index) => {
     const aux = []
     showModalMobile.map((elem,indexAux) => {
-      if(index==indexAux) aux.push(bool)
+      if(index === indexAux) aux.push(bool)
       else aux.push(false)
-      return
+      return <></>
     })
     setShowModalMobile(aux)
   }
@@ -154,7 +156,7 @@ export default function ChrisWorkElem({ displayPage }) {
       <div className='w-full h-[85px] bg-black' />
       <div className='flex flex-col justify-center items-center w-full gap-4 my-20'>
         {pages.map((elem) => {
-          if (elem.id == displayPage) {
+          if (elem.id === displayPage) {
             return <>
               {elem.title}
               {elem.subtitle}
@@ -171,7 +173,7 @@ export default function ChrisWorkElem({ displayPage }) {
               </div>
             </>
           }
-
+          return <></>
         })}
       </div>
     </div>

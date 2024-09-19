@@ -1,17 +1,7 @@
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
-import {
-	Bars3Icon,
-	XMarkIcon,
-	GlobeAltIcon,
-	CodeBracketIcon,
-	RocketLaunchIcon
-} from '@heroicons/react/24/outline'
 import VideoWorkCard from './VideoWorkCard';
 import marketing_image from '../assets/marketing.png';
 import hype_image from '../assets/hypevideos.png';
 import storytelling_image from '../assets/storytelling.png';
-import { Link } from 'react-router-dom';
-
 
 const works = [
 

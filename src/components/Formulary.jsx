@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Dialog, Disclosure, Popover, Transition } from '@headlessui/react'
 import {FORM_URL} from "../constants/constants"
 
 
@@ -114,7 +113,7 @@ export default function Formulary() {
 
   return (
     <>
-      {!isSent &&
+      {(!isSent &&
         <div className="flex items-center justify-center px-12 pt-4 pb-12">
           <div className="mx-auto w-full max-w-[550px]">
           <div className='text-lg mb-10 font-zenKaku font-semibold text-black'>
@@ -241,8 +240,8 @@ export default function Formulary() {
           </div>
         </form>
           </div >
-        </div > ||
-    <div className='text-4xl text-black font-zenKaku font-extrabold my-32'>Thank you we will contact you soon</div>
+        </div >) ||
+    (<div className='text-4xl text-black font-zenKaku font-extrabold my-32'>Thank you we will contact you soon</div>)
 }
 
     </>

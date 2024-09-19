@@ -1,8 +1,6 @@
 import hero_video from '../assets/hero_video.mp4';
 import ReactPlayer from 'react-player';
-import { Link } from 'react-router-dom';
 import TitleDomino from './TitleDomino';
-import TitleHover from './TitleHover';
 
 
 export default function HeroVideo() {

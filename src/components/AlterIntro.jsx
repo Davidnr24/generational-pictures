@@ -1,5 +1,4 @@
 import AlterIntroCard from "./AlterIntroCard.jsx";
-import VideoWorkCard from './VideoWorkCard';
 import marketing_image from '../assets/marketing.png';
 import hype_image from '../assets/hypevideos.png';
 import storytelling_image from '../assets/storytelling.png';
