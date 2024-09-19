@@ -18,6 +18,9 @@ jobs:
       - run:
           name: Build React App
           command: npm run build
+      - run: 
+          name: Give permissions
+          command: chmod -R 777 build
       - persist_to_workspace:
           root: .
           paths:
