@@ -1,6 +1,6 @@
 # Generational Pictures Website
 
-https://Dhakernator24.github.io/kostianis-web
+https://generational-pictures.com
 
 ## Tech Stack
 
